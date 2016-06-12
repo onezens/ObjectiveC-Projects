@@ -4,7 +4,11 @@
 //
 //  Created by wackosix on 16/6/12.
 //  Copyright © 2016年 www.wackosix.cn. All rights reserved.
-//
+///Users/lexue/Desktop/Zhen/WSWeibo/WSWeibo/Core/Global/WSWeibo.pch
+
+//************** 发布环境和测试环境 *****************
+//#define WSWeibo_RELEASE
+#define WSWeibo_DEBUG
 
 //**************        真机和模拟器之间的设置         *****************
 
@@ -28,6 +32,7 @@
 #import "WSBaseController.h"
 #import "WSBaseService.h"
 #import "WSCoreManager.h"
+#import "WSCoreDefs.h"
 
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS

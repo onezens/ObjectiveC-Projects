@@ -91,6 +91,9 @@
 		65DEF2A41D0D5CA300E975FF /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DEF29E1D0D5CA300E975FF /* FMResultSet.m */; };
 		65DEF2A51D0D5CA300E975FF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65DEF29F1D0D5CA300E975FF /* Info.plist */; };
 		65DEF2A71D0D5CB800E975FF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DEF2A61D0D5CB800E975FF /* libsqlite3.tbd */; };
+		65DEF2AB1D0D5D5800E975FF /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DEF2AA1D0D5D5800E975FF /* NSArray+Log.m */; };
+		65DEF2AF1D0D5D6C00E975FF /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DEF2AE1D0D5D6C00E975FF /* UIView+Frame.m */; };
+		65DEF2B21D0D5EAC00E975FF /* WSCoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DEF2B11D0D5EAC00E975FF /* WSCoreManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -269,6 +272,12 @@
 		65DEF29E1D0D5CA300E975FF /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		65DEF29F1D0D5CA300E975FF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65DEF2A61D0D5CB800E975FF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		65DEF2A91D0D5D5800E975FF /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		65DEF2AA1D0D5D5800E975FF /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		65DEF2AD1D0D5D6C00E975FF /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		65DEF2AE1D0D5D6C00E975FF /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		65DEF2B01D0D5EAC00E975FF /* WSCoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSCoreManager.h; sourceTree = "<group>"; };
+		65DEF2B11D0D5EAC00E975FF /* WSCoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSCoreManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,6 +361,8 @@
 				65DEF1731D0D528E00E975FF /* Global */,
 				65DEF1741D0D528E00E975FF /* Main */,
 				65DEF1781D0D528E00E975FF /* Network */,
+				65DEF2B01D0D5EAC00E975FF /* WSCoreManager.h */,
+				65DEF2B11D0D5EAC00E975FF /* WSCoreManager.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -414,6 +425,8 @@
 		65DEF17D1D0D528E00E975FF /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				65DEF2AC1D0D5D6C00E975FF /* UIView+Frame */,
+				65DEF2A81D0D5D5800E975FF /* Log */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -708,6 +721,24 @@
 			path = fmdb;
 			sourceTree = "<group>";
 		};
+		65DEF2A81D0D5D5800E975FF /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				65DEF2A91D0D5D5800E975FF /* NSArray+Log.h */,
+				65DEF2AA1D0D5D5800E975FF /* NSArray+Log.m */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		65DEF2AC1D0D5D6C00E975FF /* UIView+Frame */ = {
+			isa = PBXGroup;
+			children = (
+				65DEF2AD1D0D5D6C00E975FF /* UIView+Frame.h */,
+				65DEF2AE1D0D5D6C00E975FF /* UIView+Frame.m */,
+			);
+			path = "UIView+Frame";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -865,8 +896,10 @@
 				65DEF2511D0D5A9900E975FF /* MJRefreshAutoFooter.m in Sources */,
 				65DEF25B1D0D5A9900E975FF /* MJRefreshBackStateFooter.m in Sources */,
 				65DEF21F1D0D599B00E975FF /* SVIndefiniteAnimatedView.m in Sources */,
+				65DEF2AB1D0D5D5800E975FF /* NSArray+Log.m in Sources */,
 				65DEF2A11D0D5CA300E975FF /* FMDatabaseAdditions.m in Sources */,
 				65DEF1DA1D0D595900E975FF /* MASConstraintMaker.m in Sources */,
+				65DEF2AF1D0D5D6C00E975FF /* UIView+Frame.m in Sources */,
 				65DEF28F1D0D5C4E00E975FF /* JSONHTTPClient.m in Sources */,
 				65DEF20A1D0D597500E975FF /* SDWebImageDownloaderOperation.m in Sources */,
 				65DEF2571D0D5A9900E975FF /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -886,6 +919,7 @@
 				65DEF2621D0D5A9900E975FF /* UIScrollView+MJRefresh.m in Sources */,
 				65DEF1DC1D0D595900E975FF /* MASViewAttribute.m in Sources */,
 				65DEF1801D0D528E00E975FF /* AppDelegate.m in Sources */,
+				65DEF2B21D0D5EAC00E975FF /* WSCoreManager.m in Sources */,
 				65DEF28C1D0D5C4E00E975FF /* JSONModelClassProperty.m in Sources */,
 				65DEF2581D0D5A9900E975FF /* MJRefreshAutoStateFooter.m in Sources */,
 				65DEF2911D0D5C4E00E975FF /* JSONKeyMapper.m in Sources */,

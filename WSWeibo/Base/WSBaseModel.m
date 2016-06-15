@@ -10,4 +10,24 @@
 
 @implementation WSBaseModel
 
++(JSONKeyMapper*)keyMapper
+{
+    return [JSONKeyMapper mapperFromUnderscoreCaseToCamelCase];
+}
+
+
++ (void)saveWithDic:(NSDictionary *)dic{
+    
+}
+
++ (void)remove{
+    
+}
+
+
++ (WSBaseModel *)getCurrentSaveModel{
+    return nil;
+}
+
+
 @end

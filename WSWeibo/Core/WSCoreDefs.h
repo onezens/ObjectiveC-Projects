@@ -8,10 +8,17 @@
 
 #ifdef WSWeibo_DEBUG
 
-#define kBaseURL @"WSWeibo_DEBUG"
+#define kBaseURL @"WSWeibo_DEBUG" //内测环境API接口
 
-#else
+#define WS_API_GET          @""
+#define WS_API_POST         @""
+
+#else //上线环境API接口
 
 #define kBaseURL @"WSWeibo_RELEASE"
 
+
 #endif
+
+
+#define WS_ERROR_SYS -1000 //ios端系统错误

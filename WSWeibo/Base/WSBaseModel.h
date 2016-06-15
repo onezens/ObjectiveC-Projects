@@ -10,4 +10,10 @@
 
 @interface WSBaseModel : JSONModel
 
++ (void)saveWithDic:(NSDictionary *)dic;
+
++ (void)remove;
+
++ (WSBaseModel *)getCurrentSaveModel;
+
 @end

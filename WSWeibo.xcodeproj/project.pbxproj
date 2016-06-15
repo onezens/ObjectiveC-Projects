@@ -83,6 +83,7 @@
 		65620BE71D0FD4C300B2F933 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65620B9E1D0FD4C300B2F933 /* SVRadialGradientLayer.m */; };
 		65620BEE1D0FD60900B2F933 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65620BEB1D0FD60900B2F933 /* AppDelegate.m */; };
 		65620BEF1D0FD60900B2F933 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65620BEC1D0FD60900B2F933 /* main.m */; };
+		65620BF21D10F3C800B2F933 /* WSResModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65620BF11D10F3C800B2F933 /* WSResModel.m */; };
 		657C04CD1D0D71B1007030C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657C04CF1D0D71B1007030C8 /* Main.storyboard */; };
 		657C04D61D0D7255007030C8 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 657C04D81D0D7255007030C8 /* View.xib */; };
 		65DEF3AD1D0D6B2F00E975FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DEF2D81D0D6B2F00E975FF /* LaunchScreen.storyboard */; };
@@ -259,6 +260,8 @@
 		65620BEB1D0FD60900B2F933 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		65620BEC1D0FD60900B2F933 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		65620BED1D0FD60900B2F933 /* WSWeibo.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSWeibo.pch; sourceTree = "<group>"; };
+		65620BF01D10F3C800B2F933 /* WSResModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSResModel.h; sourceTree = "<group>"; };
+		65620BF11D10F3C800B2F933 /* WSResModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSResModel.m; sourceTree = "<group>"; };
 		657C04CE1D0D71B1007030C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		657C04D11D0D71B2007030C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		657C04D31D0D71B3007030C8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -668,6 +671,8 @@
 				65DEF2E91D0D6B2F00E975FF /* WSBaseModel.m */,
 				65DEF2EA1D0D6B2F00E975FF /* WSBaseService.h */,
 				65DEF2EB1D0D6B2F00E975FF /* WSBaseService.m */,
+				65620BF01D10F3C800B2F933 /* WSResModel.h */,
+				65620BF11D10F3C800B2F933 /* WSResModel.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -926,6 +931,7 @@
 				65620BB51D0FD4C300B2F933 /* JSONValueTransformer.m in Sources */,
 				65620BE71D0FD4C300B2F933 /* SVRadialGradientLayer.m in Sources */,
 				65620BCB1D0FD4C300B2F933 /* MJRefreshGifHeader.m in Sources */,
+				65620BF21D10F3C800B2F933 /* WSResModel.m in Sources */,
 				65620BCF1D0FD4C300B2F933 /* MJRefreshConst.m in Sources */,
 				65DEF3B51D0D6B2F00E975FF /* WSBaseService.m in Sources */,
 				65620BC31D0FD4C300B2F933 /* MJRefreshFooter.m in Sources */,

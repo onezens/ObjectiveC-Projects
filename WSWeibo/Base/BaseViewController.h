@@ -1,5 +1,5 @@
 //
-//  WSBaseController.h
+//  BaseViewController.h
 //  WSWeibo
 //
 //  Created by wackosix on 16/6/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WSBaseController : UIViewController
+@interface BaseViewController : UIViewController
 
 @end

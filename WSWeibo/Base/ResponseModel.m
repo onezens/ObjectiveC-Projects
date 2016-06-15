@@ -1,18 +1,18 @@
 //
-//  WSResModel.m
+//  ResponseModel.m
 //  WSWeibo
 //
 //  Created by wackosix on 16/6/15.
 //  Copyright © 2016年 www.wackosix.cn. All rights reserved.
 //
 
-#import "WSResModel.h"
+#import "ResponseModel.h"
 
-@implementation WSResModel
+@implementation ResponseModel
 
 + (instancetype)resSuccessModelWithName:(NSString *)reqName response:(id)resObj{
     
-    WSResModel *res = [[WSResModel alloc] init];
+    ResponseModel *res = [[ResponseModel alloc] init];
     res.reqName = reqName;
     res.resObj = resObj;
     res.status = 1;
@@ -20,7 +20,7 @@
 }
 + (instancetype)resFailedModelWithName:(NSString *)reqName status:(NSInteger)status errorInfo:(NSString *)info{
     
-    WSResModel *res = [[WSResModel alloc] init];
+    ResponseModel *res = [[ResponseModel alloc] init];
     res.status = status;
     res.resInfo = info;
     res.reqName = reqName;

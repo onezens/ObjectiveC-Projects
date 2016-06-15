@@ -1,5 +1,5 @@
 //
-//  WSResModel.h
+//  ResponseModel.h
 //  WSWeibo
 //
 //  Created by wackosix on 16/6/15.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WSResModel : NSObject
+@interface ResponseModel : NSObject
 
 @property (nonatomic, copy) NSString *reqName;
 @property (nonatomic, assign) NSInteger status;

@@ -1,5 +1,5 @@
 //
-//  WSBaseService.h
+//  BaseService.h
 //  WSWeibo
 //
 //  Created by wackosix on 16/6/12.
@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class WSResModel;
+@class ResponseModel;
 
 typedef enum : NSUInteger {
     WSServiceDefault
@@ -15,12 +15,12 @@ typedef enum : NSUInteger {
 
 @protocol WSBaseServiceDelegate <NSObject>
 
-- (void)requestSuccess:(WSResModel *)res;
-- (void)requestFailed:(WSResModel *)res;
+- (void)requestSuccess:(ResponseModel *)res;
+- (void)requestFailed:(ResponseModel *)res;
 
 @end
 
-@interface WSBaseService : NSObject
+@interface BaseService : NSObject
 
 @property (nonatomic, assign) WSServiceType type;
 @property (nonatomic, weak) id <WSBaseServiceDelegate> delegate;

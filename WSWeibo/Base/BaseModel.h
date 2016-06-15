@@ -1,5 +1,5 @@
 //
-//  WSBaseModel.h
+//  BaseModel.h
 //  WSWeibo
 //
 //  Created by wackosix on 16/6/12.
@@ -8,12 +8,12 @@
 
 #import "JSONModel.h"
 
-@interface WSBaseModel : JSONModel
+@interface BaseModel : JSONModel
 
 + (void)saveWithDic:(NSDictionary *)dic;
 
 + (void)remove;
 
-+ (WSBaseModel *)getCurrentSaveModel;
++ (BaseModel *)getCurrentSaveModel;
 
 @end

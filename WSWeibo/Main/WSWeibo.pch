@@ -29,9 +29,9 @@
 
 #import <UIKit/UIKit.h>
 #import "UIView+Frame.h"
-#import "WSBaseModel.h"
-#import "WSBaseController.h"
-#import "WSBaseService.h"
+#import "BaseModel.h"
+#import "BaseViewController.h"
+#import "BaseService.h"
 #import "WSCoreManager.h"
 #import "WSCoreDefs.h"
 

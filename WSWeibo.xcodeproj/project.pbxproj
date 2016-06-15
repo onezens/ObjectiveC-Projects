@@ -21,8 +21,6 @@
 		65620BA91D0FD4C300B2F933 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 65620B0E1D0FD4C300B2F933 /* FMDatabasePool.m */; };
 		65620BAA1D0FD4C300B2F933 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 65620B101D0FD4C300B2F933 /* FMDatabaseQueue.m */; };
 		65620BAB1D0FD4C300B2F933 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 65620B131D0FD4C300B2F933 /* FMResultSet.m */; };
-		65620BAC1D0FD4C300B2F933 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65620B141D0FD4C300B2F933 /* Info.plist */; };
-		65620BAD1D0FD4C300B2F933 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65620B161D0FD4C300B2F933 /* Info.plist */; };
 		65620BAE1D0FD4C300B2F933 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65620B191D0FD4C300B2F933 /* JSONModel.m */; };
 		65620BAF1D0FD4C300B2F933 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 65620B1B1D0FD4C300B2F933 /* JSONModelClassProperty.m */; };
 		65620BB01D0FD4C300B2F933 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 65620B1D1D0FD4C300B2F933 /* JSONModelError.m */; };
@@ -97,7 +95,6 @@
 		65DEF4041D0D6B2F00E975FF /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DEF3A91D0D6B2F00E975FF /* NSArray+Log.m */; };
 		65DEF4051D0D6B2F00E975FF /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DEF3AC1D0D6B2F00E975FF /* UIView+Frame.m */; };
 		65DEF4071D0D6DA100E975FF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DEF4061D0D6DA100E975FF /* libsqlite3.tbd */; };
-		65DEF4341D0D702900E975FF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65DEF4331D0D702900E975FF /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -629,10 +626,10 @@
 		65DEF2BF1D0D6AE000E975FF /* WSWeibo */ = {
 			isa = PBXGroup;
 			children = (
+				65DEF2D71D0D6B2F00E975FF /* AutoLocalization */,
 				65DEF2E51D0D6B2F00E975FF /* Base */,
 				65DEF2EC1D0D6B2F00E975FF /* Core */,
 				65DEF3A51D0D6B2F00E975FF /* UI */,
-				65DEF2D71D0D6B2F00E975FF /* AutoLocalization */,
 				65DEF3A61D0D6B2F00E975FF /* Utility */,
 				65620AF41D0FD4C300B2F933 /* ThirdLib */,
 				65DEF3A21D0D6B2F00E975FF /* Image */,
@@ -665,14 +662,14 @@
 		65DEF2E51D0D6B2F00E975FF /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				65DEF2E61D0D6B2F00E975FF /* BaseViewController.h */,
-				65DEF2E71D0D6B2F00E975FF /* BaseViewController.m */,
 				65DEF2E81D0D6B2F00E975FF /* BaseModel.h */,
 				65DEF2E91D0D6B2F00E975FF /* BaseModel.m */,
 				65DEF2EA1D0D6B2F00E975FF /* BaseService.h */,
 				65DEF2EB1D0D6B2F00E975FF /* BaseService.m */,
 				65620BF01D10F3C800B2F933 /* ResponseModel.h */,
 				65620BF11D10F3C800B2F933 /* ResponseModel.m */,
+				65DEF2E61D0D6B2F00E975FF /* BaseViewController.h */,
+				65DEF2E71D0D6B2F00E975FF /* BaseViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -815,10 +812,7 @@
 				65DEF4021D0D6B2F00E975FF /* Assets.xcassets in Resources */,
 				65DEF3B21D0D6B2F00E975FF /* AutoGenStringsXIB.py in Resources */,
 				65DEF3B11D0D6B2F00E975FF /* AutoGenStringsSB.py in Resources */,
-				65620BAC1D0FD4C300B2F933 /* Info.plist in Resources */,
 				65620BE51D0FD4C300B2F933 /* SVProgressHUD.bundle in Resources */,
-				65DEF4341D0D702900E975FF /* Info.plist in Resources */,
-				65620BAD1D0FD4C300B2F933 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

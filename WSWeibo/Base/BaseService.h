@@ -10,24 +10,24 @@
 @class ResponseModel;
 
 typedef enum : NSUInteger {
-    WSServiceDefault
-} WSServiceType;
+    ServiceDefault
+} ServiceType;
 
-@protocol WSBaseServiceDelegate <NSObject>
+@protocol BaseServiceDelegate <NSObject>
 
-- (void)requestSuccess:(ResponseModel *)res;
-- (void)requestFailed:(ResponseModel *)res;
+- (void)requestSuccessedWithRes:(ResponseModel *)res;
+- (void)requestFailedWithRes:(ResponseModel *)res;
 
 @end
 
 @interface BaseService : NSObject
 
-@property (nonatomic, assign) WSServiceType type;
-@property (nonatomic, weak) id <WSBaseServiceDelegate> delegate;
+@property (nonatomic, assign) ServiceType type;
+@property (nonatomic, weak) id <BaseServiceDelegate> delegate;
 
-- (NSString *)getWithInterface:(NSString *)interface body:(NSMutableDictionary *)body reqName:(NSString *)name resObjClass:(Class)resObjClass delegate:(id<WSBaseServiceDelegate>)delegate needSave:(BOOL)isNeed;
+- (NSString *)getWithInterface:(NSString *)interface body:(NSMutableDictionary *)body reqName:(NSString *)name resObjClass:(Class)resObjClass delegate:(id<BaseServiceDelegate>)delegate needSave:(BOOL)isNeed;
 
-- (NSString *)postWithInterface:(NSString *)interface body:(NSMutableDictionary *)body reqName:(NSString *)name resObjClass:(Class)resObjClass delegate:(id<WSBaseServiceDelegate>)delegate needSave:(BOOL)isNeed;
+- (NSString *)postWithInterface:(NSString *)interface body:(NSMutableDictionary *)body reqName:(NSString *)name resObjClass:(Class)resObjClass delegate:(id<BaseServiceDelegate>)delegate needSave:(BOOL)isNeed;
 
 
 @end

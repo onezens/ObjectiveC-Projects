@@ -42,6 +42,14 @@
     
 }
 
+- (void)setTipText:(NSString *)tipText {
+    
+    _tipText = tipText;
+    if (tipText.length > 0) {
+        self.titleLbl.text = tipText;
+    }
+}
+
 #pragma mark - lazy loading
 
 - (UILabel *)titleLbl {

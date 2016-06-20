@@ -12,5 +12,7 @@
 
 /**是否拥有导航栏*/
 @property (nonatomic, assign) BOOL isHaveNav;
+/**空白视图提示内容，为空为默认提示*/
+@property (nonatomic, copy) NSString *tipText;
 
 @end

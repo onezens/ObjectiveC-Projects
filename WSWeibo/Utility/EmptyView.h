@@ -10,4 +10,7 @@
 
 @interface EmptyView : UIView
 
+/**是否拥有导航栏*/
+@property (nonatomic, assign) BOOL isHaveNav;
+
 @end

@@ -31,13 +31,15 @@
     
     [super layoutSubviews];
     CGFloat margin = 8;
+    CGFloat offsetY = self.isHaveNav ? 64.0 : 0.0;
     CGFloat titLblW = self.titleLbl.bounds.size.width;
     CGFloat titLblH = self.titleLbl.bounds.size.height;
     CGFloat activityW = self.activity.bounds.size.width;
     CGFloat activityH = self.activity.bounds.size.height;
-    CGFloat titLblX = self.bounds.size.width - titLblW - activityW - margin;
-    self.titleLbl.frame = CGRectMake(titLblX * 0.5, margin, titLblW, titLblH);
-    self.activity.frame = CGRectMake(CGRectGetMaxX(self.titleLbl.frame) + margin, margin, activityW, activityH);
+    CGFloat activityX = self.bounds.size.width - titLblW - activityW - margin;
+    self.activity.frame = CGRectMake(activityX * 0.5, margin + offsetY, activityW, activityH);
+    self.titleLbl.frame = CGRectMake(CGRectGetMaxX(self.activity.frame) + margin, margin + offsetY, titLblW, titLblH);
+    
 }
 
 #pragma mark - lazy loading
@@ -46,7 +48,9 @@
     if (!_titleLbl) {
         _titleLbl = [[UILabel alloc] init];
         _titleLbl.text = @"正在加载...";
+        _titleLbl.textColor = [UIColor grayColor];
         [_titleLbl sizeToFit];
+        _titleLbl.font = [UIFont systemFontOfSize:14];
         [self addSubview:_titleLbl];
     }
     return _titleLbl;
@@ -55,8 +59,9 @@
 - (UIActivityIndicatorView *)activity {
     
     if (!_activity) {
-        _activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+        _activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         [_activity startAnimating];
+        [self addSubview:_activity];
     }
     return _activity;
 }

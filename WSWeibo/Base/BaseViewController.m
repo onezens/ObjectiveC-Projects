@@ -9,14 +9,14 @@
 #import "BaseViewController.h"
 #import "SVProgressHUD.h"
 #import "ErrorButton.h"
-//#import "EmptyView.h"
+#import "EmptyView.h"
 
 NSString * const kLoadingTitle = @"正在加载";
 
 @interface BaseViewController ()
 
 @property (nonatomic, strong) ErrorButton *errorBtn;
-//@property (nonatomic, strong) EmptyView *emptyView;
+@property (nonatomic, strong) EmptyView *emptyView;
 @end
 
 @implementation BaseViewController
@@ -179,7 +179,8 @@ NSString * const kLoadingTitle = @"正在加载";
 
 - (void)showEmptyLoadingView {
     
-//    self.emptyView.hidden = false;
+    self.emptyView.isHaveNav = self.navigationController;
+    self.emptyView.hidden = false;
 }
 
 - (void)showEmptyLoadingViewWithText:(NSString *)text {
@@ -187,7 +188,7 @@ NSString * const kLoadingTitle = @"正在加载";
 }
 
 - (void)dismissEmptyLoadingView {
-//    self.emptyView.hidden = true;
+    self.emptyView.hidden = true;
 }
 
 - (void)showHUD:(NSString *)message AndImage:(UIImage *)image {
@@ -228,16 +229,16 @@ NSString * const kLoadingTitle = @"正在加载";
     return _errorBtn;
 }
 
-//- (EmptyView *)emptyView {
-//    
-//    if (!_emptyView) {
-//        _emptyView = [[EmptyView alloc] init];
-//        _emptyView.frame = self.view.bounds;
-//        [self.view addSubview:_emptyView];
-//    }
-//    [self.view bringSubviewToFront:_emptyView];
-//    return _emptyView;
-//}
+- (EmptyView *)emptyView {
+    
+    if (!_emptyView) {
+        _emptyView = [[EmptyView alloc] init];
+        _emptyView.frame = self.view.bounds;
+        [self.view addSubview:_emptyView];
+    }
+    [self.view bringSubviewToFront:_emptyView];
+    return _emptyView;
+}
 
 
 @end

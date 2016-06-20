@@ -84,6 +84,11 @@
 		65620BF21D10F3C800B2F933 /* ResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65620BF11D10F3C800B2F933 /* ResponseModel.m */; };
 		657C04CD1D0D71B1007030C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657C04CF1D0D71B1007030C8 /* Main.storyboard */; };
 		657C04D61D0D7255007030C8 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 657C04D81D0D7255007030C8 /* View.xib */; };
+		658613231D17866800255494 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658613221D17866800255494 /* TestViewController.m */; };
+		658613261D1786B100255494 /* WSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658613251D1786B100255494 /* WSViewController.m */; };
+		658613291D178A1C00255494 /* UIColor+WS.m in Sources */ = {isa = PBXBuildFile; fileRef = 658613281D178A1C00255494 /* UIColor+WS.m */; };
+		6586132C1D1794C500255494 /* UIView+WS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6586132B1D1794C500255494 /* UIView+WS.m */; };
+		6586132F1D17953200255494 /* UIImage+WS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6586132E1D17953200255494 /* UIImage+WS.m */; };
 		65DEF3AD1D0D6B2F00E975FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DEF2D81D0D6B2F00E975FF /* LaunchScreen.storyboard */; };
 		65DEF3B11D0D6B2F00E975FF /* AutoGenStringsSB.py in Resources */ = {isa = PBXBuildFile; fileRef = 65DEF2E11D0D6B2F00E975FF /* AutoGenStringsSB.py */; };
 		65DEF3B21D0D6B2F00E975FF /* AutoGenStringsXIB.py in Resources */ = {isa = PBXBuildFile; fileRef = 65DEF2E21D0D6B2F00E975FF /* AutoGenStringsXIB.py */; };
@@ -265,6 +270,16 @@
 		657C04D71D0D7255007030C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/View.xib; sourceTree = "<group>"; };
 		657C04DA1D0D7256007030C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/View.strings; sourceTree = "<group>"; };
 		657C04DC1D0D7256007030C8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/View.strings"; sourceTree = "<group>"; };
+		658613211D17866800255494 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		658613221D17866800255494 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		658613241D1786B100255494 /* WSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSViewController.h; sourceTree = "<group>"; };
+		658613251D1786B100255494 /* WSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSViewController.m; sourceTree = "<group>"; };
+		658613271D178A1C00255494 /* UIColor+WS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WS.h"; sourceTree = "<group>"; };
+		658613281D178A1C00255494 /* UIColor+WS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WS.m"; sourceTree = "<group>"; };
+		6586132A1D1794C500255494 /* UIView+WS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WS.h"; sourceTree = "<group>"; };
+		6586132B1D1794C500255494 /* UIView+WS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WS.m"; sourceTree = "<group>"; };
+		6586132D1D17953200255494 /* UIImage+WS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WS.h"; sourceTree = "<group>"; };
+		6586132E1D17953200255494 /* UIImage+WS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WS.m"; sourceTree = "<group>"; };
 		65DEF2BD1D0D6AE000E975FF /* WSWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DEF2D91D0D6B2F00E975FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65DEF2E11D0D6B2F00E975FF /* AutoGenStringsSB.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = AutoGenStringsSB.py; sourceTree = "<group>"; };
@@ -602,6 +617,10 @@
 				65620BEB1D0FD60900B2F933 /* AppDelegate.m */,
 				65620BEC1D0FD60900B2F933 /* main.m */,
 				65620BED1D0FD60900B2F933 /* WSWeibo.pch */,
+				658613241D1786B100255494 /* WSViewController.h */,
+				658613251D1786B100255494 /* WSViewController.m */,
+				658613211D17866800255494 /* TestViewController.h */,
+				658613221D17866800255494 /* TestViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -714,6 +733,12 @@
 			children = (
 				65DEF3A71D0D6B2F00E975FF /* Log */,
 				65DEF3AA1D0D6B2F00E975FF /* UIView+Frame */,
+				658613271D178A1C00255494 /* UIColor+WS.h */,
+				658613281D178A1C00255494 /* UIColor+WS.m */,
+				6586132A1D1794C500255494 /* UIView+WS.h */,
+				6586132B1D1794C500255494 /* UIView+WS.m */,
+				6586132D1D17953200255494 /* UIImage+WS.h */,
+				6586132E1D17953200255494 /* UIImage+WS.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -730,8 +755,8 @@
 		65DEF3AA1D0D6B2F00E975FF /* UIView+Frame */ = {
 			isa = PBXGroup;
 			children = (
-				65DEF3AB1D0D6B2F00E975FF /* UIView+Frame.h */,
 				65DEF3AC1D0D6B2F00E975FF /* UIView+Frame.m */,
+				65DEF3AB1D0D6B2F00E975FF /* UIView+Frame.h */,
 			);
 			path = "UIView+Frame";
 			sourceTree = "<group>";
@@ -866,6 +891,7 @@
 				65620BC01D0FD4C300B2F933 /* MJRefreshAutoFooter.m in Sources */,
 				65620AF31D0FB38000B2F933 /* WSHttpClient.m in Sources */,
 				65620BC51D0FD4C300B2F933 /* MJRefreshAutoGifFooter.m in Sources */,
+				658613231D17866800255494 /* TestViewController.m in Sources */,
 				65620BD71D0FD4C300B2F933 /* SDWebImageDecoder.m in Sources */,
 				65620BD21D0FD4C300B2F933 /* UIView+MJExtension.m in Sources */,
 				65DEF4041D0D6B2F00E975FF /* NSArray+Log.m in Sources */,
@@ -880,6 +906,7 @@
 				65620BDB1D0FD4C300B2F933 /* SDWebImagePrefetcher.m in Sources */,
 				65620BA91D0FD4C300B2F933 /* FMDatabasePool.m in Sources */,
 				65DEF3B41D0D6B2F00E975FF /* BaseModel.m in Sources */,
+				6586132F1D17953200255494 /* UIImage+WS.m in Sources */,
 				65620B9F1D0FD4C300B2F933 /* AFHTTPSessionManager.m in Sources */,
 				65620BB31D0FD4C300B2F933 /* JSONModel+networking.m in Sources */,
 				65620BAA1D0FD4C300B2F933 /* FMDatabaseQueue.m in Sources */,
@@ -901,9 +928,11 @@
 				65620BBC1D0FD4C300B2F933 /* NSArray+MASAdditions.m in Sources */,
 				65620BBB1D0FD4C300B2F933 /* MASViewConstraint.m in Sources */,
 				65620BDD1D0FD4C300B2F933 /* UIImage+GIF.m in Sources */,
+				6586132C1D1794C500255494 /* UIView+WS.m in Sources */,
 				65620BAB1D0FD4C300B2F933 /* FMResultSet.m in Sources */,
 				65620BB61D0FD4C300B2F933 /* MASCompositeConstraint.m in Sources */,
 				65620BE21D0FD4C300B2F933 /* UIView+WebCacheOperation.m in Sources */,
+				658613291D178A1C00255494 /* UIColor+WS.m in Sources */,
 				65620BEF1D0FD60900B2F933 /* main.m in Sources */,
 				65620BD61D0FD4C300B2F933 /* SDWebImageCompat.m in Sources */,
 				65620BC81D0FD4C300B2F933 /* MJRefreshBackGifFooter.m in Sources */,
@@ -922,6 +951,7 @@
 				65620BC11D0FD4C300B2F933 /* MJRefreshBackFooter.m in Sources */,
 				65620BE41D0FD4C300B2F933 /* SVProgressAnimatedView.m in Sources */,
 				65620BA11D0FD4C300B2F933 /* AFSecurityPolicy.m in Sources */,
+				658613261D1786B100255494 /* WSViewController.m in Sources */,
 				65620BB51D0FD4C300B2F933 /* JSONValueTransformer.m in Sources */,
 				65620BE71D0FD4C300B2F933 /* SVRadialGradientLayer.m in Sources */,
 				65620BCB1D0FD4C300B2F933 /* MJRefreshGifHeader.m in Sources */,

@@ -19,6 +19,10 @@
     // Override point for customization after application launch.
     WSLog(@"%@", kBaseURL);
     debugLog();
+    
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleDefault];
+    [[UINavigationBar appearance] setTintColor:[UIColor navTintColor]];
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor baseThemeColor]]; //全局导航栏的背景颜色
     return YES;
 }
 

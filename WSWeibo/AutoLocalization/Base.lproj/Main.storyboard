@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--viewcontoller1-->
         <scene sceneID="7yV-IH-iYQ">
             <objects>
                 <viewController id="Tx5-mA-Thc" customClass="WSViewController" sceneMemberID="viewController">
@@ -27,13 +27,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Rz1-ZX-KaO"/>
+                    <navigationItem key="navigationItem" title="viewcontoller1" id="Rz1-ZX-KaO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vur-h5-0Ul" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="974" y="255"/>
         </scene>
-        <!--Test View Controller-->
+        <!--viewcontoller2-->
         <scene sceneID="nDX-0q-hcF">
             <objects>
                 <viewController id="8FN-g6-hnq" customClass="TestViewController" sceneMemberID="viewController">
@@ -46,6 +46,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="viewcontoller2" id="YV0-Kp-5UE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pnp-Rd-QrY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

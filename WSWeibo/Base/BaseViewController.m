@@ -7,10 +7,16 @@
 //
 
 #import "BaseViewController.h"
+#import "SVProgressHUD.h"
+#import "ErrorButton.h"
+//#import "EmptyView.h"
+
+NSString * const kLoadingTitle = @"正在加载";
 
 @interface BaseViewController ()
 
-
+@property (nonatomic, strong) ErrorButton *errorBtn;
+//@property (nonatomic, strong) EmptyView *emptyView;
 @end
 
 @implementation BaseViewController
@@ -18,14 +24,19 @@
 #pragma mark - init layout
 
 - (void)viewDidLoad {
-    
+    debugLog();
     [super viewDidLoad];
     [self setupRootView];
+//    [self showLoadingView];
+//    [self showErrorView];
+    [self showEmptyLoadingView];
 }
 
 - (void)setupRootView {
     
-    [self setLeftBackBarButton];
+    if(self.navigationController.viewControllers.count > 1){
+        [self setLeftBackBarButton];
+    }
     self.navigationController.navigationBar.translucent = true;
 }
 
@@ -128,30 +139,37 @@
 
 - (void)showLoadingView {
     
+    [SVProgressHUD showWithStatus:kLoadingTitle];
 }
 
 
 - (void)showLoadingViewWithText:(NSString *)text{
     
+    [SVProgressHUD showWithStatus:text];
 }
 
 
 - (void)dismissLoadingView {
     
+    [SVProgressHUD dismiss];
 }
 
 - (void)showErrorView {
     
+    self.errorBtn.hidden = false;
 }
 
 
 - (void)dismissErrorView {
-    
+    self.errorBtn.hidden = true;
 }
 
 
 - (void)errorViewOnClick {
     
+    [self showEmptyLoadingView];
+    [self dismissErrorView];
+    [self showLoadingView];
 }
 
 
@@ -161,6 +179,7 @@
 
 - (void)showEmptyLoadingView {
     
+//    self.emptyView.hidden = false;
 }
 
 - (void)showEmptyLoadingViewWithText:(NSString *)text {
@@ -168,16 +187,18 @@
 }
 
 - (void)dismissEmptyLoadingView {
-    
+//    self.emptyView.hidden = true;
 }
 
-- (void)showToast:(NSString *)message AndImage:(UIImage *)image {
+- (void)showHUD:(NSString *)message AndImage:(UIImage *)image {
     
+    [SVProgressHUD showImage:image status:message];
 }
 
 
-- (void)showNetErrorToast {
-    
+- (void)showNetErrorHUD {
+    [SVProgressHUD showErrorWithStatus:@"网络异常"];
+
 }
 
 #pragma mark - network 
@@ -190,6 +211,33 @@
     
 }
 
+#pragma mark - lazy loading 
+
+- (ErrorButton *)errorBtn {
+    
+    if(!_errorBtn){
+        
+        _errorBtn = [[ErrorButton alloc] init];
+        _errorBtn.frame = self.view.bounds;
+        [self.view addSubview:_errorBtn];
+        [_errorBtn addTarget:self action:@selector(errorViewOnClick) forControlEvents:UIControlEventTouchUpInside];
+//        _errorBtn.imageView.contentMode = UIViewContentModeCenter;
+        
+    }
+    [self.view bringSubviewToFront:_errorBtn];
+    return _errorBtn;
+}
+
+//- (EmptyView *)emptyView {
+//    
+//    if (!_emptyView) {
+//        _emptyView = [[EmptyView alloc] init];
+//        _emptyView.frame = self.view.bounds;
+//        [self.view addSubview:_emptyView];
+//    }
+//    [self.view bringSubviewToFront:_emptyView];
+//    return _emptyView;
+//}
 
 
 @end

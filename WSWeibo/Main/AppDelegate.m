@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SVProgressHUD.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,8 @@
     
     [[UINavigationBar appearance] setBarStyle:UIBarStyleDefault];
     [[UINavigationBar appearance] setTintColor:[UIColor baseNavTintColor]];
+//    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
 //    [[UINavigationBar appearance] setBarTintColor:[UIColor baseThemeColor]]; //全局导航栏的背景颜色
     return YES;
 }

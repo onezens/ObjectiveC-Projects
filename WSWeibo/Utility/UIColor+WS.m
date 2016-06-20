@@ -27,6 +27,11 @@
     return [UIColor colorFromRGB:0xff8200];
 }
 
++ (instancetype)baseBackGroundColor {
+    
+    return [UIColor colorFromRGB:0xF4F4F4];
+}
+
 + (UIColor *)colorFromRGB:(NSInteger)rgbValue {
     return [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.f
                            green:((float)((rgbValue & 0x00FF00) >> 8)) / 255.f

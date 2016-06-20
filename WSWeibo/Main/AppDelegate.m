@@ -21,7 +21,7 @@
     debugLog();
     
     [[UINavigationBar appearance] setBarStyle:UIBarStyleDefault];
-    [[UINavigationBar appearance] setTintColor:[UIColor navTintColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor baseNavTintColor]];
 //    [[UINavigationBar appearance] setBarTintColor:[UIColor baseThemeColor]]; //全局导航栏的背景颜色
     return YES;
 }

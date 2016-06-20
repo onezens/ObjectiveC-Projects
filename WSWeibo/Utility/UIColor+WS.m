@@ -19,8 +19,12 @@
     return [UIColor colorFromRGB:0xff8200];
 }
 
-+ (instancetype)navTintColor {
++ (instancetype)baseNavTintColor {
     return [UIColor colorFromRGB:0x818181];
+}
+
++ (instancetype)baseNavPressedTintColor {
+    return [UIColor colorFromRGB:0xff8200];
 }
 
 + (UIColor *)colorFromRGB:(NSInteger)rgbValue {

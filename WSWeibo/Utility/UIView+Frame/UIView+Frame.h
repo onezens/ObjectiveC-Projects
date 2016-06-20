@@ -13,9 +13,8 @@
 
 @property (assign, nonatomic) CGFloat y;
 
-@property (assign, nonatomic) CGFloat w;
+@property (assign, nonatomic) CGFloat width;
 
-@property (assign, nonatomic) CGFloat h;
-
+@property (assign, nonatomic) CGFloat height;
 
 @end

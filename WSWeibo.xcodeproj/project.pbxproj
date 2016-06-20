@@ -755,8 +755,8 @@
 		65DEF3AA1D0D6B2F00E975FF /* UIView+Frame */ = {
 			isa = PBXGroup;
 			children = (
-				65DEF3AC1D0D6B2F00E975FF /* UIView+Frame.m */,
 				65DEF3AB1D0D6B2F00E975FF /* UIView+Frame.h */,
+				65DEF3AC1D0D6B2F00E975FF /* UIView+Frame.m */,
 			);
 			path = "UIView+Frame";
 			sourceTree = "<group>";

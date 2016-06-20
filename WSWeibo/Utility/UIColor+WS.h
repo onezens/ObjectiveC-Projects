@@ -11,7 +11,8 @@
 @interface UIColor (WS)
 
 + (instancetype)baseThemeColor;
-+ (instancetype)navTintColor;
++ (instancetype)baseNavTintColor;
++ (instancetype)baseNavPressedTintColor;
 + (instancetype)baseHightLightColor;
 + (UIColor *)colorFromRGB:(NSInteger)rgbValue;
 

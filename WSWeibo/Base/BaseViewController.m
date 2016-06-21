@@ -24,12 +24,9 @@ NSString * const kLoadingTitle = @"正在加载";
 #pragma mark - init layout
 
 - (void)viewDidLoad {
-    debugLog();
     [super viewDidLoad];
     [self setupRootView];
-//    [self showLoadingView];
-//    [self showErrorView];
-    [self showEmptyLoadingView];
+
 }
 
 - (void)setupRootView {

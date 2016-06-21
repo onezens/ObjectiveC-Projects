@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65BE5C1D1D18D6E6002840AA /* BaseLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BE5C1C1D18D6E6002840AA /* BaseLoadViewController.m */; };
+		65BE5C201D18D8C5002840AA /* WSLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BE5C1F1D18D8C5002840AA /* WSLoadingViewController.m */; };
+		65BE5C231D18DB66002840AA /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BE5C221D18DB66002840AA /* BaseTableViewCell.m */; };
 		65DD73A41D17E6290075917E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DD72BC1D17E6290075917E /* LaunchScreen.storyboard */; };
 		65DD73A51D17E6290075917E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DD72BE1D17E6290075917E /* Main.storyboard */; };
 		65DD73A61D17E6290075917E /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65DD72C01D17E6290075917E /* View.xib */; };
@@ -21,7 +24,6 @@
 		65DD73AF1D17E6290075917E /* WSHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD72D71D17E6290075917E /* WSHttpClient.m */; };
 		65DD73B01D17E6290075917E /* WSCoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD72DA1D17E6290075917E /* WSCoreManager.m */; };
 		65DD73B11D17E6290075917E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65DD72DC1D17E6290075917E /* Assets.xcassets */; };
-		65DD73B21D17E6290075917E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65DD72DD1D17E6290075917E /* Info.plist */; };
 		65DD73B31D17E6290075917E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD72E01D17E6290075917E /* AppDelegate.m */; };
 		65DD73B41D17E6290075917E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD72E11D17E6290075917E /* main.m */; };
 		65DD73B51D17E6290075917E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD72E31D17E6290075917E /* TestViewController.m */; };
@@ -39,8 +41,6 @@
 		65DD73C11D17E6290075917E /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD73011D17E6290075917E /* FMDatabasePool.m */; };
 		65DD73C21D17E6290075917E /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD73031D17E6290075917E /* FMDatabaseQueue.m */; };
 		65DD73C31D17E6290075917E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD73061D17E6290075917E /* FMResultSet.m */; };
-		65DD73C41D17E6290075917E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65DD73071D17E6290075917E /* Info.plist */; };
-		65DD73C51D17E6290075917E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65DD73091D17E6290075917E /* Info.plist */; };
 		65DD73C61D17E6290075917E /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD730C1D17E6290075917E /* JSONModel.m */; };
 		65DD73C71D17E6290075917E /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD730E1D17E6290075917E /* JSONModelClassProperty.m */; };
 		65DD73C81D17E6290075917E /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD73101D17E6290075917E /* JSONModelError.m */; };
@@ -110,6 +110,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65BE5C1B1D18D6E6002840AA /* BaseLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLoadViewController.h; sourceTree = "<group>"; };
+		65BE5C1C1D18D6E6002840AA /* BaseLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseLoadViewController.m; sourceTree = "<group>"; };
+		65BE5C1E1D18D8C5002840AA /* WSLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLoadingViewController.h; sourceTree = "<group>"; };
+		65BE5C1F1D18D8C5002840AA /* WSLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLoadingViewController.m; sourceTree = "<group>"; };
+		65BE5C211D18DB66002840AA /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		65BE5C221D18DB66002840AA /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		65DD70061D17E23B0075917E /* WSWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DD72BD1D17E6290075917E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65DD72BF1D17E6290075917E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -387,10 +393,14 @@
 				65DD72CD1D17E6290075917E /* BaseModel.m */,
 				65DD72CE1D17E6290075917E /* BaseService.h */,
 				65DD72CF1D17E6290075917E /* BaseService.m */,
-				65DD72D01D17E6290075917E /* BaseViewController.h */,
-				65DD72D11D17E6290075917E /* BaseViewController.m */,
 				65DD72D21D17E6290075917E /* ResponseModel.h */,
 				65DD72D31D17E6290075917E /* ResponseModel.m */,
+				65BE5C211D18DB66002840AA /* BaseTableViewCell.h */,
+				65BE5C221D18DB66002840AA /* BaseTableViewCell.m */,
+				65DD72D01D17E6290075917E /* BaseViewController.h */,
+				65DD72D11D17E6290075917E /* BaseViewController.m */,
+				65BE5C1B1D18D6E6002840AA /* BaseLoadViewController.h */,
+				65BE5C1C1D18D6E6002840AA /* BaseLoadViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -434,6 +444,8 @@
 				65DD72E41D17E6290075917E /* WSViewController.h */,
 				65DD72E51D17E6290075917E /* WSViewController.m */,
 				65DD72E61D17E6290075917E /* WSWeibo.pch */,
+				65BE5C1E1D18D8C5002840AA /* WSLoadingViewController.h */,
+				65BE5C1F1D18D8C5002840AA /* WSLoadingViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -849,15 +861,12 @@
 				65DD73A91D17E6290075917E /* AutoGenStringsSB.py in Resources */,
 				65DD73AA1D17E6290075917E /* AutoGenStringsXIB.py in Resources */,
 				65DD73E61D17E6290075917E /* MJRefresh.bundle in Resources */,
-				65DD73B21D17E6290075917E /* Info.plist in Resources */,
 				65DD73A41D17E6290075917E /* LaunchScreen.storyboard in Resources */,
 				65DD73A71D17E6290075917E /* Main.strings in Resources */,
 				65DD73A61D17E6290075917E /* View.xib in Resources */,
 				65DD73A51D17E6290075917E /* Main.storyboard in Resources */,
 				65DD73FD1D17E6290075917E /* SVProgressHUD.bundle in Resources */,
 				65DD73B11D17E6290075917E /* Assets.xcassets in Resources */,
-				65DD73C51D17E6290075917E /* Info.plist in Resources */,
-				65DD73C41D17E6290075917E /* Info.plist in Resources */,
 				65DD73A81D17E6290075917E /* View.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -932,6 +941,7 @@
 				65DD73BB1D17E6290075917E /* AFURLResponseSerialization.m in Sources */,
 				65DD73CE1D17E6290075917E /* MASCompositeConstraint.m in Sources */,
 				65DD73E71D17E6290075917E /* MJRefreshConst.m in Sources */,
+				65BE5C1D1D18D6E6002840AA /* BaseLoadViewController.m in Sources */,
 				65DD73C81D17E6290075917E /* JSONModelError.m in Sources */,
 				65DD73C61D17E6290075917E /* JSONModel.m in Sources */,
 				65DD73E81D17E6290075917E /* UIScrollView+MJExtension.m in Sources */,
@@ -953,6 +963,7 @@
 				65DD73DE1D17E6290075917E /* MJRefreshAutoNormalFooter.m in Sources */,
 				65DD73F41D17E6290075917E /* UIButton+WebCache.m in Sources */,
 				65DD73EE1D17E6290075917E /* SDWebImageCompat.m in Sources */,
+				65BE5C231D18DB66002840AA /* BaseTableViewCell.m in Sources */,
 				65DD73AF1D17E6290075917E /* WSHttpClient.m in Sources */,
 				65DD73DA1D17E6290075917E /* MJRefreshComponent.m in Sources */,
 				65DD73BC1D17E6290075917E /* AFURLSessionManager.m in Sources */,
@@ -980,6 +991,7 @@
 				65DD73F61D17E6290075917E /* UIImage+MultiFormat.m in Sources */,
 				65DD73B81D17E6290075917E /* AFNetworkReachabilityManager.m in Sources */,
 				65DD73EF1D17E6290075917E /* SDWebImageDecoder.m in Sources */,
+				65BE5C201D18D8C5002840AA /* WSLoadingViewController.m in Sources */,
 				65DD73C21D17E6290075917E /* FMDatabaseQueue.m in Sources */,
 				65DD73B31D17E6290075917E /* AppDelegate.m in Sources */,
 				65DD73F51D17E6290075917E /* UIImage+GIF.m in Sources */,
@@ -1125,7 +1137,7 @@
 				INFOPLIST_FILE = WSWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.wackosix.WSWeibo;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.wackosix.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1138,7 +1150,7 @@
 				INFOPLIST_FILE = WSWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.wackosix.WSWeibo;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.wackosix.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -44,6 +44,15 @@
                     <view key="view" contentMode="scaleToFill" id="iI6-tB-DdY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBI-27-mus">
+                                <rect key="frame" x="20" y="131" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="opE-F7-4xR" kind="show" id="0iT-Jg-He0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="viewcontoller2" id="YV0-Kp-5UE"/>
@@ -51,6 +60,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pnp-Rd-QrY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1372" y="267"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="imb-Wt-PEu">
+            <objects>
+                <viewController id="opE-F7-4xR" customClass="WSLoadingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LiN-iC-0eX"/>
+                        <viewControllerLayoutGuide type="bottom" id="WPg-kb-vXW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SMY-JQ-Gee">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zHJ-e9-sbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="267"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EzR-T2-cSE">

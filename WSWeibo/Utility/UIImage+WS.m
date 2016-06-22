@@ -31,4 +31,32 @@
     return image;
 }
 
+- (instancetype)compressImageWithMaxWidth:(CGFloat)width {
+    
+    UIImage *compressedImg = nil;
+    CGFloat com_width = width;
+    CGFloat com_height = width;
+    
+    if (self.size.width <= com_width) {
+        if (self.size.height <= com_width) {
+            return self;
+        }else {
+            com_width = self.size.width / self.size.height * com_height;
+        }
+    }else {
+        com_height = self.size.height / self.size.width * com_width;
+    }
+    
+    UIGraphicsBeginImageContext(CGSizeMake(com_width, com_height));
+    
+    [self drawInRect:CGRectMake(0, 0, com_width, com_height)];
+    
+    compressedImg = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return compressedImg;
+    
+}
+
 @end

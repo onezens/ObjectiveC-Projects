@@ -102,7 +102,6 @@
 		65DD74021D17E6290075917E /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD739A1D17E6290075917E /* NSArray+Log.m */; };
 		65DD74031D17E6290075917E /* UIColor+WS.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD739C1D17E6290075917E /* UIColor+WS.m */; };
 		65DD74041D17E6290075917E /* UIImage+WS.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD739E1D17E6290075917E /* UIImage+WS.m */; };
-		65DD74051D17E6290075917E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD73A11D17E6290075917E /* UIView+Frame.m */; };
 		65DD74061D17E6290075917E /* UIView+WS.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD73A31D17E6290075917E /* UIView+WS.m */; };
 		65DD74091D17E6430075917E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DD74081D17E6430075917E /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
@@ -310,8 +309,6 @@
 		65DD739C1D17E6290075917E /* UIColor+WS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WS.m"; sourceTree = "<group>"; };
 		65DD739D1D17E6290075917E /* UIImage+WS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WS.h"; sourceTree = "<group>"; };
 		65DD739E1D17E6290075917E /* UIImage+WS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WS.m"; sourceTree = "<group>"; };
-		65DD73A01D17E6290075917E /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
-		65DD73A11D17E6290075917E /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		65DD73A21D17E6290075917E /* UIView+WS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WS.h"; sourceTree = "<group>"; };
 		65DD73A31D17E6290075917E /* UIView+WS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WS.m"; sourceTree = "<group>"; };
 		65DD74081D17E6430075917E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -460,8 +457,8 @@
 				65DD72D41D17E6290075917E /* Core */,
 				65DD72DB1D17E6290075917E /* Image */,
 				65DD72DE1D17E6290075917E /* Main */,
-				65DD72E71D17E6290075917E /* ThirdLib */,
 				65DD73921D17E6290075917E /* UI */,
+				65DD72E71D17E6290075917E /* ThirdLib */,
 				65DD73931D17E6290075917E /* Utility */,
 				65DD72DD1D17E6290075917E /* Info.plist */,
 			);
@@ -857,7 +854,6 @@
 				65DD739C1D17E6290075917E /* UIColor+WS.m */,
 				65DD739D1D17E6290075917E /* UIImage+WS.h */,
 				65DD739E1D17E6290075917E /* UIImage+WS.m */,
-				65DD739F1D17E6290075917E /* UIView+Frame */,
 				65DD73A21D17E6290075917E /* UIView+WS.h */,
 				65DD73A31D17E6290075917E /* UIView+WS.m */,
 			);
@@ -871,15 +867,6 @@
 				65DD739A1D17E6290075917E /* NSArray+Log.m */,
 			);
 			path = Log;
-			sourceTree = "<group>";
-		};
-		65DD739F1D17E6290075917E /* UIView+Frame */ = {
-			isa = PBXGroup;
-			children = (
-				65DD73A01D17E6290075917E /* UIView+Frame.h */,
-				65DD73A11D17E6290075917E /* UIView+Frame.m */,
-			);
-			path = "UIView+Frame";
 			sourceTree = "<group>";
 		};
 		65DD74071D17E6360075917E /* Frameworks */ = {
@@ -1046,7 +1033,6 @@
 				65DD73B61D17E6290075917E /* WSViewController.m in Sources */,
 				65DD73BA1D17E6290075917E /* AFURLRequestSerialization.m in Sources */,
 				65531B961D1A3D1F00782632 /* BaseTableViewCell.m in Sources */,
-				65DD74051D17E6290075917E /* UIView+Frame.m in Sources */,
 				65DD73B71D17E6290075917E /* AFHTTPSessionManager.m in Sources */,
 				65DD73F31D17E6290075917E /* SDWebImagePrefetcher.m in Sources */,
 				65DD73DE1D17E6290075917E /* MJRefreshAutoNormalFooter.m in Sources */,

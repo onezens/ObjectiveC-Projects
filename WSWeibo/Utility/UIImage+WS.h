@@ -19,4 +19,11 @@
  */
 - (instancetype)renderImageWithColor:(UIColor *)color;
 
+/**
+ *  等比压缩图片
+ *
+ *  @param width 最大的宽或者高
+ */
+- (instancetype)compressImageWithMaxWidth:(CGFloat)width;
+
 @end

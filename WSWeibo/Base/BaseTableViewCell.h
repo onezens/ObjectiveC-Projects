@@ -10,4 +10,6 @@
 
 @interface BaseTableViewCell : UITableViewCell
 
+- (void)setIndexPath:(NSIndexPath *)indexPath count:(NSInteger)count;
+
 @end

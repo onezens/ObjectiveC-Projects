@@ -10,6 +10,13 @@
 
 @interface UIImage (WS)
 
+/**
+ *  给图片添加填充颜色
+ *
+ *  @param color 填充的颜色
+ *
+ *  @return 填充过颜色后的图片
+ */
 - (instancetype)renderImageWithColor:(UIColor *)color;
 
 @end

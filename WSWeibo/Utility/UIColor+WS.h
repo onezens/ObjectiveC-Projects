@@ -15,6 +15,7 @@
 + (instancetype)baseNavPressedTintColor;
 + (instancetype)baseHightLightColor;
 + (instancetype)baseBackGroundColor;
++ (instancetype)baseSeperateLineColor;
 + (UIColor *)colorFromRGB:(NSInteger)rgbValue;
 
 @end

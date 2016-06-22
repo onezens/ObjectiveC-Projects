@@ -73,39 +73,61 @@
  */
 - (void)requestFailedWithRes:(ResponseModel *)res;
 
-
+/**
+ *  显示加载视图
+ */
 - (void)showLoadingView;
 
-
+/**
+ *  自定义加载的文字视图
+ */
 - (void)showLoadingViewWithText:(NSString *)text;
 
-
+/**
+ *  移除加载视图
+ */
 - (void)dismissLoadingView;
 
-
+/**
+ *  显示网络错误的view
+ */
 - (void)showErrorView;
 
-
+/**
+ *  移除网络异常的view
+ */
 - (void)dismissErrorView;
 
-
+/**
+ *  网络异常view，点击后触发的事件
+ */
 - (void)errorViewOnClick;
 
-
+/**
+ *  自定义显示HUD的提示文字和图片
+ */
 - (void)showHUD:(NSString *)message AndImage:(UIImage *)image;
 
-
+/**
+ *  显示网络异常的HUD
+ */
 - (void)showNetErrorHUD;
 
 
 - (void)showOtherAlertView;
 
-
+/**
+ *  显示加载空视图
+ */
 - (void)showEmptyLoadingView;
-
+/**
+ *  自定义显示加载空视图的文字
+ */
 - (void)showEmptyLoadingViewWithText:(NSString *)text;
 
-
+/**
+ *  移除空视图
+ */
 - (void)dismissEmptyLoadingView;
 
 

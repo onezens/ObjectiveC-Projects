@@ -29,11 +29,13 @@
 #pragma mark - event
 
 - (void)refreshData {
-    
+    [self.tableView.mj_header endRefreshing];
+    [self.tableView reloadData];
 }
 
 - (void)loadMoreData {
-    
+    [self.tableView.mj_footer endRefreshing];
+    [self.tableView reloadData];
 }
 
 #pragma mark - lazy loading
@@ -45,7 +47,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.backgroundColor = [UIColor baseBackGroundColor];
-//        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.frame = self.view.bounds;
         [self.view addSubview:_tableView];
         self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];

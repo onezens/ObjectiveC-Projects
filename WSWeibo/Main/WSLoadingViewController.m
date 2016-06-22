@@ -22,7 +22,6 @@ static NSString * const cellId = @"WSLoadingViewControllerCell";
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    self.count = 20;
 }
 
 #pragma mark - refresh
@@ -37,7 +36,7 @@ static NSString * const cellId = @"WSLoadingViewControllerCell";
 - (void)refreshData {
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.count = 20;
+        self.count = 5;
         [self.tableView reloadData];
         [self.tableView.mj_header endRefreshing];
         
@@ -52,12 +51,11 @@ static NSString * const cellId = @"WSLoadingViewControllerCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    
+    BaseTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        cell = [[BaseTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
-    
+    [cell setIndexPath:indexPath count:self.count];
     cell.textLabel.text = [NSString stringWithFormat:@"%zd",indexPath.row];
     return cell;
 }

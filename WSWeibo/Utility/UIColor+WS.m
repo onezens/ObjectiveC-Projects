@@ -14,7 +14,7 @@
     return [UIColor colorFromRGB:0xff8200];
 }
 
-+( instancetype)baseHightLightColor {
++ (instancetype)baseHightLightColor {
     
     return [UIColor colorFromRGB:0xff8200];
 }
@@ -30,6 +30,11 @@
 + (instancetype)baseBackGroundColor {
     
     return [UIColor colorFromRGB:0xF4F4F4];
+}
+
++ (instancetype)baseSeperateLineColor {
+    
+    return [UIColor colorFromRGB:0xe8e8e8];
 }
 
 + (UIColor *)colorFromRGB:(NSInteger)rgbValue {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		654A28861D1A7C480076BF9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A28881D1A7C480076BF9D /* Main.storyboard */; };
+		654A28911D1A7E3C0076BF9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 654A28931D1A7E3C0076BF9D /* InfoPlist.strings */; };
+		654A289F1D1A7EA40076BF9D /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 654A28A11D1A7EA40076BF9D /* Localization.strings */; };
 		65531B911D1A3D1F00782632 /* BaseLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531B7F1D1A3D1F00782632 /* BaseLoadViewController.m */; };
 		65531B931D1A3D1F00782632 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531B831D1A3D1F00782632 /* BaseViewController.m */; };
 		65531B941D1A3D1F00782632 /* ResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531B861D1A3D1F00782632 /* ResponseModel.m */; };
@@ -15,9 +18,17 @@
 		65531B971D1A3D1F00782632 /* EmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531B8E1D1A3D1F00782632 /* EmptyView.m */; };
 		65531B981D1A3D1F00782632 /* ErrorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531B901D1A3D1F00782632 /* ErrorButton.m */; };
 		65531B9B1D1A3D3500782632 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531B9A1D1A3D3500782632 /* BaseModel.m */; };
+		65531B9E1D1A75A200782632 /* WSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531B9D1D1A75A200782632 /* WSTabBar.m */; };
+		65531BA11D1A75BD00782632 /* WSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BA01D1A75BD00782632 /* WSTabBarController.m */; };
+		65531BA41D1A762400782632 /* WSHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BA31D1A762400782632 /* WSHomeController.m */; };
+		65531BA71D1A764900782632 /* WSMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BA61D1A764900782632 /* WSMeController.m */; };
+		65531BAA1D1A765600782632 /* WSMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BA91D1A765600782632 /* WSMessageController.m */; };
+		65531BAD1D1A766900782632 /* WSDiscoveryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BAC1D1A766900782632 /* WSDiscoveryController.m */; };
+		65531BB01D1A767A00782632 /* WSComposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BAF1D1A767A00782632 /* WSComposeController.m */; };
+		658739431D1A896800C3E820 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 658739421D1A896800C3E820 /* Info.plist */; };
 		65BE5C201D18D8C5002840AA /* WSLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BE5C1F1D18D8C5002840AA /* WSLoadingViewController.m */; };
 		65DD73A41D17E6290075917E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DD72BC1D17E6290075917E /* LaunchScreen.storyboard */; };
-		65DD73A51D17E6290075917E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DD72BE1D17E6290075917E /* Main.storyboard */; };
+		65DD73A51D17E6290075917E /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DD72BE1D17E6290075917E /* Test.storyboard */; };
 		65DD73A61D17E6290075917E /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65DD72C01D17E6290075917E /* View.xib */; };
 		65DD73A91D17E6290075917E /* AutoGenStringsSB.py in Resources */ = {isa = PBXBuildFile; fileRef = 65DD72C71D17E6290075917E /* AutoGenStringsSB.py */; };
 		65DD73AA1D17E6290075917E /* AutoGenStringsXIB.py in Resources */ = {isa = PBXBuildFile; fileRef = 65DD72C81D17E6290075917E /* AutoGenStringsXIB.py */; };
@@ -107,8 +118,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		65531B701D1A3C3700782632 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		65531B721D1A3C3800782632 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		654A28871D1A7C480076BF9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		654A288A1D1A7C4A0076BF9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		654A288C1D1A7C4A0076BF9D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		654A28951D1A7E400076BF9D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		654A28A31D1A7EA50076BF9D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localization.strings"; sourceTree = "<group>"; };
+		654A28A41D1A88EF0076BF9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		65531B701D1A3C3700782632 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Test.strings; sourceTree = "<group>"; };
+		65531B721D1A3C3800782632 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Test.strings"; sourceTree = "<group>"; };
 		65531B741D1A3C4500782632 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/View.strings; sourceTree = "<group>"; };
 		65531B761D1A3C4500782632 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/View.strings"; sourceTree = "<group>"; };
 		65531B7E1D1A3D1F00782632 /* BaseLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLoadViewController.h; sourceTree = "<group>"; };
@@ -127,11 +144,28 @@
 		65531B901D1A3D1F00782632 /* ErrorButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorButton.m; sourceTree = "<group>"; };
 		65531B991D1A3D3500782632 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		65531B9A1D1A3D3500782632 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		65531B9C1D1A75A200782632 /* WSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTabBar.h; sourceTree = "<group>"; };
+		65531B9D1D1A75A200782632 /* WSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTabBar.m; sourceTree = "<group>"; };
+		65531B9F1D1A75BD00782632 /* WSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTabBarController.h; sourceTree = "<group>"; };
+		65531BA01D1A75BD00782632 /* WSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTabBarController.m; sourceTree = "<group>"; };
+		65531BA21D1A762400782632 /* WSHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSHomeController.h; sourceTree = "<group>"; };
+		65531BA31D1A762400782632 /* WSHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSHomeController.m; sourceTree = "<group>"; };
+		65531BA51D1A764900782632 /* WSMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMeController.h; sourceTree = "<group>"; };
+		65531BA61D1A764900782632 /* WSMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSMeController.m; sourceTree = "<group>"; };
+		65531BA81D1A765600782632 /* WSMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMessageController.h; sourceTree = "<group>"; };
+		65531BA91D1A765600782632 /* WSMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSMessageController.m; sourceTree = "<group>"; };
+		65531BAB1D1A766900782632 /* WSDiscoveryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSDiscoveryController.h; sourceTree = "<group>"; };
+		65531BAC1D1A766900782632 /* WSDiscoveryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDiscoveryController.m; sourceTree = "<group>"; };
+		65531BAE1D1A767A00782632 /* WSComposeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSComposeController.h; sourceTree = "<group>"; };
+		65531BAF1D1A767A00782632 /* WSComposeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSComposeController.m; sourceTree = "<group>"; };
+		658739421D1A896800C3E820 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		658739441D1A898700C3E820 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		658739451D1A899000C3E820 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
 		65BE5C1E1D18D8C5002840AA /* WSLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLoadingViewController.h; sourceTree = "<group>"; };
 		65BE5C1F1D18D8C5002840AA /* WSLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLoadingViewController.m; sourceTree = "<group>"; };
 		65DD70061D17E23B0075917E /* WSWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DD72BD1D17E6290075917E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		65DD72BF1D17E6290075917E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		65DD72BF1D17E6290075917E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Test.storyboard; sourceTree = "<group>"; };
 		65DD72C11D17E6290075917E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/View.xib; sourceTree = "<group>"; };
 		65DD72C71D17E6290075917E /* AutoGenStringsSB.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = AutoGenStringsSB.py; sourceTree = "<group>"; };
 		65DD72C81D17E6290075917E /* AutoGenStringsXIB.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = AutoGenStringsXIB.py; sourceTree = "<group>"; };
@@ -141,7 +175,6 @@
 		65DD72D91D17E6290075917E /* WSCoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSCoreManager.h; sourceTree = "<group>"; };
 		65DD72DA1D17E6290075917E /* WSCoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSCoreManager.m; sourceTree = "<group>"; };
 		65DD72DC1D17E6290075917E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		65DD72DD1D17E6290075917E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65DD72DF1D17E6290075917E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65DD72E01D17E6290075917E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		65DD72E11D17E6290075917E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -342,6 +375,8 @@
 		65531B681D1A3B2D00782632 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				65531BAB1D1A766900782632 /* WSDiscoveryController.h */,
+				65531BAC1D1A766900782632 /* WSDiscoveryController.m */,
 			);
 			path = Discovery;
 			sourceTree = "<group>";
@@ -349,6 +384,8 @@
 		65531B691D1A3B2D00782632 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				65531BA21D1A762400782632 /* WSHomeController.h */,
+				65531BA31D1A762400782632 /* WSHomeController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -356,6 +393,8 @@
 		65531B6A1D1A3B2D00782632 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				65531BA51D1A764900782632 /* WSMeController.h */,
+				65531BA61D1A764900782632 /* WSMeController.m */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -363,6 +402,8 @@
 		65531B6B1D1A3B2D00782632 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				65531BA81D1A765600782632 /* WSMessageController.h */,
+				65531BA91D1A765600782632 /* WSMessageController.m */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -370,6 +411,10 @@
 		65531B6C1D1A3B2D00782632 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				65531B9C1D1A75A200782632 /* WSTabBar.h */,
+				65531B9D1D1A75A200782632 /* WSTabBar.m */,
+				65531B9F1D1A75BD00782632 /* WSTabBarController.h */,
+				65531BA01D1A75BD00782632 /* WSTabBarController.m */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -377,6 +422,8 @@
 		65531B6D1D1A3BD700782632 /* Compose */ = {
 			isa = PBXGroup;
 			children = (
+				65531BAE1D1A767A00782632 /* WSComposeController.h */,
+				65531BAF1D1A767A00782632 /* WSComposeController.m */,
 			);
 			path = Compose;
 			sourceTree = "<group>";
@@ -460,7 +507,7 @@
 				65DD73921D17E6290075917E /* UI */,
 				65DD72E71D17E6290075917E /* ThirdLib */,
 				65DD73931D17E6290075917E /* Utility */,
-				65DD72DD1D17E6290075917E /* Info.plist */,
+				654A28A51D1A88EF0076BF9D /* Info.plist */,
 			);
 			path = WSWeibo;
 			sourceTree = "<group>";
@@ -470,7 +517,8 @@
 			children = (
 				65DD72C61D17E6290075917E /* RunScript */,
 				65DD72BC1D17E6290075917E /* LaunchScreen.storyboard */,
-				65DD72BE1D17E6290075917E /* Main.storyboard */,
+				654A28881D1A7C480076BF9D /* Main.storyboard */,
+				65DD72BE1D17E6290075917E /* Test.storyboard */,
 				65DD72C01D17E6290075917E /* View.xib */,
 			);
 			path = AutoLocalization;
@@ -532,6 +580,8 @@
 				65DD72E01D17E6290075917E /* AppDelegate.m */,
 				65DD72E11D17E6290075917E /* main.m */,
 				65DD72E61D17E6290075917E /* WSWeibo.pch */,
+				654A28931D1A7E3C0076BF9D /* InfoPlist.strings */,
+				654A28A11D1A7EA40076BF9D /* Localization.strings */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -849,6 +899,7 @@
 		65DD73931D17E6290075917E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				658739421D1A896800C3E820 /* Info.plist */,
 				65DD73981D17E6290075917E /* Log */,
 				65DD739B1D17E6290075917E /* UIColor+WS.h */,
 				65DD739C1D17E6290075917E /* UIColor+WS.m */,
@@ -942,9 +993,13 @@
 				65DD73E61D17E6290075917E /* MJRefresh.bundle in Resources */,
 				65DD73A41D17E6290075917E /* LaunchScreen.storyboard in Resources */,
 				65DD73A61D17E6290075917E /* View.xib in Resources */,
-				65DD73A51D17E6290075917E /* Main.storyboard in Resources */,
+				65DD73A51D17E6290075917E /* Test.storyboard in Resources */,
+				654A289F1D1A7EA40076BF9D /* Localization.strings in Resources */,
+				654A28861D1A7C480076BF9D /* Main.storyboard in Resources */,
+				658739431D1A896800C3E820 /* Info.plist in Resources */,
 				65DD73FD1D17E6290075917E /* SVProgressHUD.bundle in Resources */,
 				65DD73B11D17E6290075917E /* Assets.xcassets in Resources */,
+				654A28911D1A7E3C0076BF9D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -999,9 +1054,11 @@
 				65DD73E11D17E6290075917E /* MJRefreshBackNormalFooter.m in Sources */,
 				65DD73F91D17E6290075917E /* UIImageView+WebCache.m in Sources */,
 				65DD73D21D17E6290075917E /* MASViewAttribute.m in Sources */,
+				65531BAA1D1A765600782632 /* WSMessageController.m in Sources */,
 				65DD73CF1D17E6290075917E /* MASConstraint.m in Sources */,
 				65DD73D31D17E6290075917E /* MASViewConstraint.m in Sources */,
 				65DD73D01D17E6290075917E /* MASConstraintMaker.m in Sources */,
+				65531BA41D1A762400782632 /* WSHomeController.m in Sources */,
 				65531B9B1D1A3D3500782632 /* BaseModel.m in Sources */,
 				65DD73DC1D17E6290075917E /* MJRefreshHeader.m in Sources */,
 				65DD73F71D17E6290075917E /* UIImage+WebP.m in Sources */,
@@ -1010,6 +1067,8 @@
 				65DD73FC1D17E6290075917E /* SVProgressAnimatedView.m in Sources */,
 				65DD73BD1D17E6290075917E /* DeviceID.m in Sources */,
 				65531B951D1A3D1F00782632 /* BaseService.m in Sources */,
+				65531BB01D1A767A00782632 /* WSComposeController.m in Sources */,
+				65531B9E1D1A75A200782632 /* WSTabBar.m in Sources */,
 				65DD73DB1D17E6290075917E /* MJRefreshFooter.m in Sources */,
 				65DD73C71D17E6290075917E /* JSONModelClassProperty.m in Sources */,
 				65DD73BE1D17E6290075917E /* SSKeychain.m in Sources */,
@@ -1028,6 +1087,7 @@
 				65DD73D41D17E6290075917E /* NSArray+MASAdditions.m in Sources */,
 				65DD74021D17E6290075917E /* NSArray+Log.m in Sources */,
 				65531B911D1A3D1F00782632 /* BaseLoadViewController.m in Sources */,
+				65531BA11D1A75BD00782632 /* WSTabBarController.m in Sources */,
 				65DD73D81D17E6290075917E /* MJRefreshAutoFooter.m in Sources */,
 				65DD73E21D17E6290075917E /* MJRefreshBackStateFooter.m in Sources */,
 				65DD73B61D17E6290075917E /* WSViewController.m in Sources */,
@@ -1048,6 +1108,7 @@
 				65DD73D61D17E6290075917E /* View+MASAdditions.m in Sources */,
 				65DD73B51D17E6290075917E /* TestViewController.m in Sources */,
 				65531B931D1A3D1F00782632 /* BaseViewController.m in Sources */,
+				65531BA71D1A764900782632 /* WSMeController.m in Sources */,
 				65DD73FF1D17E6290075917E /* SVRadialGradientLayer.m in Sources */,
 				65DD73E31D17E6290075917E /* MJRefreshGifHeader.m in Sources */,
 				65DD73B91D17E6290075917E /* AFSecurityPolicy.m in Sources */,
@@ -1071,6 +1132,7 @@
 				65DD73C21D17E6290075917E /* FMDatabaseQueue.m in Sources */,
 				65DD73B31D17E6290075917E /* AppDelegate.m in Sources */,
 				65DD73F51D17E6290075917E /* UIImage+GIF.m in Sources */,
+				65531BAD1D1A766900782632 /* WSDiscoveryController.m in Sources */,
 				65DD73C01D17E6290075917E /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1078,6 +1140,42 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		654A28881D1A7C480076BF9D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				654A28871D1A7C480076BF9D /* Base */,
+				654A288A1D1A7C4A0076BF9D /* en */,
+				654A288C1D1A7C4A0076BF9D /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		654A28931D1A7E3C0076BF9D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				654A28951D1A7E400076BF9D /* zh-Hans */,
+				658739441D1A898700C3E820 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		654A28A11D1A7EA40076BF9D /* Localization.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				654A28A31D1A7EA50076BF9D /* zh-Hans */,
+				658739451D1A899000C3E820 /* en */,
+			);
+			name = Localization.strings;
+			sourceTree = "<group>";
+		};
+		654A28A51D1A88EF0076BF9D /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				654A28A41D1A88EF0076BF9D /* Base */,
+			);
+			name = Info.plist;
+			sourceTree = "<group>";
+		};
 		65DD72BC1D17E6290075917E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1086,14 +1184,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		65DD72BE1D17E6290075917E /* Main.storyboard */ = {
+		65DD72BE1D17E6290075917E /* Test.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				65DD72BF1D17E6290075917E /* Base */,
 				65531B701D1A3C3700782632 /* en */,
 				65531B721D1A3C3800782632 /* zh-Hans */,
 			);
-			name = Main.storyboard;
+			name = Test.storyboard;
 			sourceTree = "<group>";
 		};
 		65DD72C01D17E6290075917E /* View.xib */ = {

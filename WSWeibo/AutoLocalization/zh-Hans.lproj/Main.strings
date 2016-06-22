@@ -1,12 +1,12 @@
 
-/* Class = "UINavigationItem"; title = "viewcontoller1"; ObjectID = "Rz1-ZX-KaO"; */
-"Rz1-ZX-KaO.title" = "viewcontoller1";
+/* Class = "UITabBarItem"; title = "消息"; ObjectID = "CTE-gy-Iha"; */
+"CTE-gy-Iha.title" = "消息";
 
-/* Class = "UINavigationItem"; title = "viewcontoller2"; ObjectID = "YV0-Kp-5UE"; */
-"YV0-Kp-5UE.title" = "viewcontoller2";
+/* Class = "UITabBarItem"; title = "我"; ObjectID = "QWV-Vb-I8N"; */
+"QWV-Vb-I8N.title" = "我";
 
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Zv3-hH-HMg"; */
-"Zv3-hH-HMg.normalTitle" = "Button";
+/* Class = "UITabBarItem"; title = "发现"; ObjectID = "Wb4-aN-soB"; */
+"Wb4-aN-soB.title" = "发现";
 
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kBI-27-mus"; */
-"kBI-27-mus.normalTitle" = "Button";
+/* Class = "UITabBarItem"; title = "首页"; ObjectID = "xnS-5a-6vu"; */
+"xnS-5a-6vu.title" = "首页";

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SVProgressHUD.h"
+#import "WSTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -25,7 +26,13 @@
     [[UINavigationBar appearance] setTintColor:[UIColor baseNavTintColor]];
 //    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    [[UITabBar appearance] setTintColor:[UIColor baseThemeColor]];
 //    [[UINavigationBar appearance] setBarTintColor:[UIColor baseThemeColor]]; //全局导航栏的背景颜色
+    
+//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    self.window.rootViewController = [[WSTabBarController alloc] init];
+//    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

@@ -1,18 +1,12 @@
 
-
-//##################################################################################
-//#           AutoStrings            2016-06-12 18:34:28
-//##################################################################################
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Zv3-hH-HMg"; */
-"Zv3-hH-HMg.normalTitle" = "Button";
-
-//##################################################################################
-//#           AutoStrings            2016-06-20 12:00:25
-//##################################################################################
-
 /* Class = "UINavigationItem"; title = "viewcontoller1"; ObjectID = "Rz1-ZX-KaO"; */
 "Rz1-ZX-KaO.title" = "viewcontoller1";
 
 /* Class = "UINavigationItem"; title = "viewcontoller2"; ObjectID = "YV0-Kp-5UE"; */
 "YV0-Kp-5UE.title" = "viewcontoller2";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Zv3-hH-HMg"; */
+"Zv3-hH-HMg.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kBI-27-mus"; */
+"kBI-27-mus.normalTitle" = "Button";

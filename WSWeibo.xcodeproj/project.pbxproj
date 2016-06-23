@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650ED0F81D1BB24D0057108E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 650ED0FA1D1BB24D0057108E /* InfoPlist.strings */; };
 		654A28861D1A7C480076BF9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A28881D1A7C480076BF9D /* Main.storyboard */; };
-		654A28911D1A7E3C0076BF9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 654A28931D1A7E3C0076BF9D /* InfoPlist.strings */; };
-		654A289F1D1A7EA40076BF9D /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 654A28A11D1A7EA40076BF9D /* Localization.strings */; };
 		65531B911D1A3D1F00782632 /* BaseLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531B7F1D1A3D1F00782632 /* BaseLoadViewController.m */; };
 		65531B931D1A3D1F00782632 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531B831D1A3D1F00782632 /* BaseViewController.m */; };
 		65531B941D1A3D1F00782632 /* ResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531B861D1A3D1F00782632 /* ResponseModel.m */; };
@@ -25,7 +24,7 @@
 		65531BAA1D1A765600782632 /* WSMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BA91D1A765600782632 /* WSMessageController.m */; };
 		65531BAD1D1A766900782632 /* WSDiscoveryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BAC1D1A766900782632 /* WSDiscoveryController.m */; };
 		65531BB01D1A767A00782632 /* WSComposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BAF1D1A767A00782632 /* WSComposeController.m */; };
-		658739431D1A896800C3E820 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 658739421D1A896800C3E820 /* Info.plist */; };
+		658739591D1A8DCB00C3E820 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6587395B1D1A8DCB00C3E820 /* Localizable.strings */; };
 		65BE5C201D18D8C5002840AA /* WSLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BE5C1F1D18D8C5002840AA /* WSLoadingViewController.m */; };
 		65DD73A41D17E6290075917E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DD72BC1D17E6290075917E /* LaunchScreen.storyboard */; };
 		65DD73A51D17E6290075917E /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DD72BE1D17E6290075917E /* Test.storyboard */; };
@@ -118,16 +117,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		650ED0F41D1BB16D0057108E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		650ED0FB1D1BB2500057108E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		650ED0FC1D1BB2530057108E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		650ED0FD1D1BB2640057108E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		654A28871D1A7C480076BF9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		654A288A1D1A7C4A0076BF9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		654A288C1D1A7C4A0076BF9D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		654A28951D1A7E400076BF9D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		654A28A31D1A7EA50076BF9D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localization.strings"; sourceTree = "<group>"; };
-		654A28A41D1A88EF0076BF9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
 		65531B701D1A3C3700782632 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Test.strings; sourceTree = "<group>"; };
-		65531B721D1A3C3800782632 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Test.strings"; sourceTree = "<group>"; };
 		65531B741D1A3C4500782632 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/View.strings; sourceTree = "<group>"; };
-		65531B761D1A3C4500782632 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/View.strings"; sourceTree = "<group>"; };
 		65531B7E1D1A3D1F00782632 /* BaseLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLoadViewController.h; sourceTree = "<group>"; };
 		65531B7F1D1A3D1F00782632 /* BaseLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseLoadViewController.m; sourceTree = "<group>"; };
 		65531B821D1A3D1F00782632 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -158,9 +155,11 @@
 		65531BAC1D1A766900782632 /* WSDiscoveryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDiscoveryController.m; sourceTree = "<group>"; };
 		65531BAE1D1A767A00782632 /* WSComposeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSComposeController.h; sourceTree = "<group>"; };
 		65531BAF1D1A767A00782632 /* WSComposeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSComposeController.m; sourceTree = "<group>"; };
-		658739421D1A896800C3E820 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		658739441D1A898700C3E820 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		658739451D1A899000C3E820 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
+		65873A821D1BB03200C3E820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		65873A831D1BB03300C3E820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		65873A841D1BB03300C3E820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Test.strings"; sourceTree = "<group>"; };
+		65873A851D1BB03300C3E820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/View.strings"; sourceTree = "<group>"; };
+		65873A861D1BB04400C3E820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		65BE5C1E1D18D8C5002840AA /* WSLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLoadingViewController.h; sourceTree = "<group>"; };
 		65BE5C1F1D18D8C5002840AA /* WSLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLoadingViewController.m; sourceTree = "<group>"; };
 		65DD70061D17E23B0075917E /* WSWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -507,7 +506,7 @@
 				65DD73921D17E6290075917E /* UI */,
 				65DD72E71D17E6290075917E /* ThirdLib */,
 				65DD73931D17E6290075917E /* Utility */,
-				654A28A51D1A88EF0076BF9D /* Info.plist */,
+				650ED0F41D1BB16D0057108E /* Info.plist */,
 			);
 			path = WSWeibo;
 			sourceTree = "<group>";
@@ -580,8 +579,8 @@
 				65DD72E01D17E6290075917E /* AppDelegate.m */,
 				65DD72E11D17E6290075917E /* main.m */,
 				65DD72E61D17E6290075917E /* WSWeibo.pch */,
-				654A28931D1A7E3C0076BF9D /* InfoPlist.strings */,
-				654A28A11D1A7EA40076BF9D /* Localization.strings */,
+				6587395B1D1A8DCB00C3E820 /* Localizable.strings */,
+				650ED0FA1D1BB24D0057108E /* InfoPlist.strings */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -899,7 +898,6 @@
 		65DD73931D17E6290075917E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				658739421D1A896800C3E820 /* Info.plist */,
 				65DD73981D17E6290075917E /* Log */,
 				65DD739B1D17E6290075917E /* UIColor+WS.h */,
 				65DD739C1D17E6290075917E /* UIColor+WS.m */,
@@ -989,17 +987,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				65DD73A91D17E6290075917E /* AutoGenStringsSB.py in Resources */,
+				658739591D1A8DCB00C3E820 /* Localizable.strings in Resources */,
 				65DD73AA1D17E6290075917E /* AutoGenStringsXIB.py in Resources */,
 				65DD73E61D17E6290075917E /* MJRefresh.bundle in Resources */,
 				65DD73A41D17E6290075917E /* LaunchScreen.storyboard in Resources */,
 				65DD73A61D17E6290075917E /* View.xib in Resources */,
 				65DD73A51D17E6290075917E /* Test.storyboard in Resources */,
-				654A289F1D1A7EA40076BF9D /* Localization.strings in Resources */,
 				654A28861D1A7C480076BF9D /* Main.storyboard in Resources */,
-				658739431D1A896800C3E820 /* Info.plist in Resources */,
 				65DD73FD1D17E6290075917E /* SVProgressHUD.bundle in Resources */,
+				650ED0F81D1BB24D0057108E /* InfoPlist.strings in Resources */,
 				65DD73B11D17E6290075917E /* Assets.xcassets in Resources */,
-				654A28911D1A7E3C0076BF9D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1140,46 +1137,39 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		650ED0FA1D1BB24D0057108E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				650ED0FB1D1BB2500057108E /* en */,
+				650ED0FC1D1BB2530057108E /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		654A28881D1A7C480076BF9D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				654A28871D1A7C480076BF9D /* Base */,
 				654A288A1D1A7C4A0076BF9D /* en */,
-				654A288C1D1A7C4A0076BF9D /* zh-Hans */,
+				65873A831D1BB03300C3E820 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		654A28931D1A7E3C0076BF9D /* InfoPlist.strings */ = {
+		6587395B1D1A8DCB00C3E820 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				654A28951D1A7E400076BF9D /* zh-Hans */,
-				658739441D1A898700C3E820 /* en */,
+				65873A861D1BB04400C3E820 /* zh-Hans */,
+				650ED0FD1D1BB2640057108E /* en */,
 			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		654A28A11D1A7EA40076BF9D /* Localization.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				654A28A31D1A7EA50076BF9D /* zh-Hans */,
-				658739451D1A899000C3E820 /* en */,
-			);
-			name = Localization.strings;
-			sourceTree = "<group>";
-		};
-		654A28A51D1A88EF0076BF9D /* Info.plist */ = {
-			isa = PBXVariantGroup;
-			children = (
-				654A28A41D1A88EF0076BF9D /* Base */,
-			);
-			name = Info.plist;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		65DD72BC1D17E6290075917E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				65DD72BD1D17E6290075917E /* Base */,
+				65873A821D1BB03200C3E820 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1189,7 +1179,7 @@
 			children = (
 				65DD72BF1D17E6290075917E /* Base */,
 				65531B701D1A3C3700782632 /* en */,
-				65531B721D1A3C3800782632 /* zh-Hans */,
+				65873A841D1BB03300C3E820 /* zh-Hans */,
 			);
 			name = Test.storyboard;
 			sourceTree = "<group>";
@@ -1199,7 +1189,7 @@
 			children = (
 				65DD72C11D17E6290075917E /* Base */,
 				65531B741D1A3C4500782632 /* en */,
-				65531B761D1A3C4500782632 /* zh-Hans */,
+				65873A851D1BB03300C3E820 /* zh-Hans */,
 			);
 			name = View.xib;
 			sourceTree = "<group>";
@@ -1293,12 +1283,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = WSWeibo/Main/WSWeibo.pch;
 				INFOPLIST_FILE = WSWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.wackosix.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4a000bf0-ec7f-4740-8a40-7e20d9de36fc";
 			};
 			name = Debug;
 		};
@@ -1306,12 +1298,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = WSWeibo/Main/WSWeibo.pch;
 				INFOPLIST_FILE = WSWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.wackosix.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4a000bf0-ec7f-4740-8a40-7e20d9de36fc";
 			};
 			name = Release;
 		};

@@ -16,6 +16,7 @@ static NSString * const title = @"发现";
     
     [super viewDidLoad];
     self.title = NSLocalizedString(title, nil);
+    debugLog();
 }
 
 @end

@@ -42,6 +42,7 @@ NSString * const kLoadingTitle = @"正在加载";
 - (void)setTitle:(NSString *)title {
     [super setTitle:title];
     self.titleLbl.text = title;
+    [self.titleLbl sizeToFit];
 }
 
 - (void)setupRootView {
@@ -259,9 +260,8 @@ NSString * const kLoadingTitle = @"正在加载";
     
     if (!_titleLbl) {
         _titleLbl = [[UILabel alloc] init];
-        _titleLbl.font = [UIFont systemFontOfSize:20];
-        _titleLbl.backgroundColor = [UIColor baseNavTintColor];
-        [_titleLbl sizeToFit];
+        _titleLbl.font = [UIFont boldSystemFontOfSize:17];
+        _titleLbl.textColor = [UIColor baseTitleColor];
         self.navigationItem.titleView = _titleLbl;
     }
     return _titleLbl;

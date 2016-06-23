@@ -16,6 +16,7 @@ static NSString * const title = @"消息";
     
     [super viewDidLoad];
     self.title = NSLocalizedString(title, nil);
+    debugLog();
 }
 
 @end

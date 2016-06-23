@@ -16,6 +16,9 @@
 + (instancetype)baseHightLightColor;
 + (instancetype)baseBackGroundColor;
 + (instancetype)baseSeperateLineColor;
++ (instancetype)baseTitleColor;
++ (instancetype)baseTextColor;
++ (instancetype)baseTextGrayColor;
 + (UIColor *)colorFromRGB:(NSInteger)rgbValue;
 
 @end

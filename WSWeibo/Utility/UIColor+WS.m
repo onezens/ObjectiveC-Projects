@@ -23,8 +23,23 @@
     return [UIColor colorFromRGB:0x818181];
 }
 
++ (instancetype)baseTitleColor {
+    
+    return [UIColor colorFromRGB:0x525252];
+}
+
++ (instancetype)baseTextColor {
+    
+    return [UIColor colorFromRGB:0x333333];
+}
+
 + (instancetype)baseNavPressedTintColor {
     return [UIColor colorFromRGB:0xff8200];
+}
+
++ (instancetype)baseTextGrayColor {
+    
+    return [UIColor colorFromRGB:0x939393];
 }
 
 + (instancetype)baseBackGroundColor {

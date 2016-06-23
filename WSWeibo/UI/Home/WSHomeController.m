@@ -14,6 +14,7 @@
     
     [super viewDidLoad];
     self.title = NSLocalizedString(title, nil);
+    debugLog();
 }
 
 @end

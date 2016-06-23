@@ -38,6 +38,7 @@
 #import "MJRefresh.h"
 #import "BaseTableViewCell.h"
 #import "UIView+WS.h"
+#import "UIFont+WS.h"
 
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS

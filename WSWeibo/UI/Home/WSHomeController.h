@@ -8,8 +8,6 @@
 
 #import "BaseViewController.h"
 
-static NSString * const title = @"首页";
-
 @interface WSHomeController : BaseViewController
 
 @end

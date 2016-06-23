@@ -10,13 +10,29 @@
 
 static NSString * const title = @"发现";
 
+@interface WSDiscoveryController ()
+
+@property (nonatomic, strong) UISearchBar *searchBar;
+
+@end
+
 @implementation WSDiscoveryController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-    self.title = NSLocalizedString(title, nil);
+- (void)setupRootView {
+    [super setupRootView];
+    self.view.backgroundColor = [UIColor baseBackGroundColor];
+    self.navigationItem.titleView = self.searchBar;
     debugLog();
+}
+
+#pragma mark - lazy loading
+
+- (UISearchBar *)searchBar {
+    
+    if (!_searchBar) {
+        _searchBar = [[UISearchBar alloc] init];
+    }
+    return _searchBar;
 }
 
 @end

@@ -12,11 +12,25 @@ static NSString * const title = @"我";
 
 @implementation WSMeController
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
+- (void)setupRootView {
+    [super setupRootView];
     self.title = NSLocalizedString(title, nil);
+    self.view.backgroundColor = [UIColor baseBackGroundColor];
+    [self setLeftBarButtonWithText:@"添加好友"];
+    [self setRightBarButtonWithText:@"设置"];
+    [self.leftBarButton addTarget:self action:@selector(addFriend) forControlEvents:UIControlEventTouchUpInside];
+    [self.rightBarButton addTarget:self action:@selector(goSetting) forControlEvents:UIControlEventTouchUpInside];
     debugLog();
 }
 
+
+#pragma mark - event
+
+- (void)addFriend {
+    debugLog();
+}
+
+- (void)goSetting {
+    debugLog();
+}
 @end

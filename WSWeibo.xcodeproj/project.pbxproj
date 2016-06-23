@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		650ED0F81D1BB24D0057108E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 650ED0FA1D1BB24D0057108E /* InfoPlist.strings */; };
+		650ED0FF1D1BD7400057108E /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 650ED0FE1D1BD7400057108E /* config.plist */; };
 		654A28861D1A7C480076BF9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A28881D1A7C480076BF9D /* Main.storyboard */; };
 		65531B911D1A3D1F00782632 /* BaseLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531B7F1D1A3D1F00782632 /* BaseLoadViewController.m */; };
 		65531B931D1A3D1F00782632 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531B831D1A3D1F00782632 /* BaseViewController.m */; };
@@ -114,6 +115,7 @@
 		65DD74041D17E6290075917E /* UIImage+WS.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD739E1D17E6290075917E /* UIImage+WS.m */; };
 		65DD74061D17E6290075917E /* UIView+WS.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD73A31D17E6290075917E /* UIView+WS.m */; };
 		65DD74091D17E6430075917E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DD74081D17E6430075917E /* libsqlite3.tbd */; };
+		65E8AAB01D1BDD0200CF84D9 /* UIFont+WS.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E8AAAF1D1BDD0200CF84D9 /* UIFont+WS.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +123,7 @@
 		650ED0FB1D1BB2500057108E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		650ED0FC1D1BB2530057108E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		650ED0FD1D1BB2640057108E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		650ED0FE1D1BD7400057108E /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = config.plist; sourceTree = "<group>"; };
 		654A28871D1A7C480076BF9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		654A288A1D1A7C4A0076BF9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		65531B701D1A3C3700782632 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Test.strings; sourceTree = "<group>"; };
@@ -344,6 +347,8 @@
 		65DD73A21D17E6290075917E /* UIView+WS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WS.h"; sourceTree = "<group>"; };
 		65DD73A31D17E6290075917E /* UIView+WS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WS.m"; sourceTree = "<group>"; };
 		65DD74081D17E6430075917E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		65E8AAAE1D1BDD0200CF84D9 /* UIFont+WS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+WS.h"; sourceTree = "<group>"; };
+		65E8AAAF1D1BDD0200CF84D9 /* UIFont+WS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+WS.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -574,6 +579,7 @@
 		65DD72DE1D17E6290075917E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				650ED0FE1D1BD7400057108E /* config.plist */,
 				65531B671D1A3A8D00782632 /* Test */,
 				65DD72DF1D17E6290075917E /* AppDelegate.h */,
 				65DD72E01D17E6290075917E /* AppDelegate.m */,
@@ -905,6 +911,8 @@
 				65DD739E1D17E6290075917E /* UIImage+WS.m */,
 				65DD73A21D17E6290075917E /* UIView+WS.h */,
 				65DD73A31D17E6290075917E /* UIView+WS.m */,
+				65E8AAAE1D1BDD0200CF84D9 /* UIFont+WS.h */,
+				65E8AAAF1D1BDD0200CF84D9 /* UIFont+WS.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -994,6 +1002,7 @@
 				65DD73A61D17E6290075917E /* View.xib in Resources */,
 				65DD73A51D17E6290075917E /* Test.storyboard in Resources */,
 				654A28861D1A7C480076BF9D /* Main.storyboard in Resources */,
+				650ED0FF1D1BD7400057108E /* config.plist in Resources */,
 				65DD73FD1D17E6290075917E /* SVProgressHUD.bundle in Resources */,
 				650ED0F81D1BB24D0057108E /* InfoPlist.strings in Resources */,
 				65DD73B11D17E6290075917E /* Assets.xcassets in Resources */,
@@ -1116,6 +1125,7 @@
 				65DD73E91D17E6290075917E /* UIScrollView+MJRefresh.m in Sources */,
 				65DD73CC1D17E6290075917E /* JSONKeyMapper.m in Sources */,
 				65DD73EB1D17E6290075917E /* MKAnnotationView+WebCache.m in Sources */,
+				65E8AAB01D1BDD0200CF84D9 /* UIFont+WS.m in Sources */,
 				65531B981D1A3D1F00782632 /* ErrorButton.m in Sources */,
 				65DD73B41D17E6290075917E /* main.m in Sources */,
 				65DD73DF1D17E6290075917E /* MJRefreshAutoStateFooter.m in Sources */,

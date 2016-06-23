@@ -55,28 +55,30 @@ NSString * const kLoadingTitle = @"正在加载";
 
 - (void)setLeftBarButtonWithImage:(UIImage *)normalImage highLightImage:(UIImage *)highLightImage {
     
-    UIButton *rightBtn = [[UIButton alloc] init];
-    [rightBtn setImage:normalImage forState:UIControlStateNormal];
-    [rightBtn setImage:highLightImage forState:UIControlStateHighlighted];
-    [rightBtn setTitleColor:[UIColor baseNavTintColor] forState:UIControlStateNormal];
-    [rightBtn setTitleColor:[UIColor baseNavPressedTintColor] forState:UIControlStateHighlighted];
-    rightBtn.titleLabel.font = [UIFont systemFontOfSize:16];
-    [rightBtn sizeToFit];
-    _rightBarButton = rightBtn;
+    UIButton *leftBtn = [[UIButton alloc] init];
+    [leftBtn setImage:normalImage forState:UIControlStateNormal];
+    [leftBtn setImage:highLightImage forState:UIControlStateHighlighted];
+    [leftBtn setTitleColor:[UIColor baseNavTintColor] forState:UIControlStateNormal];
+    [leftBtn setTitleColor:[UIColor baseNavPressedTintColor] forState:UIControlStateHighlighted];
+    leftBtn.titleLabel.font = [UIFont navItemTitleFont];
+    [leftBtn sizeToFit];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    _leftBarButton = leftBtn;
     
 }
 
 
 - (void)setRightBarButtonWithImage:(UIImage *)normalImage highLightImage:(UIImage *)highLightImage {
     
-    UIButton *leftBtn = [[UIButton alloc] init];
-    [leftBtn setImage:normalImage forState:UIControlStateNormal];
-    [leftBtn setImage:highLightImage forState:UIControlStateHighlighted];
-    [leftBtn setTitleColor:[UIColor baseNavTintColor] forState:UIControlStateNormal];
-    [leftBtn setTitleColor:[UIColor baseNavPressedTintColor] forState:UIControlStateHighlighted];
-    leftBtn.titleLabel.font = [UIFont systemFontOfSize:16];
-    [leftBtn sizeToFit];
-    _leftBarButton = leftBtn;
+    UIButton *rightBtn = [[UIButton alloc] init];
+    [rightBtn setImage:normalImage forState:UIControlStateNormal];
+    [rightBtn setImage:highLightImage forState:UIControlStateHighlighted];
+    [rightBtn setTitleColor:[UIColor baseNavTintColor] forState:UIControlStateNormal];
+    [rightBtn setTitleColor:[UIColor baseNavPressedTintColor] forState:UIControlStateHighlighted];
+    rightBtn.titleLabel.font = [UIFont navItemTitleFont];
+    [rightBtn sizeToFit];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    _rightBarButton = rightBtn;
     
 }
 - (void)setLeftBarButtonWithImage:(UIImage *)normalImage highLightImage:(UIImage *)highLightImage andText:(NSString *)text {
@@ -87,7 +89,7 @@ NSString * const kLoadingTitle = @"正在加载";
     [leftBtn setTitle:text forState:UIControlStateNormal];
     [leftBtn setTitleColor:[UIColor baseNavTintColor] forState:UIControlStateNormal];
     [leftBtn setTitleColor:[UIColor baseNavPressedTintColor] forState:UIControlStateHighlighted];
-    leftBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+    leftBtn.titleLabel.font = [UIFont navItemTitleFont];
     [leftBtn sizeToFit];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
     _leftBarButton = leftBtn;
@@ -104,9 +106,11 @@ NSString * const kLoadingTitle = @"正在加载";
     
     UIButton *leftBtn = [[UIButton alloc] init];
     [leftBtn setTitle:text forState:UIControlStateNormal];
-    [leftBtn setTitleColor:[UIColor baseNavTintColor] forState:UIControlStateNormal];
-    [leftBtn setTitleColor:[UIColor baseNavPressedTintColor] forState:UIControlStateNormal];
+    [leftBtn setTitleColor:[UIColor baseTitleColor] forState:UIControlStateNormal];
+    [leftBtn setTitleColor:[UIColor baseNavPressedTintColor] forState:UIControlStateHighlighted];
+    leftBtn.titleLabel.font = [UIFont navItemTitleFont];
     [leftBtn sizeToFit];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
     _leftBarButton = leftBtn;
 }
 
@@ -115,9 +119,11 @@ NSString * const kLoadingTitle = @"正在加载";
     
     UIButton *rightBtn = [[UIButton alloc] init];
     [rightBtn setTitle:text forState:UIControlStateNormal];
-    [rightBtn setTitleColor:[UIColor baseNavTintColor] forState:UIControlStateNormal];
-    [rightBtn setTitleColor:[UIColor baseNavPressedTintColor] forState:UIControlStateNormal];
+    [rightBtn setTitleColor:[UIColor baseTitleColor] forState:UIControlStateNormal];
+    [rightBtn setTitleColor:[UIColor baseNavPressedTintColor] forState:UIControlStateHighlighted];
     [rightBtn sizeToFit];
+    rightBtn.titleLabel.font = [UIFont navItemTitleFont];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     _rightBarButton = rightBtn;
 }
 
@@ -131,7 +137,7 @@ NSString * const kLoadingTitle = @"正在加载";
     [rightBtn setImage:secHighImage forState:UIControlStateHighlighted];
     [rightBtn setTitleColor:textColor forState:UIControlStateNormal];
     [rightBtn setTitleColor:highColor forState:UIControlStateHighlighted];
-    rightBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+    rightBtn.titleLabel.font = [UIFont navItemTitleFont];
     [rightBtn sizeToFit];
     _rightSecBarButton = rightBtn;
     
@@ -260,7 +266,7 @@ NSString * const kLoadingTitle = @"正在加载";
     
     if (!_titleLbl) {
         _titleLbl = [[UILabel alloc] init];
-        _titleLbl.font = [UIFont boldSystemFontOfSize:17];
+        _titleLbl.font = [UIFont navTitleFont];
         _titleLbl.textColor = [UIColor baseTitleColor];
         self.navigationItem.titleView = _titleLbl;
     }

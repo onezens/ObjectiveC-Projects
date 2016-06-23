@@ -10,8 +10,19 @@
 
 typedef void (^AlertCompletedBlock)();
 
+#define WSManager [WSCoreManager shareCoreManager]
 
 @interface WSCoreManager : NSObject
+
++ (instancetype)shareCoreManager;
+
+/**
+ *  统计或者标识一个事件或者其他
+ *
+ *  @param Id  统计标识
+ *  @param label 注释，标签
+ */
++ (void)markID:(NSString *)Id label:(NSString *)label;
 
 /**
  *  @param title        标题，粗体，可以为空

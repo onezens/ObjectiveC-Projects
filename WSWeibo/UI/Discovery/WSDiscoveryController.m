@@ -22,6 +22,7 @@ static NSString * const title = @"发现";
     [super setupRootView];
     self.view.backgroundColor = [UIColor baseBackGroundColor];
     self.navigationItem.titleView = self.searchBar;
+    [WSCoreManager markID:@"DiscoveryPage" label:@""];
     debugLog();
 }
 

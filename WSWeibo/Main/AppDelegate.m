@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "SVProgressHUD.h"
 #import "WSTabBarController.h"
+#import "TalkingData.h"
 
 @interface AppDelegate ()
 
@@ -27,11 +28,13 @@
 //    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     [[UITabBar appearance] setTintColor:[UIColor baseThemeColor]];
+    [TalkingData sessionStarted:@"1D86C5F479F1F5B6AABA0D7385BFBDDB" withChannelId:@"gt"];
 //    [[UINavigationBar appearance] setBarTintColor:[UIColor baseThemeColor]]; //全局导航栏的背景颜色
     
 //    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 //    self.window.rootViewController = [[WSTabBarController alloc] init];
 //    [self.window makeKeyAndVisible];
+    [WSCoreManager markID:@"AppStartUp" label:@"应用启动"];
     
     return YES;
 }

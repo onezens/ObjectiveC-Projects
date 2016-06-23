@@ -20,6 +20,7 @@ static NSString * const title = @"消息";
     [self setRightBarButtonWithImage:[UIImage imageNamed:@"navigationbar_icon_newchat"] highLightImage:[UIImage imageNamed:@"navigationbar_icon_newchat_highlight"]];
     [self.leftBarButton addTarget:self action:@selector(findGroup) forControlEvents:UIControlEventTouchUpInside];
     [self.rightBarButton addTarget:self action:@selector(goMessage) forControlEvents:UIControlEventTouchUpInside];
+    [WSCoreManager markID:@"MessagePage" label:@""];
     debugLog();
 }
 
@@ -28,10 +29,12 @@ static NSString * const title = @"消息";
 - (void)findGroup {
     
     debugLog();
+    [WSCoreManager markID:@"findGroup" label:@""];
 }
 
 - (void)goMessage {
     debugLog();
+    [WSCoreManager markID:@"goMessage" label:@""];
 }
 
 @end

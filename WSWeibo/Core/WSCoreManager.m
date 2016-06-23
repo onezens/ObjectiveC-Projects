@@ -7,6 +7,7 @@
 //
 
 #import "WSCoreManager.h"
+#import "TalkingData.h"
 
 @interface WSCoreManager ()
 
@@ -16,6 +17,22 @@
 @end
 
 @implementation WSCoreManager
+
+static id _instance;
+
++ (instancetype)shareCoreManager {
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [[self alloc] init];
+    });
+    return _instance;
+}
+
++ (void)markID:(NSString *)Id label:(NSString *)label{
+    
+    [TalkingData trackEvent:Id label:label];
+}
 
 
 - (id)showAlert:(NSString *)title withMessage:(NSString *)message cancelTitle:(NSString *)cancelTitle cancelBlock:(AlertCompletedBlock)cancel confirmTitle:(NSString *)confirmTitle confirmBlock:(AlertCompletedBlock)confirm

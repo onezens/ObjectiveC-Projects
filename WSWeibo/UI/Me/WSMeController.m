@@ -20,6 +20,7 @@ static NSString * const title = @"我";
     [self setRightBarButtonWithText:@"设置"];
     [self.leftBarButton addTarget:self action:@selector(addFriend) forControlEvents:UIControlEventTouchUpInside];
     [self.rightBarButton addTarget:self action:@selector(goSetting) forControlEvents:UIControlEventTouchUpInside];
+    [WSCoreManager markID:@"MePage" label:@""];
     debugLog();
 }
 
@@ -28,9 +29,11 @@ static NSString * const title = @"我";
 
 - (void)addFriend {
     debugLog();
+    [WSCoreManager markID:@"addFriend" label:@""];
 }
 
 - (void)goSetting {
     debugLog();
+    [WSCoreManager markID:@"goSetting" label:@""];
 }
 @end

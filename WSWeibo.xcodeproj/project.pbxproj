@@ -116,6 +116,13 @@
 		65DD74061D17E6290075917E /* UIView+WS.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD73A31D17E6290075917E /* UIView+WS.m */; };
 		65DD74091D17E6430075917E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DD74081D17E6430075917E /* libsqlite3.tbd */; };
 		65E8AAB01D1BDD0200CF84D9 /* UIFont+WS.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E8AAAF1D1BDD0200CF84D9 /* UIFont+WS.m */; };
+		65E8AAB41D1BED6C00CF84D9 /* libTalkingData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AAB21D1BED6C00CF84D9 /* libTalkingData.a */; };
+		65E8AAB61D1BED9500CF84D9 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AAB51D1BED9500CF84D9 /* AdSupport.framework */; };
+		65E8AAB81D1BED9B00CF84D9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AAB71D1BED9B00CF84D9 /* CoreTelephony.framework */; };
+		65E8AABA1D1BEDA100CF84D9 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AAB91D1BEDA100CF84D9 /* CoreMotion.framework */; };
+		65E8AABC1D1BEDAA00CF84D9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AABB1D1BEDAA00CF84D9 /* Security.framework */; };
+		65E8AABE1D1BEDB100CF84D9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AABD1D1BEDB100CF84D9 /* SystemConfiguration.framework */; };
+		65E8AAC01D1BEDBC00CF84D9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AABF1D1BEDBC00CF84D9 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -349,6 +356,14 @@
 		65DD74081D17E6430075917E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		65E8AAAE1D1BDD0200CF84D9 /* UIFont+WS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+WS.h"; sourceTree = "<group>"; };
 		65E8AAAF1D1BDD0200CF84D9 /* UIFont+WS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+WS.m"; sourceTree = "<group>"; };
+		65E8AAB21D1BED6C00CF84D9 /* libTalkingData.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTalkingData.a; sourceTree = "<group>"; };
+		65E8AAB31D1BED6C00CF84D9 /* TalkingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingData.h; sourceTree = "<group>"; };
+		65E8AAB51D1BED9500CF84D9 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		65E8AAB71D1BED9B00CF84D9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		65E8AAB91D1BEDA100CF84D9 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		65E8AABB1D1BEDAA00CF84D9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		65E8AABD1D1BEDB100CF84D9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		65E8AABF1D1BEDBC00CF84D9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +371,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E8AAC01D1BEDBC00CF84D9 /* libz.tbd in Frameworks */,
+				65E8AABE1D1BEDB100CF84D9 /* SystemConfiguration.framework in Frameworks */,
+				65E8AABC1D1BEDAA00CF84D9 /* Security.framework in Frameworks */,
+				65E8AABA1D1BEDA100CF84D9 /* CoreMotion.framework in Frameworks */,
+				65E8AAB81D1BED9B00CF84D9 /* CoreTelephony.framework in Frameworks */,
+				65E8AAB61D1BED9500CF84D9 /* AdSupport.framework in Frameworks */,
+				65E8AAB41D1BED6C00CF84D9 /* libTalkingData.a in Frameworks */,
 				65DD74091D17E6430075917E /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,7 +601,6 @@
 		65DD72DE1D17E6290075917E /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				650ED0FE1D1BD7400057108E /* config.plist */,
 				65531B671D1A3A8D00782632 /* Test */,
 				65DD72DF1D17E6290075917E /* AppDelegate.h */,
 				65DD72E01D17E6290075917E /* AppDelegate.m */,
@@ -587,6 +608,7 @@
 				65DD72E61D17E6290075917E /* WSWeibo.pch */,
 				6587395B1D1A8DCB00C3E820 /* Localizable.strings */,
 				650ED0FA1D1BB24D0057108E /* InfoPlist.strings */,
+				650ED0FE1D1BD7400057108E /* config.plist */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -594,6 +616,7 @@
 		65DD72E71D17E6290075917E /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				65E8AAB11D1BED6C00CF84D9 /* TalkingData V2.2.35 */,
 				65DD72E81D17E6290075917E /* AFNetworking */,
 				65DD72F61D17E6290075917E /* DeviceID */,
 				65DD72FB1D17E6290075917E /* fmdb */,
@@ -890,13 +913,13 @@
 		65DD73921D17E6290075917E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				65531B6E1D1A3BE500782632 /* Login */,
-				65531B6D1D1A3BD700782632 /* Compose */,
-				65531B681D1A3B2D00782632 /* Discovery */,
 				65531B691D1A3B2D00782632 /* Home */,
+				65531B681D1A3B2D00782632 /* Discovery */,
 				65531B6A1D1A3B2D00782632 /* Me */,
 				65531B6B1D1A3B2D00782632 /* Message */,
 				65531B6C1D1A3B2D00782632 /* TabBar */,
+				65531B6E1D1A3BE500782632 /* Login */,
+				65531B6D1D1A3BD700782632 /* Compose */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -929,9 +952,24 @@
 		65DD74071D17E6360075917E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				65E8AABF1D1BEDBC00CF84D9 /* libz.tbd */,
+				65E8AABD1D1BEDB100CF84D9 /* SystemConfiguration.framework */,
+				65E8AABB1D1BEDAA00CF84D9 /* Security.framework */,
+				65E8AAB91D1BEDA100CF84D9 /* CoreMotion.framework */,
+				65E8AAB71D1BED9B00CF84D9 /* CoreTelephony.framework */,
+				65E8AAB51D1BED9500CF84D9 /* AdSupport.framework */,
 				65DD74081D17E6430075917E /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65E8AAB11D1BED6C00CF84D9 /* TalkingData V2.2.35 */ = {
+			isa = PBXGroup;
+			children = (
+				65E8AAB21D1BED6C00CF84D9 /* libTalkingData.a */,
+				65E8AAB31D1BED6C00CF84D9 /* TalkingData.h */,
+			);
+			path = "TalkingData V2.2.35";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1298,6 +1336,12 @@
 				INFOPLIST_FILE = WSWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WSWeibo/ThirdLib/TalkingData",
+					V2.2.35,
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.wackosix.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4a000bf0-ec7f-4740-8a40-7e20d9de36fc";
@@ -1313,6 +1357,12 @@
 				INFOPLIST_FILE = WSWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WSWeibo/ThirdLib/TalkingData",
+					V2.2.35,
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.wackosix.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4a000bf0-ec7f-4740-8a40-7e20d9de36fc";

@@ -21,6 +21,7 @@ static NSString * const title = @"首页";
     [self setRightBarButtonWithImage:[UIImage imageNamed:@"navigationbar_icon_radar"] highLightImage:[UIImage imageNamed:@"navigationbar_icon_radar_highlighted"]];
     [self.leftBarButton addTarget:self action:@selector(leftBarButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.rightBarButton addTarget:self action:@selector(rightBarButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [WSCoreManager markID:@"HomePage" label:@""];
     debugLog();
 }
 
@@ -28,10 +29,12 @@ static NSString * const title = @"首页";
 
 - (void)leftBarButtonClick {
     debugLog();
+    [WSCoreManager markID:@"HomeLeft" label:@""];
 }
 
 - (void)rightBarButtonClick {
     debugLog();
+    [WSCoreManager markID:@"HomeRight" label:@""];
 }
 
 @end

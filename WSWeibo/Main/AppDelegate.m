@@ -19,25 +19,27 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    WSLog(@"%@", kBaseURL);
-    debugLog();
     
     [[UINavigationBar appearance] setBarStyle:UIBarStyleDefault];
     [[UINavigationBar appearance] setTintColor:[UIColor baseNavTintColor]];
-//    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     [[UITabBar appearance] setTintColor:[UIColor baseThemeColor]];
-    [TalkingData sessionStarted:@"1D86C5F479F1F5B6AABA0D7385BFBDDB" withChannelId:@"gt"];
-//    [[UINavigationBar appearance] setBarTintColor:[UIColor baseThemeColor]]; //全局导航栏的背景颜色
     
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    self.window.rootViewController = [[WSTabBarController alloc] init];
-//    [self.window makeKeyAndVisible];
-    [WSCoreManager markID:@"AppStartUp" label:@"应用启动"];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    
+    [self setUpTalkData];
     
     return YES;
 }
+
+
+- (void)setUpTalkData {
+    
+    [TalkingData setLogEnabled:false];
+    [TalkingData setExceptionReportEnabled:true];
+    [TalkingData setSignalReportEnabled:true];
+    [WSCoreManager markID:@"AppStartUp" label:@"应用启动"];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

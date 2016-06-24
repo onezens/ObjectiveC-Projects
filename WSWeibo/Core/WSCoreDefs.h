@@ -29,4 +29,6 @@
 
 
 #define WS_ERROR_SYS -1000 //ios端系统错误
+#define WS_UM_APPKEY @"576bbeffe0f55a6cb7002db7"
+#define WS_TalkData_APPKEY @"1D86C5F479F1F5B6AABA0D7385BFBDDB"
 

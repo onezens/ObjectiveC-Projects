@@ -8,9 +8,8 @@
 
 #import "AppDelegate.h"
 #import "SVProgressHUD.h"
-#import "WSTabBarController.h"
 #import "TalkingData.h"
-#import "UMMobClick/MobClick.h"
+#import <UMMobClick/MobClick.h>
 
 @interface AppDelegate ()
 
@@ -36,12 +35,14 @@
 
 - (void)setUpUM {
     
-    UMConfigInstance.appKey = @"576bbeffe0f55a6cb7002db7";
+    UMConfigInstance.appKey = WS_UM_APPKEY;
     UMConfigInstance.channelId = @"gt";
+    [MobClick setCrashReportEnabled:true];
 }
 
 - (void)setUpTalkData {
     
+    [TalkingData sessionStarted:WS_TalkData_APPKEY  withChannelId:@"gt"];
     [TalkingData setLogEnabled:false];
     [TalkingData setExceptionReportEnabled:true];
     [TalkingData setSignalReportEnabled:true];

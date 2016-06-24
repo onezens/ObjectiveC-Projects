@@ -116,14 +116,14 @@
 		65DD74061D17E6290075917E /* UIView+WS.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD73A31D17E6290075917E /* UIView+WS.m */; };
 		65DD74091D17E6430075917E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DD74081D17E6430075917E /* libsqlite3.tbd */; };
 		65E8AAB01D1BDD0200CF84D9 /* UIFont+WS.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E8AAAF1D1BDD0200CF84D9 /* UIFont+WS.m */; };
-		65E8AAB41D1BED6C00CF84D9 /* libTalkingData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AAB21D1BED6C00CF84D9 /* libTalkingData.a */; };
 		65E8AAB61D1BED9500CF84D9 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AAB51D1BED9500CF84D9 /* AdSupport.framework */; };
 		65E8AAB81D1BED9B00CF84D9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AAB71D1BED9B00CF84D9 /* CoreTelephony.framework */; };
 		65E8AABA1D1BEDA100CF84D9 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AAB91D1BEDA100CF84D9 /* CoreMotion.framework */; };
 		65E8AABC1D1BEDAA00CF84D9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AABB1D1BEDAA00CF84D9 /* Security.framework */; };
 		65E8AABE1D1BEDB100CF84D9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AABD1D1BEDB100CF84D9 /* SystemConfiguration.framework */; };
 		65E8AAC01D1BEDBC00CF84D9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AABF1D1BEDBC00CF84D9 /* libz.tbd */; };
-		65E8AB581D1CC74300CF84D9 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AB571D1CC74300CF84D9 /* UMMobClick.framework */; };
+		65E8AB5E1D1CCA8F00CF84D9 /* libTalkingData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AB5A1D1CCA8F00CF84D9 /* libTalkingData.a */; };
+		65E8AB5F1D1CCA8F00CF84D9 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AB5D1D1CCA8F00CF84D9 /* UMMobClick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -357,15 +357,15 @@
 		65DD74081D17E6430075917E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		65E8AAAE1D1BDD0200CF84D9 /* UIFont+WS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+WS.h"; sourceTree = "<group>"; };
 		65E8AAAF1D1BDD0200CF84D9 /* UIFont+WS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+WS.m"; sourceTree = "<group>"; };
-		65E8AAB21D1BED6C00CF84D9 /* libTalkingData.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTalkingData.a; sourceTree = "<group>"; };
-		65E8AAB31D1BED6C00CF84D9 /* TalkingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingData.h; sourceTree = "<group>"; };
 		65E8AAB51D1BED9500CF84D9 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		65E8AAB71D1BED9B00CF84D9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		65E8AAB91D1BEDA100CF84D9 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		65E8AABB1D1BEDAA00CF84D9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		65E8AABD1D1BEDB100CF84D9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		65E8AABF1D1BEDBC00CF84D9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		65E8AB571D1CC74300CF84D9 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
+		65E8AB5A1D1CCA8F00CF84D9 /* libTalkingData.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTalkingData.a; sourceTree = "<group>"; };
+		65E8AB5B1D1CCA8F00CF84D9 /* TalkingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingData.h; sourceTree = "<group>"; };
+		65E8AB5D1D1CCA8F00CF84D9 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,14 +373,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65E8AB581D1CC74300CF84D9 /* UMMobClick.framework in Frameworks */,
-				65E8AAC01D1BEDBC00CF84D9 /* libz.tbd in Frameworks */,
-				65E8AABE1D1BEDB100CF84D9 /* SystemConfiguration.framework in Frameworks */,
+				65E8AB5F1D1CCA8F00CF84D9 /* UMMobClick.framework in Frameworks */,
 				65E8AABC1D1BEDAA00CF84D9 /* Security.framework in Frameworks */,
+				65E8AAC01D1BEDBC00CF84D9 /* libz.tbd in Frameworks */,
+				65E8AB5E1D1CCA8F00CF84D9 /* libTalkingData.a in Frameworks */,
+				65E8AABE1D1BEDB100CF84D9 /* SystemConfiguration.framework in Frameworks */,
 				65E8AABA1D1BEDA100CF84D9 /* CoreMotion.framework in Frameworks */,
 				65E8AAB81D1BED9B00CF84D9 /* CoreTelephony.framework in Frameworks */,
 				65E8AAB61D1BED9500CF84D9 /* AdSupport.framework in Frameworks */,
-				65E8AAB41D1BED6C00CF84D9 /* libTalkingData.a in Frameworks */,
 				65DD74091D17E6430075917E /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,8 +619,8 @@
 		65DD72E71D17E6290075917E /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
-				65E8AB561D1CC74300CF84D9 /* umsdk v4.0.4 */,
-				65E8AAB11D1BED6C00CF84D9 /* TalkingData V2.2.35 */,
+				65E8AB591D1CCA8F00CF84D9 /* TalkingData_V2.2.35 */,
+				65E8AB5C1D1CCA8F00CF84D9 /* umsdk_v4.0.4 */,
 				65DD72E81D17E6290075917E /* AFNetworking */,
 				65DD72F61D17E6290075917E /* DeviceID */,
 				65DD72FB1D17E6290075917E /* fmdb */,
@@ -967,21 +967,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		65E8AAB11D1BED6C00CF84D9 /* TalkingData V2.2.35 */ = {
+		65E8AB591D1CCA8F00CF84D9 /* TalkingData_V2.2.35 */ = {
 			isa = PBXGroup;
 			children = (
-				65E8AAB21D1BED6C00CF84D9 /* libTalkingData.a */,
-				65E8AAB31D1BED6C00CF84D9 /* TalkingData.h */,
+				65E8AB5A1D1CCA8F00CF84D9 /* libTalkingData.a */,
+				65E8AB5B1D1CCA8F00CF84D9 /* TalkingData.h */,
 			);
-			path = "TalkingData V2.2.35";
+			path = TalkingData_V2.2.35;
 			sourceTree = "<group>";
 		};
-		65E8AB561D1CC74300CF84D9 /* umsdk v4.0.4 */ = {
+		65E8AB5C1D1CCA8F00CF84D9 /* umsdk_v4.0.4 */ = {
 			isa = PBXGroup;
 			children = (
-				65E8AB571D1CC74300CF84D9 /* UMMobClick.framework */,
+				65E8AB5D1D1CCA8F00CF84D9 /* UMMobClick.framework */,
 			);
-			path = "umsdk v4.0.4";
+			path = umsdk_v4.0.4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1346,9 +1346,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/WSWeibo/ThirdLib/umsdk_IOS_analyics_idfa_v4.0.4",
-					"$(PROJECT_DIR)/WSWeibo/ThirdLib/umsdk",
-					v4.0.4,
+					"$(PROJECT_DIR)/WSWeibo/ThirdLib/umsdk_v4.0.4",
 				);
 				GCC_PREFIX_HEADER = WSWeibo/Main/WSWeibo.pch;
 				INFOPLIST_FILE = WSWeibo/Info.plist;
@@ -1356,13 +1354,12 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/WSWeibo/ThirdLib/TalkingData",
-					V2.2.35,
+					"$(PROJECT_DIR)/WSWeibo/ThirdLib/TalkingData_V2.2.35",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.wackosix.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4a000bf0-ec7f-4740-8a40-7e20d9de36fc";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1373,9 +1370,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/WSWeibo/ThirdLib/umsdk_IOS_analyics_idfa_v4.0.4",
-					"$(PROJECT_DIR)/WSWeibo/ThirdLib/umsdk",
-					v4.0.4,
+					"$(PROJECT_DIR)/WSWeibo/ThirdLib/umsdk_v4.0.4",
 				);
 				GCC_PREFIX_HEADER = WSWeibo/Main/WSWeibo.pch;
 				INFOPLIST_FILE = WSWeibo/Info.plist;
@@ -1383,13 +1378,12 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/WSWeibo/ThirdLib/TalkingData",
-					V2.2.35,
+					"$(PROJECT_DIR)/WSWeibo/ThirdLib/TalkingData_V2.2.35",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.wackosix.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4a000bf0-ec7f-4740-8a40-7e20d9de36fc";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

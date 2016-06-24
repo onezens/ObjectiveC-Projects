@@ -71,6 +71,7 @@
 - (void)showCompose {
     
     debugLog();
+    [WSCoreManager markID:@"showCompose" label:nil];
 }
 
 

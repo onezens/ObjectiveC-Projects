@@ -10,6 +10,7 @@
 #import "SVProgressHUD.h"
 #import "TalkingData.h"
 #import <UMMobClick/MobClick.h>
+#import <Bugly/Bugly.h>
 
 @interface AppDelegate ()
 
@@ -29,6 +30,8 @@
     [self setUpTalkData];
     
     [self setUpUM];
+    
+    [Bugly startWithAppId:WS_BUGLY_APPKEY];
     
     return YES;
 }

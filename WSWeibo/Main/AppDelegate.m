@@ -10,6 +10,7 @@
 #import "SVProgressHUD.h"
 #import "WSTabBarController.h"
 #import "TalkingData.h"
+#import "UMMobClick/MobClick.h"
 
 @interface AppDelegate ()
 
@@ -28,9 +29,16 @@
     
     [self setUpTalkData];
     
+    [self setUpUM];
+    
     return YES;
 }
 
+- (void)setUpUM {
+    
+    UMConfigInstance.appKey = @"576bbeffe0f55a6cb7002db7";
+    UMConfigInstance.channelId = @"gt";
+}
 
 - (void)setUpTalkData {
     

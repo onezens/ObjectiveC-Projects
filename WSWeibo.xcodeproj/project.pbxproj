@@ -123,6 +123,7 @@
 		65E8AABC1D1BEDAA00CF84D9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AABB1D1BEDAA00CF84D9 /* Security.framework */; };
 		65E8AABE1D1BEDB100CF84D9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AABD1D1BEDB100CF84D9 /* SystemConfiguration.framework */; };
 		65E8AAC01D1BEDBC00CF84D9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AABF1D1BEDBC00CF84D9 /* libz.tbd */; };
+		65E8AB581D1CC74300CF84D9 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AB571D1CC74300CF84D9 /* UMMobClick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -364,6 +365,7 @@
 		65E8AABB1D1BEDAA00CF84D9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		65E8AABD1D1BEDB100CF84D9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		65E8AABF1D1BEDBC00CF84D9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		65E8AB571D1CC74300CF84D9 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +373,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E8AB581D1CC74300CF84D9 /* UMMobClick.framework in Frameworks */,
 				65E8AAC01D1BEDBC00CF84D9 /* libz.tbd in Frameworks */,
 				65E8AABE1D1BEDB100CF84D9 /* SystemConfiguration.framework in Frameworks */,
 				65E8AABC1D1BEDAA00CF84D9 /* Security.framework in Frameworks */,
@@ -616,6 +619,7 @@
 		65DD72E71D17E6290075917E /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				65E8AB561D1CC74300CF84D9 /* umsdk v4.0.4 */,
 				65E8AAB11D1BED6C00CF84D9 /* TalkingData V2.2.35 */,
 				65DD72E81D17E6290075917E /* AFNetworking */,
 				65DD72F61D17E6290075917E /* DeviceID */,
@@ -970,6 +974,14 @@
 				65E8AAB31D1BED6C00CF84D9 /* TalkingData.h */,
 			);
 			path = "TalkingData V2.2.35";
+			sourceTree = "<group>";
+		};
+		65E8AB561D1CC74300CF84D9 /* umsdk v4.0.4 */ = {
+			isa = PBXGroup;
+			children = (
+				65E8AB571D1CC74300CF84D9 /* UMMobClick.framework */,
+			);
+			path = "umsdk v4.0.4";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1332,6 +1344,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WSWeibo/ThirdLib/umsdk_IOS_analyics_idfa_v4.0.4",
+					"$(PROJECT_DIR)/WSWeibo/ThirdLib/umsdk",
+					v4.0.4,
+				);
 				GCC_PREFIX_HEADER = WSWeibo/Main/WSWeibo.pch;
 				INFOPLIST_FILE = WSWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1353,6 +1371,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WSWeibo/ThirdLib/umsdk_IOS_analyics_idfa_v4.0.4",
+					"$(PROJECT_DIR)/WSWeibo/ThirdLib/umsdk",
+					v4.0.4,
+				);
 				GCC_PREFIX_HEADER = WSWeibo/Main/WSWeibo.pch;
 				INFOPLIST_FILE = WSWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

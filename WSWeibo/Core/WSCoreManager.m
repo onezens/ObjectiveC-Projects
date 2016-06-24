@@ -8,6 +8,7 @@
 
 #import "WSCoreManager.h"
 #import "TalkingData.h"
+#import "UMMobClick/MobClick.h"
 
 @interface WSCoreManager ()
 
@@ -32,6 +33,7 @@ static id _instance;
 + (void)markID:(NSString *)Id label:(NSString *)label{
     
     [TalkingData trackEvent:Id label:label];
+    [MobClick event:Id label:label];
 }
 
 

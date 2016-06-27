@@ -10,6 +10,8 @@
 #import "SVProgressHUD.h"
 #import "ErrorButton.h"
 #import "EmptyView.h"
+#import "WSOauthController.h"
+#import "UnloginView.h"
 
 NSString * const kLoadingTitle = @"正在加载";
 
@@ -18,6 +20,8 @@ NSString * const kLoadingTitle = @"正在加载";
 @property (nonatomic, strong) ErrorButton *errorBtn;
 @property (nonatomic, strong) EmptyView *emptyView;
 @property (nonatomic, strong) UILabel *titleLbl;
+@property (nonatomic, strong) UnloginView *unloginView;
+@property (nonatomic, assign) WSUnloginViewType unloginViewType;
 
 @end
 
@@ -153,12 +157,28 @@ NSString * const kLoadingTitle = @"正在加载";
     self.navigationItem.rightBarButtonItems = @[item1, item2];
 }
 
+- (void)showUnLoginViewWithType:(WSUnloginViewType)viewType {
+    self.unloginViewType = viewType;
+    self.unloginView.hidden = false;
+}
+
 
 #pragma mark - event 
 
 - (void)goBack {
     
     [self.navigationController popViewControllerAnimated:true];
+}
+
+- (BOOL)checkLogin {
+    
+    if ([WSUserModel isLogin]) {
+        return true;
+    }else {
+        UINavigationController *nav = [WSOauthController OauthController];
+        [self presentViewController:nav animated:true completion:nil];
+        return false;
+    }
 }
 
 #pragma mark - loading tip
@@ -242,6 +262,16 @@ NSString * const kLoadingTitle = @"正在加载";
 }
 
 #pragma mark - lazy loading 
+
+- (UnloginView *)unloginView {
+    
+    if (!_unloginView) {
+        _unloginView = [UnloginView unloginViewWithType:self.unloginViewType];
+        _unloginView.frame = self.view.bounds;
+        [self.view addSubview:_unloginView];
+    }
+    return _unloginView;
+}
 
 - (ErrorButton *)errorBtn {
     

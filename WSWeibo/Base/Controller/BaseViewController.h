@@ -9,6 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "ResponseModel.h"
 
+typedef NS_ENUM(NSUInteger, WSUnloginViewType) {
+    WSUnloginViewHome,
+    WSUnloginViewMessage,
+    WSUnloginViewDiscovery,
+    WSUnloginViewMe
+};
+
 @interface BaseViewController : UIViewController<BaseServiceDelegate>
 
 /**导航栏上面左边的按钮*/
@@ -17,6 +24,18 @@
 @property (nonatomic,strong) UIButton * rightBarButton;
 /**导航栏上面右边的第二个按钮*/
 @property (nonatomic,strong) UIButton * rightSecBarButton;
+
+/**
+ *  判断是否登录
+ */
+-(BOOL)checkLogin;
+
+/**
+ *  显示未登录视图
+ *
+ *  @param viewType 未登录视图的类型
+ */
+- (void)showUnLoginViewWithType:(WSUnloginViewType)viewType;
 
 /**
  *  设置左边的按钮的图片

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6509E4E91D212C49001EE2F0 /* WSUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6509E4E81D212C49001EE2F0 /* WSUserModel.m */; };
+		6509E4EC1D21374F001EE2F0 /* UnloginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6509E4EB1D21374F001EE2F0 /* UnloginView.m */; };
 		650ED0F81D1BB24D0057108E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 650ED0FA1D1BB24D0057108E /* InfoPlist.strings */; };
 		650ED0FF1D1BD7400057108E /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 650ED0FE1D1BD7400057108E /* config.plist */; };
 		654A28861D1A7C480076BF9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A28881D1A7C480076BF9D /* Main.storyboard */; };
@@ -132,6 +134,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6509E4E71D212C49001EE2F0 /* WSUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSUserModel.h; sourceTree = "<group>"; };
+		6509E4E81D212C49001EE2F0 /* WSUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSUserModel.m; sourceTree = "<group>"; };
+		6509E4EA1D21374F001EE2F0 /* UnloginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnloginView.h; sourceTree = "<group>"; };
+		6509E4EB1D21374F001EE2F0 /* UnloginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnloginView.m; sourceTree = "<group>"; };
 		650ED0F41D1BB16D0057108E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		650ED0FB1D1BB2500057108E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		650ED0FC1D1BB2530057108E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -523,6 +529,8 @@
 				65531B901D1A3D1F00782632 /* ErrorButton.m */,
 				65531B8B1D1A3D1F00782632 /* BaseTableViewCell.h */,
 				65531B8C1D1A3D1F00782632 /* BaseTableViewCell.m */,
+				6509E4EA1D21374F001EE2F0 /* UnloginView.h */,
+				6509E4EB1D21374F001EE2F0 /* UnloginView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -532,6 +540,8 @@
 			children = (
 				65BEE3E11D2100240057C01D /* WSOauthModel.h */,
 				65BEE3E21D2100240057C01D /* WSOauthModel.m */,
+				6509E4E71D212C49001EE2F0 /* WSUserModel.h */,
+				6509E4E81D212C49001EE2F0 /* WSUserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1152,6 +1162,7 @@
 				65DD73EC1D17E6290075917E /* NSData+ImageContentType.m in Sources */,
 				65DD73CB1D17E6290075917E /* JSONModel+networking.m in Sources */,
 				65DD73E01D17E6290075917E /* MJRefreshBackGifFooter.m in Sources */,
+				6509E4EC1D21374F001EE2F0 /* UnloginView.m in Sources */,
 				65DD73ED1D17E6290075917E /* SDImageCache.m in Sources */,
 				65DD73BF1D17E6290075917E /* FMDatabase.m in Sources */,
 				65BEE3DA1D20B9E30057C01D /* WSOauthController.m in Sources */,
@@ -1162,6 +1173,7 @@
 				65DD73D21D17E6290075917E /* MASViewAttribute.m in Sources */,
 				65531BAA1D1A765600782632 /* WSMessageController.m in Sources */,
 				65DD73CF1D17E6290075917E /* MASConstraint.m in Sources */,
+				6509E4E91D212C49001EE2F0 /* WSUserModel.m in Sources */,
 				65DD73D31D17E6290075917E /* MASViewConstraint.m in Sources */,
 				65DD73D01D17E6290075917E /* MASConstraintMaker.m in Sources */,
 				65531BA41D1A762400782632 /* WSHomeController.m in Sources */,

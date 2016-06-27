@@ -21,7 +21,7 @@ WSWeibo
  
  * 项目结构搭建
  * 添加基类
- * 友盟&TalkData分析统计以及crash记录
+ * 友盟&TalkData分析统计以及crash记录(bugly)
  * 代码国际化，设置国际化，xib自动国际化，storyboard自动国际化
  
  

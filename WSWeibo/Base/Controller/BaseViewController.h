@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ResponseModel.h"
 
-@interface BaseViewController : UIViewController 
+@interface BaseViewController : UIViewController<BaseServiceDelegate>
 
 /**导航栏上面左边的按钮*/
 @property (nonatomic,strong) UIButton * leftBarButton;

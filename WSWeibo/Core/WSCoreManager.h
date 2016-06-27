@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WSUserService.h"
 
 typedef void (^AlertCompletedBlock)();
 
 #define WSManager [WSCoreManager shareCoreManager]
 
 @interface WSCoreManager : NSObject
+
+@property (nonatomic, strong) WSUserService *userService;
 
 + (instancetype)shareCoreManager;
 

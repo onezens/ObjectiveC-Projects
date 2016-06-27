@@ -27,6 +27,10 @@
 		65531BB01D1A767A00782632 /* WSComposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BAF1D1A767A00782632 /* WSComposeController.m */; };
 		658739591D1A8DCB00C3E820 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6587395B1D1A8DCB00C3E820 /* Localizable.strings */; };
 		65BE5C201D18D8C5002840AA /* WSLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BE5C1F1D18D8C5002840AA /* WSLoadingViewController.m */; };
+		65BEE3D71D20B89F0057C01D /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BEE3D61D20B89F0057C01D /* BaseWebViewController.m */; };
+		65BEE3DA1D20B9E30057C01D /* WSOauthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BEE3D91D20B9E30057C01D /* WSOauthController.m */; };
+		65BEE3DF1D20BB950057C01D /* WSUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BEE3DE1D20BB950057C01D /* WSUserService.m */; };
+		65BEE3E31D2100240057C01D /* WSOauthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BEE3E21D2100240057C01D /* WSOauthModel.m */; };
 		65DD73A41D17E6290075917E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DD72BC1D17E6290075917E /* LaunchScreen.storyboard */; };
 		65DD73A51D17E6290075917E /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DD72BE1D17E6290075917E /* Test.storyboard */; };
 		65DD73A61D17E6290075917E /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65DD72C01D17E6290075917E /* View.xib */; };
@@ -174,6 +178,14 @@
 		65873A861D1BB04400C3E820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		65BE5C1E1D18D8C5002840AA /* WSLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLoadingViewController.h; sourceTree = "<group>"; };
 		65BE5C1F1D18D8C5002840AA /* WSLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLoadingViewController.m; sourceTree = "<group>"; };
+		65BEE3D51D20B89F0057C01D /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
+		65BEE3D61D20B89F0057C01D /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
+		65BEE3D81D20B9E30057C01D /* WSOauthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSOauthController.h; sourceTree = "<group>"; };
+		65BEE3D91D20B9E30057C01D /* WSOauthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSOauthController.m; sourceTree = "<group>"; };
+		65BEE3DD1D20BB950057C01D /* WSUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSUserService.h; sourceTree = "<group>"; };
+		65BEE3DE1D20BB950057C01D /* WSUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSUserService.m; sourceTree = "<group>"; };
+		65BEE3E11D2100240057C01D /* WSOauthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSOauthModel.h; sourceTree = "<group>"; };
+		65BEE3E21D2100240057C01D /* WSOauthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSOauthModel.m; sourceTree = "<group>"; };
 		65DD70061D17E23B0075917E /* WSWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DD72BD1D17E6290075917E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65DD72BF1D17E6290075917E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Test.storyboard; sourceTree = "<group>"; };
@@ -463,6 +475,8 @@
 		65531B6E1D1A3BE500782632 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				65BEE3D81D20B9E30057C01D /* WSOauthController.h */,
+				65BEE3D91D20B9E30057C01D /* WSOauthController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -474,6 +488,8 @@
 				65531B831D1A3D1F00782632 /* BaseViewController.m */,
 				65531B7E1D1A3D1F00782632 /* BaseLoadViewController.h */,
 				65531B7F1D1A3D1F00782632 /* BaseLoadViewController.m */,
+				65BEE3D51D20B89F0057C01D /* BaseWebViewController.h */,
+				65BEE3D61D20B89F0057C01D /* BaseWebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -511,6 +527,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		65BEE3DB1D20BB0B0057C01D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				65BEE3E11D2100240057C01D /* WSOauthModel.h */,
+				65BEE3E21D2100240057C01D /* WSOauthModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		65BEE3DC1D20BB0B0057C01D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				65BEE3DD1D20BB950057C01D /* WSUserService.h */,
+				65BEE3DE1D20BB950057C01D /* WSUserService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		65DD6FFD1D17E23B0075917E = {
 			isa = PBXGroup;
 			children = (
@@ -535,6 +569,8 @@
 				65DD72CB1D17E6290075917E /* Base */,
 				65DD72D41D17E6290075917E /* Core */,
 				65DD72DB1D17E6290075917E /* Image */,
+				65BEE3DB1D20BB0B0057C01D /* Model */,
+				65BEE3DC1D20BB0B0057C01D /* Service */,
 				65DD72DE1D17E6290075917E /* Main */,
 				65DD73921D17E6290075917E /* UI */,
 				65DD72E71D17E6290075917E /* ThirdLib */,
@@ -1118,6 +1154,8 @@
 				65DD73E01D17E6290075917E /* MJRefreshBackGifFooter.m in Sources */,
 				65DD73ED1D17E6290075917E /* SDImageCache.m in Sources */,
 				65DD73BF1D17E6290075917E /* FMDatabase.m in Sources */,
+				65BEE3DA1D20B9E30057C01D /* WSOauthController.m in Sources */,
+				65BEE3D71D20B89F0057C01D /* BaseWebViewController.m in Sources */,
 				65DD73D71D17E6290075917E /* ViewController+MASAdditions.m in Sources */,
 				65DD73E11D17E6290075917E /* MJRefreshBackNormalFooter.m in Sources */,
 				65DD73F91D17E6290075917E /* UIImageView+WebCache.m in Sources */,
@@ -1142,6 +1180,7 @@
 				65DD73BE1D17E6290075917E /* SSKeychain.m in Sources */,
 				65DD74041D17E6290075917E /* UIImage+WS.m in Sources */,
 				65DD73BB1D17E6290075917E /* AFURLResponseSerialization.m in Sources */,
+				65BEE3E31D2100240057C01D /* WSOauthModel.m in Sources */,
 				65DD73CE1D17E6290075917E /* MASCompositeConstraint.m in Sources */,
 				65DD73E71D17E6290075917E /* MJRefreshConst.m in Sources */,
 				65DD73C81D17E6290075917E /* JSONModelError.m in Sources */,
@@ -1195,6 +1234,7 @@
 				65DD74031D17E6290075917E /* UIColor+WS.m in Sources */,
 				65DD73F61D17E6290075917E /* UIImage+MultiFormat.m in Sources */,
 				65531B971D1A3D1F00782632 /* EmptyView.m in Sources */,
+				65BEE3DF1D20BB950057C01D /* WSUserService.m in Sources */,
 				65DD73B81D17E6290075917E /* AFNetworkReachabilityManager.m in Sources */,
 				65DD73EF1D17E6290075917E /* SDWebImageDecoder.m in Sources */,
 				65BE5C201D18D8C5002840AA /* WSLoadingViewController.m in Sources */,

@@ -39,6 +39,13 @@ NSString * const kLoadingTitle = @"正在加载";
 
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    [self dismissLoadingView];
+    
+}
+
 - (void)setTitle:(NSString *)title {
     [super setTitle:title];
     self.titleLbl.text = title;

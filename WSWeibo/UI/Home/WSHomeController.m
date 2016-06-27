@@ -7,6 +7,7 @@
 //
 
 #import "WSHomeController.h"
+#import "WSOauthController.h"
 
 static NSString * const title = @"首页";
 
@@ -30,6 +31,9 @@ static NSString * const title = @"首页";
 - (void)leftBarButtonClick {
     debugLog();
     [WSCoreManager markID:@"HomeLeft" label:@""];
+    
+    UINavigationController *vc = [WSOauthController OauthController];
+    [self presentViewController:vc animated:true completion:nil];
 }
 
 - (void)rightBarButtonClick {

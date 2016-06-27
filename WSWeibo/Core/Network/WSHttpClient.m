@@ -25,7 +25,10 @@ static id _instance;
 - (NSString *)sendGetWithURL:(NSString *)url body:(NSDictionary *)body headers:(NSDictionary *)header success:(HttpRequestSuccessBlock)sucess failed:(HttpRequestFailedBlock)failed{
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
+    [header enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        [manager.requestSerializer setValue:obj forHTTPHeaderField:key];
+    }];
+    [manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/plain", nil]];
     NSURLSessionDataTask *task = [manager GET:url parameters:body progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self hanlderSuccessWithTask:task response:responseObject success:sucess];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -40,6 +43,7 @@ static id _instance;
 - (NSString *)sendPostWithURL:(NSString *)url body:(NSDictionary *)body headers:(NSDictionary *)header success:(HttpRequestSuccessBlock)sucess failed:(HttpRequestFailedBlock)failed{
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/plain", nil]];
     NSMutableDictionary *headers_dict = [NSMutableDictionary dictionaryWithDictionary:header];
     [headers_dict setValuesForKeysWithDictionary:self.headers];
     [header enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {

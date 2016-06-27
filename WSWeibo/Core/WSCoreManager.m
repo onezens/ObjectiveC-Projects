@@ -30,6 +30,15 @@ static id _instance;
     return _instance;
 }
 
+- (instancetype)init {
+    
+    if (self = [super init]) {
+        
+        self.userService = [[WSUserService alloc] init];
+    }
+    return self;
+}
+
 + (void)markID:(NSString *)Id label:(NSString *)label{
     
     [TalkingData trackEvent:Id label:label];

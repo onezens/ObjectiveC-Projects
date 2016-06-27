@@ -12,6 +12,8 @@
 
 + (void)saveWithDic:(NSDictionary *)dic;
 
++ (void)saveWithArr:(NSArray *)arr;
+
 + (void)remove;
 
 + (BaseModel *)getCurrentSaveModel;

@@ -24,6 +24,7 @@ static NSString * const title = @"首页";
     [self.rightBarButton addTarget:self action:@selector(rightBarButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [WSCoreManager markID:@"HomePage" label:@""];
     debugLog();
+    [self sendRequest];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -38,6 +39,22 @@ static NSString * const title = @"首页";
     if (![WSUserModel isLogin]) {
         
     }
+    
+}
+
+#pragma mark - network
+
+- (void)sendRequest {
+    
+    [WSManager.statusService getHomeStatusesWithSince_id:[NSNumber numberWithInteger:0] max_id:[NSNumber numberWithInteger:0] count:20 page:1 feature:0 delegate:self];
+}
+
+- (void)requestFailedWithRes:(ResponseModel *)res {
+    
+}
+
+- (void)requestSuccessedWithRes:(ResponseModel *)res {
+    
     
 }
 

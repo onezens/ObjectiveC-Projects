@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "WSUserService.h"
+#import "WSStatusService.h"
 
 typedef void (^AlertCompletedBlock)();
 
@@ -16,6 +17,7 @@ typedef void (^AlertCompletedBlock)();
 @interface WSCoreManager : NSObject
 
 @property (nonatomic, strong) WSUserService *userService;
+@property (nonatomic, strong) WSStatusService *statusService;
 
 + (instancetype)shareCoreManager;
 

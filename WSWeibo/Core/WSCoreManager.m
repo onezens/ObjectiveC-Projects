@@ -35,6 +35,7 @@ static id _instance;
     if (self = [super init]) {
         
         self.userService = [[WSUserService alloc] init];
+        self.statusService = [[WSStatusService alloc] init];
     }
     return self;
 }

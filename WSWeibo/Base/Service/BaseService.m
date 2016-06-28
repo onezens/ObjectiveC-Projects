@@ -20,11 +20,11 @@
     WS(weakSelf);
 
     return [WSHttpClient sendGetWithURL:url body:body headers:nil success:^(NSString *reqId, id response) {
-        [weakSelf requestSuccessName:name resposne:response delegate:weakDel resObjClass:resObjClass needSave:isNeed];
+        [weakSelf requestSuccessName:name resposne:response delegate:weakDel resObjClass:resObjClass needSave:isNeed interface:interface];
         
     } failed:^(NSString *reqId, NSError *error) {
         
-        [weakSelf requestFailedName:name error:error delegate:weakDel];
+        [weakSelf requestFailedName:name error:error delegate:weakDel interface:interface];
     }];
 }
 
@@ -35,22 +35,23 @@
     WS(weakSelf);
     
     return [WSHttpClient sendPostWithURL:url body:body headers:nil success:^(NSString *reqId, id response) {
-        [weakSelf requestSuccessName:name resposne:response delegate:weakDel resObjClass:resObjClass needSave:isNeed];
+        [weakSelf requestSuccessName:name resposne:response delegate:weakDel resObjClass:resObjClass needSave:isNeed interface:interface];
     } failed:^(NSString *reqId, NSError *error) {
-        [weakSelf requestFailedName:name error:error delegate:weakDel];
+        [weakSelf requestFailedName:name error:error delegate:weakDel interface:interface];
     }];
 }
 
-- (void)requestSuccessName:(NSString *)name resposne:(id)response delegate:(id)delegate resObjClass:(Class)resObjClass needSave:(BOOL)isNeed {
+- (void)requestSuccessName:(NSString *)name resposne:(id)response delegate:(id)delegate resObjClass:(Class)resObjClass needSave:(BOOL)isNeed interface:(NSString *)interface{
     
+     WSLog(@"\n\n接口:%@\n接口反馈：%@\n接口内容：%@",interface,nil,response);
     if(resObjClass) { //需要进行转换为Model
         if ([response isKindOfClass:[NSDictionary class]]) {
             NSError *error = nil;
-            id model = [[resObjClass alloc] initWithDictionary:response error:&error];
+            ResponseModel *model = [[ResponseModel alloc] initWithDictionary:response error:&error];
             if (!error) {
-                ResponseModel *res = [ResponseModel resSuccessModelWithName:name response:model];
+                model.reqName = name;
                 if ([delegate respondsToSelector:@selector(requestSuccessedWithRes:)]) {
-                    [delegate requestSuccessedWithRes:res];
+                    [delegate requestSuccessedWithRes:model];
                 }
                 if (isNeed) {
                     if ([resObjClass respondsToSelector:@selector(saveWithDic:)]) {
@@ -60,37 +61,19 @@
             }else {
                 WSLog(@"Model[JSONModel]转换失败:%@",error);
             }
-            
-        }else if ([response isKindOfClass:[NSArray class]]) {
-            
-            NSError *error = nil;
-            NSArray *models = [resObjClass arrayOfDictionariesFromModels:response];
-            if (!error) {
-                ResponseModel *res = [ResponseModel resSuccessModelWithName:name response:models];
-                if ([delegate respondsToSelector:@selector(requestSuccessedWithRes:)]) {
-                    [delegate requestSuccessedWithRes:res];
-                }
-                if (isNeed) {
-                    if ([resObjClass respondsToSelector:@selector(saveWithArr:)]) {
-                        [resObjClass saveWithArr:models];
-                    }
-                }
-            }else {
-                WSLog(@"Model[JSONModel]转换失败:%@",error);
-            }
         }
-        
     }else { //不需要进行转换为Model
         
-        ResponseModel *res = [ResponseModel resSuccessModelWithName:name response:response];
+        ResponseModel *res = [ResponseModel resSuccessModelWithName:name response:response ];
         if ([delegate respondsToSelector:@selector(requestSuccessedWithRes:)]) {
             [delegate requestSuccessedWithRes:res];
         }
     }
 }
 
-- (void)requestFailedName:(NSString *)name error:(NSError *)error delegate:(id)delegate{
+- (void)requestFailedName:(NSString *)name error:(NSError *)error delegate:(id)delegate interface:(NSString *)interface{
     
+    WSLog(@"\n\n接口:%@\n接口反馈：%@\n接口内容：%@",interface,error,nil);
     ResponseModel *res = [ResponseModel resFailedModelWithName:name status:0 errorInfo:error.description];
     if ([delegate respondsToSelector:@selector(requestFailedWithRes:)]) {
         [delegate requestFailedWithRes:res];

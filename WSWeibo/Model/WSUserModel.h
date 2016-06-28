@@ -10,9 +10,9 @@
 
 @interface WSUserModel : BaseModel
 
-@property (nonatomic, copy) NSString *uid;
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *access_token;
+@property (nonatomic, copy) NSString <Optional> *uid;
+@property (nonatomic, copy) NSString <Optional> *name;
+@property (nonatomic, copy) NSString <Optional> *access_token;
 
 + (instancetype)currentUser;
 + (BOOL)isLogin;

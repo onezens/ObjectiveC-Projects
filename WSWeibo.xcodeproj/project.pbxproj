@@ -131,6 +131,8 @@
 		65E8AB5E1D1CCA8F00CF84D9 /* libTalkingData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AB5A1D1CCA8F00CF84D9 /* libTalkingData.a */; };
 		65E8AB5F1D1CCA8F00CF84D9 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AB5D1D1CCA8F00CF84D9 /* UMMobClick.framework */; };
 		65E8AB621D1D23F800CF84D9 /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8AB611D1D23F800CF84D9 /* Bugly.framework */; };
+		65F9BE3B1D22476500CCC3A3 /* WSStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F9BE3A1D22476500CCC3A3 /* WSStatusModel.m */; };
+		65F9BE3E1D22479200CCC3A3 /* WSStatusService.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F9BE3D1D22479200CCC3A3 /* WSStatusService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -386,6 +388,10 @@
 		65E8AB5B1D1CCA8F00CF84D9 /* TalkingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingData.h; sourceTree = "<group>"; };
 		65E8AB5D1D1CCA8F00CF84D9 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
 		65E8AB611D1D23F800CF84D9 /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
+		65F9BE391D22476500CCC3A3 /* WSStatusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSStatusModel.h; sourceTree = "<group>"; };
+		65F9BE3A1D22476500CCC3A3 /* WSStatusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSStatusModel.m; sourceTree = "<group>"; };
+		65F9BE3C1D22479200CCC3A3 /* WSStatusService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSStatusService.h; sourceTree = "<group>"; };
+		65F9BE3D1D22479200CCC3A3 /* WSStatusService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSStatusService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -542,6 +548,8 @@
 				65BEE3E21D2100240057C01D /* WSOauthModel.m */,
 				6509E4E71D212C49001EE2F0 /* WSUserModel.h */,
 				6509E4E81D212C49001EE2F0 /* WSUserModel.m */,
+				65F9BE391D22476500CCC3A3 /* WSStatusModel.h */,
+				65F9BE3A1D22476500CCC3A3 /* WSStatusModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -551,6 +559,8 @@
 			children = (
 				65BEE3DD1D20BB950057C01D /* WSUserService.h */,
 				65BEE3DE1D20BB950057C01D /* WSUserService.m */,
+				65F9BE3C1D22479200CCC3A3 /* WSStatusService.h */,
+				65F9BE3D1D22479200CCC3A3 /* WSStatusService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1164,6 +1174,7 @@
 				65DD73E01D17E6290075917E /* MJRefreshBackGifFooter.m in Sources */,
 				6509E4EC1D21374F001EE2F0 /* UnloginView.m in Sources */,
 				65DD73ED1D17E6290075917E /* SDImageCache.m in Sources */,
+				65F9BE3E1D22479200CCC3A3 /* WSStatusService.m in Sources */,
 				65DD73BF1D17E6290075917E /* FMDatabase.m in Sources */,
 				65BEE3DA1D20B9E30057C01D /* WSOauthController.m in Sources */,
 				65BEE3D71D20B89F0057C01D /* BaseWebViewController.m in Sources */,
@@ -1255,6 +1266,7 @@
 				65DD73F51D17E6290075917E /* UIImage+GIF.m in Sources */,
 				65531BAD1D1A766900782632 /* WSDiscoveryController.m in Sources */,
 				65DD73C01D17E6290075917E /* FMDatabaseAdditions.m in Sources */,
+				65F9BE3B1D22476500CCC3A3 /* WSStatusModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

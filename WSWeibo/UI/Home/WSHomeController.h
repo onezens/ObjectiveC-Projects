@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface WSHomeController : BaseViewController
+@interface WSHomeController : BaseLoadViewController
 
 @end

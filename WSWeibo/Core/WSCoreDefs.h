@@ -45,8 +45,11 @@
 #import "UIView+WS.h"
 #import "UIFont+WS.h"
 #import "WSUserModel.h"
+#import "BaseLoadViewController.h"
+
 
 /********************** 请求名称 **********************/
 
 #define ReqName_GetAccessToken  @"ReqName_GetAccessToken"
+#define ReqName_GetHomeStatus   @"ReqName_GetHomeStatus"
 

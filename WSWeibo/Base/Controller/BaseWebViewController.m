@@ -32,6 +32,22 @@
     [self.webView loadRequest:req];
 }
 
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = true;
+    [self showLoadingView];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
+    WSLog(@"%@",error);
+    [self dismissLoadingView];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
+    [self dismissLoadingView];
+}
 
 
 @end

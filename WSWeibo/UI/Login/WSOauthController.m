@@ -8,26 +8,48 @@
 
 #import "WSOauthController.h"
 
-NSString const * Oautch = @"oauth2/authorize";
+static NSString const * Oautch = @"oauth2/authorize";
+static NSString const * RegURL = @"http://m.weibo.cn/reg/index?jp=1";
+
+typedef NS_ENUM(NSUInteger, WSOauthType) {
+    WSOauthLogin,
+    WSOauthRegister
+};
 
 @interface WSOauthController ()
+
+@property (nonatomic, assign) WSOauthType oauchType;
 
 @end
 
 @implementation WSOauthController
 
-+ (UINavigationController *)OauthController {
++ (UINavigationController *)loginController {
     
     WSOauthController *oauchVC = [[WSOauthController alloc] init];
+    oauchVC.oauchType = WSOauthLogin;
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:oauchVC];
     return nav;
+}
++ (UINavigationController *)registerController {
+    
+    WSOauthController *oauchVC = [[WSOauthController alloc] init];
+    oauchVC.oauchType = WSOauthRegister;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:oauchVC];
+    return nav;
+    
 }
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     [WSCoreManager markID:@"Login" label:nil];
-    self.url = [NSString stringWithFormat:@"%@%@?client_id=%@&redirect_uri=%@",WS_API_POST, Oautch,WS_WEIBO_APPKEY, WS_WEIBO_REDIRECTURL];
+    if (self.oauchType == WSOauthRegister) {
+        self.url = RegURL;
+        self.rightBarButton.hidden = true;
+    }else {
+        self.url = [NSString stringWithFormat:@"%@%@?client_id=%@&redirect_uri=%@",WS_API_POST, Oautch,WS_WEIBO_APPKEY, WS_WEIBO_REDIRECTURL];
+    }
 }
 
 - (void)setupRootView {
@@ -54,21 +76,18 @@ NSString const * Oautch = @"oauth2/authorize";
 
 #pragma mark - webView delegate
 
-- (void)webViewDidStartLoad:(UIWebView *)webView {
-    
-    [self showLoadingView];
-}
+
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     
-    [self dismissLoadingView];
+    [super webViewDidFinishLoad:webView];
     [self rememberPass];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
     NSString *url = request.URL.absoluteString;
-    
+    WSLog(@"%@",url);
     if ([url hasPrefix:WS_WEIBO_REDIRECTURL]) {
         
         NSRange range = [url rangeOfString:@"code"];

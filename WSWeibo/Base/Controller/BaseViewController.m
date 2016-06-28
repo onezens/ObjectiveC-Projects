@@ -158,8 +158,15 @@ NSString * const kLoadingTitle = @"正在加载";
 }
 
 - (void)showUnLoginViewWithType:(WSUnloginViewType)viewType {
-    self.unloginViewType = viewType;
-    self.unloginView.hidden = false;
+   
+    if (![WSUserModel isLogin]) {
+        self.unloginViewType = viewType;
+        self.unloginView.hidden = false;
+        [self.view bringSubviewToFront:self.unloginView];
+    }else {
+        [self.unloginView removeFromSuperview];
+        self.unloginView = nil;
+    }
 }
 
 
@@ -175,7 +182,7 @@ NSString * const kLoadingTitle = @"正在加载";
     if ([WSUserModel isLogin]) {
         return true;
     }else {
-        UINavigationController *nav = [WSOauthController OauthController];
+        UINavigationController *nav = [WSOauthController loginController];
         [self presentViewController:nav animated:true completion:nil];
         return false;
     }

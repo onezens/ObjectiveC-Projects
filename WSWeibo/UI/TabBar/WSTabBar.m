@@ -8,6 +8,7 @@
 //
 
 #import "WSTabBar.h"
+#import "WSOauthController.h"
 
 #define itemCount 5
 
@@ -72,6 +73,11 @@
     
     debugLog();
     [WSCoreManager markID:@"showCompose" label:nil];
+    if ([WSUserModel isLogin]) {
+    }else {
+        UINavigationController *nav = [WSOauthController loginController];
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:nav animated:true completion:nil];
+    }
 }
 
 

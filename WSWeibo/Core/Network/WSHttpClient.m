@@ -24,14 +24,17 @@ static id _instance;
 
 - (NSString *)sendGetWithURL:(NSString *)url body:(NSDictionary *)body headers:(NSDictionary *)header success:(HttpRequestSuccessBlock)sucess failed:(HttpRequestFailedBlock)failed{
     
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = true;
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [header enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         [manager.requestSerializer setValue:obj forHTTPHeaderField:key];
     }];
     [manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/plain", nil]];
     NSURLSessionDataTask *task = [manager GET:url parameters:body progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
         [self hanlderSuccessWithTask:task response:responseObject success:sucess];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
         [self hanlderFailedWithTask:task error:error failed:failed];
     }];
     
@@ -42,6 +45,7 @@ static id _instance;
 
 - (NSString *)sendPostWithURL:(NSString *)url body:(NSDictionary *)body headers:(NSDictionary *)header success:(HttpRequestSuccessBlock)sucess failed:(HttpRequestFailedBlock)failed{
     
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = true;
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/plain", nil]];
     NSMutableDictionary *headers_dict = [NSMutableDictionary dictionaryWithDictionary:header];
@@ -50,8 +54,10 @@ static id _instance;
         [manager.requestSerializer setValue:obj forHTTPHeaderField:key];
     }];
     NSURLSessionDataTask *task = [manager POST:url parameters:body progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
         [self hanlderSuccessWithTask:task response:responseObject success:sucess];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
         [self hanlderFailedWithTask:task error:error failed:failed];
     }];
     

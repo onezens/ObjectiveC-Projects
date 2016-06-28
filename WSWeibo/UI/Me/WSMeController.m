@@ -16,12 +16,19 @@ static NSString * const title = @"我";
     [super setupRootView];
     self.title = NSLocalizedString(title, nil);
     self.view.backgroundColor = [UIColor baseBackGroundColor];
-    [self setLeftBarButtonWithText:@"添加好友"];
+//    [self setLeftBarButtonWithText:@"添加好友"];
+    [self setLeftBarButtonWithText:@"注销"];
     [self setRightBarButtonWithText:@"设置"];
     [self.leftBarButton addTarget:self action:@selector(addFriend) forControlEvents:UIControlEventTouchUpInside];
     [self.rightBarButton addTarget:self action:@selector(goSetting) forControlEvents:UIControlEventTouchUpInside];
     [WSCoreManager markID:@"MePage" label:@""];
     debugLog();
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    [self showUnLoginViewWithType:WSUnloginViewMe];
 }
 
 
@@ -30,6 +37,8 @@ static NSString * const title = @"我";
 - (void)addFriend {
     debugLog();
     [WSCoreManager markID:@"addFriend" label:@""];
+    [WSUserModel logout];
+    [self viewWillAppear:true];
 }
 
 - (void)goSetting {

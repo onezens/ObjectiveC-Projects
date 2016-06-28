@@ -13,4 +13,8 @@
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, copy) NSString *url;
 
+- (void)webViewDidStartLoad:(UIWebView *)webView;
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error;
+- (void)webViewDidFinishLoad:(UIWebView *)webView;
+
 @end

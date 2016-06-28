@@ -10,6 +10,7 @@
 
 @interface WSOauthController : BaseWebViewController
 
-+ (UINavigationController *)OauthController;
++ (UINavigationController *)loginController;
++ (UINavigationController *)registerController;
 
 @end

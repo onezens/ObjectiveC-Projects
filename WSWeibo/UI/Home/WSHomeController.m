@@ -26,19 +26,38 @@ static NSString * const title = @"首页";
     debugLog();
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    [self showUnLoginViewWithType:WSUnloginViewHome];
+}
+
+- (void)showUnLoginViewWithType:(WSUnloginViewType)viewType {
+    
+    [super showUnLoginViewWithType:viewType];
+    if (![WSUserModel isLogin]) {
+        
+    }
+    
+}
+
 #pragma mark - event 
 
 - (void)leftBarButtonClick {
     debugLog();
     [WSCoreManager markID:@"HomeLeft" label:@""];
     
-    UINavigationController *vc = [WSOauthController OauthController];
-    [self presentViewController:vc animated:true completion:nil];
+    if ([self checkLogin]) {
+        
+    }
 }
 
 - (void)rightBarButtonClick {
     debugLog();
     [WSCoreManager markID:@"HomeRight" label:@""];
+    if ([self checkLogin]) {
+        
+    }
 }
 
 @end

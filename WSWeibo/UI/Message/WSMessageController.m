@@ -24,6 +24,12 @@ static NSString * const title = @"消息";
     debugLog();
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    [self showUnLoginViewWithType:WSUnloginViewMessage];
+}
+
 #pragma mark - event
 
 - (void)findGroup {

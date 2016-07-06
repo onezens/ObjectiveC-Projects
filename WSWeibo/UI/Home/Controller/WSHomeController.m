@@ -33,7 +33,7 @@ static NSString * const title = @"首页";
     self.enableFooterRefresh = true;
     self.enableHeaderRefresh = true;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 200;
+    self.tableView.estimatedRowHeight = 279;
     debugLog();
     [self sendRequest];
 }
@@ -57,6 +57,7 @@ static NSString * const title = @"首页";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
+    debugLog();
     return self.statuses.count;
 }
 
@@ -65,6 +66,7 @@ static NSString * const title = @"首页";
     WSStatusCell *cell = [WSStatusCell statusCellWithTableView:tableView];
     cell.statusModel = self.statuses[indexPath.row];
     return cell;
+    debugLog();
 }
 
 

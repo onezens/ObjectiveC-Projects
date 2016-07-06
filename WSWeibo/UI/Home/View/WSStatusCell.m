@@ -39,6 +39,7 @@ static NSString * const kCellID = @"WSStatusCellID";
     WSStatusCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
     if (!cell) {
         cell = [[NSBundle mainBundle] loadNibNamed:@"WSStatusCell" owner:nil options:nil].firstObject;
+        WSLog(@"*******************");
     }
     return cell;
 }

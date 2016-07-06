@@ -19,7 +19,8 @@
 }
 
 + (BOOL)isLogin {
-    return [kUserDefault valueForKey:@"token"];
+    NSString *token = [kUserDefault valueForKey:@"token"];
+    return token.length>0;
 }
 
 + (void)logout {

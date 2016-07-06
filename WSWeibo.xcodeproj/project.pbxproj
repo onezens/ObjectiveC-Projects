@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6503F94F1D2D112E00988A3E /* NSString+WS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6503F94E1D2D112E00988A3E /* NSString+WS.m */; };
 		6509E4E91D212C49001EE2F0 /* WSUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6509E4E81D212C49001EE2F0 /* WSUserModel.m */; };
 		6509E4EC1D21374F001EE2F0 /* UnloginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6509E4EB1D21374F001EE2F0 /* UnloginView.m */; };
 		650ED0F81D1BB24D0057108E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 650ED0FA1D1BB24D0057108E /* InfoPlist.strings */; };
 		650ED0FF1D1BD7400057108E /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 650ED0FE1D1BD7400057108E /* config.plist */; };
 		652B8D901D2CB8B800867565 /* WSStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652B8D8F1D2CB8B800867565 /* WSStatusCell.xib */; };
-		652B8D921D2CD9C300867565 /* WSStatusContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652B8D911D2CD9C300867565 /* WSStatusContentView.xib */; };
 		652B8D951D2CD9D200867565 /* WSStatusContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 652B8D941D2CD9D200867565 /* WSStatusContentView.m */; };
 		654A28861D1A7C480076BF9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A28881D1A7C480076BF9D /* Main.storyboard */; };
 		65531B911D1A3D1F00782632 /* BaseLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531B7F1D1A3D1F00782632 /* BaseLoadViewController.m */; };
@@ -140,6 +140,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6503F94D1D2D112E00988A3E /* NSString+WS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WS.h"; sourceTree = "<group>"; };
+		6503F94E1D2D112E00988A3E /* NSString+WS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WS.m"; sourceTree = "<group>"; };
 		6509E4E71D212C49001EE2F0 /* WSUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSUserModel.h; sourceTree = "<group>"; };
 		6509E4E81D212C49001EE2F0 /* WSUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSUserModel.m; sourceTree = "<group>"; };
 		6509E4EA1D21374F001EE2F0 /* UnloginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnloginView.h; sourceTree = "<group>"; };
@@ -150,7 +152,6 @@
 		650ED0FD1D1BB2640057108E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		650ED0FE1D1BD7400057108E /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = config.plist; sourceTree = "<group>"; };
 		652B8D8F1D2CB8B800867565 /* WSStatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSStatusCell.xib; path = ../../../AutoLocalization/WSStatusCell.xib; sourceTree = "<group>"; };
-		652B8D911D2CD9C300867565 /* WSStatusContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSStatusContentView.xib; sourceTree = "<group>"; };
 		652B8D931D2CD9D200867565 /* WSStatusContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSStatusContentView.h; sourceTree = "<group>"; };
 		652B8D941D2CD9D200867565 /* WSStatusContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSStatusContentView.m; sourceTree = "<group>"; };
 		654A28871D1A7C480076BF9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -1009,6 +1010,8 @@
 				65DD73A31D17E6290075917E /* UIView+WS.m */,
 				65E8AAAE1D1BDD0200CF84D9 /* UIFont+WS.h */,
 				65E8AAAF1D1BDD0200CF84D9 /* UIFont+WS.m */,
+				6503F94D1D2D112E00988A3E /* NSString+WS.h */,
+				6503F94E1D2D112E00988A3E /* NSString+WS.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -1085,7 +1088,6 @@
 				652B8D8F1D2CB8B800867565 /* WSStatusCell.xib */,
 				6592CB511D2CB26A00556A65 /* WSStatusCell.h */,
 				6592CB521D2CB26A00556A65 /* WSStatusCell.m */,
-				652B8D911D2CD9C300867565 /* WSStatusContentView.xib */,
 				652B8D931D2CD9D200867565 /* WSStatusContentView.h */,
 				652B8D941D2CD9D200867565 /* WSStatusContentView.m */,
 			);
@@ -1153,7 +1155,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				65DD73A91D17E6290075917E /* AutoGenStringsSB.py in Resources */,
-				652B8D921D2CD9C300867565 /* WSStatusContentView.xib in Resources */,
 				658739591D1A8DCB00C3E820 /* Localizable.strings in Resources */,
 				652B8D901D2CB8B800867565 /* WSStatusCell.xib in Resources */,
 				65DD73AA1D17E6290075917E /* AutoGenStringsXIB.py in Resources */,
@@ -1173,29 +1174,29 @@
 /* Begin PBXShellScriptBuildPhase section */
 		65DD740A1D17E6C50075917E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "python ${SRCROOT}/${TARGET_NAME}/AutoLocalization/RunScript/AutoGenStringsXIB.py ${SRCROOT}/${TARGET_NAME}";
 		};
 		65DD740B1D17E6C70075917E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "python ${SRCROOT}/${TARGET_NAME}/AutoLocalization/RunScript/AutoGenStringsSB.py ${SRCROOT}/${TARGET_NAME}";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1205,6 +1206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65DD74061D17E6290075917E /* UIView+WS.m in Sources */,
+				6503F94F1D2D112E00988A3E /* NSString+WS.m in Sources */,
 				65DD73F11D17E6290075917E /* SDWebImageDownloaderOperation.m in Sources */,
 				65DD73E51D17E6290075917E /* MJRefreshStateHeader.m in Sources */,
 				65DD73E41D17E6290075917E /* MJRefreshNormalHeader.m in Sources */,
@@ -1456,8 +1458,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEPLOYMENT_LOCATION = YES;
-				DEPLOYMENT_POSTPROCESSING = YES;
+				DEPLOYMENT_LOCATION = NO;
+				DEPLOYMENT_POSTPROCESSING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WSWeibo/ThirdLib/umsdk_v4.0.4",
@@ -1483,8 +1485,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEPLOYMENT_LOCATION = YES;
-				DEPLOYMENT_POSTPROCESSING = YES;
+				DEPLOYMENT_LOCATION = NO;
+				DEPLOYMENT_POSTPROCESSING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WSWeibo/ThirdLib/umsdk_v4.0.4",

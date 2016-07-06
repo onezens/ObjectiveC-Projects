@@ -37,6 +37,7 @@
 #import "WSCoreManager.h"
 #import "UIColor+WS.h"
 #import "UIImage+WS.h"
+//#import "NSString+WS.h"
 #import "BaseModel.h"
 #import "BaseViewController.h"
 #import "BaseService.h"

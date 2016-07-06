@@ -238,9 +238,10 @@ NSString * const kLoadingTitle = @"正在加载";
 
 - (void)showEmptyLoadingViewWithText:(NSString *)text {
  
-    self.emptyView.isHaveNav = self.navigationController;
+    self.emptyView.isHaveNav = self.navigationController != nil;
     self.emptyView.hidden = false;
     self.emptyView.tipText = text;
+    
 }
 
 - (void)dismissEmptyLoadingView {

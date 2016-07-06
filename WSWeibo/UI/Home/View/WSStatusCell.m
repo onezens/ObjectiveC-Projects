@@ -27,6 +27,8 @@ static NSString * const kCellID = @"WSStatusCellID";
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
 @property (weak, nonatomic) IBOutlet UIButton *likeBtn;
 @property (weak, nonatomic) IBOutlet UIButton *reportBtn;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *statusContentHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *retweetContentHeight;
 
 
 @end
@@ -49,6 +51,11 @@ static NSString * const kCellID = @"WSStatusCellID";
     _statusModel = statusModel;
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:statusModel.user.avatar_large] forState:UIControlStateNormal];
     self.nameLbl.text = statusModel.user.screen_name;
+    [self.statusContent setContent:statusModel.text andImageUrls:statusModel.pic_urls];
+    [self.retweetContentView setContent:statusModel.retweeted_status.text andImageUrls:statusModel.retweeted_status.pic_urls];
+    self.statusContentHeight.constant = self.statusContent.contentHeight;
+    self.retweetContentHeight.constant = self.retweetContentView.contentHeight;
+    [self.contentView layoutIfNeeded];
 }
 
 - (void)awakeFromNib {
@@ -56,6 +63,7 @@ static NSString * const kCellID = @"WSStatusCellID";
     [super awakeFromNib];
     self.iconView.layer.cornerRadius = self.iconView.bounds.size.width * 0.5;
     self.iconView.layer.masksToBounds = true;
+    self.retweetContentView.isRetweet = true;
 }
 
 @end

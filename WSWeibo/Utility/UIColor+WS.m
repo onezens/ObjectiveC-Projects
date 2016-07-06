@@ -28,6 +28,11 @@
     return [UIColor colorFromRGB:0x525252];
 }
 
++ (instancetype)retweetViewColor {
+    
+    return [UIColor colorFromRGB:0xf7f7f7];
+}
+
 + (instancetype)baseTextColor {
     
     return [UIColor colorFromRGB:0x333333];

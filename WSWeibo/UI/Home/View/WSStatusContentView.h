@@ -10,4 +10,8 @@
 
 @interface WSStatusContentView : UIView
 
+@property (nonatomic, assign) BOOL isRetweet;
+@property (nonatomic, assign, readonly) CGFloat contentHeight;
+- (void)setContent:(NSString *)content andImageUrls:(NSArray *)imgUrls;
+
 @end

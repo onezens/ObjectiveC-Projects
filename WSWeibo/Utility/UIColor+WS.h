@@ -20,5 +20,6 @@
 + (instancetype)baseTextColor;
 + (instancetype)baseTextGrayColor;
 + (UIColor *)colorFromRGB:(NSInteger)rgbValue;
++ (instancetype)retweetViewColor;
 
 @end

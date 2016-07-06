@@ -34,9 +34,7 @@
     
     [Bugly startWithAppId:WS_BUGLY_APPKEY];
     
-#if defined(DEBUG)||defined(_DEBUG)
     [[JPFPSStatus sharedInstance] open];
-#endif
     
     return YES;
 }

@@ -9,7 +9,7 @@
 #import "WSOauthController.h"
 
 static NSString const * Oautch = @"oauth2/authorize";
-static NSString const * RegURL = @"http://m.weibo.cn/reg/index?jp=1";
+
 
 typedef NS_ENUM(NSUInteger, WSOauthType) {
     WSOauthLogin,
@@ -45,7 +45,7 @@ typedef NS_ENUM(NSUInteger, WSOauthType) {
     [super viewDidLoad];
     [WSCoreManager markID:@"Login" label:nil];
     if (self.oauchType == WSOauthRegister) {
-        self.url = RegURL;
+        self.url = @"http://m.weibo.cn/reg/index?jp=1";
         self.rightBarButton.hidden = true;
     }else {
         self.url = [NSString stringWithFormat:@"%@%@?client_id=%@&redirect_uri=%@",WS_API_POST, Oautch,WS_WEIBO_APPKEY, WS_WEIBO_REDIRECTURL];

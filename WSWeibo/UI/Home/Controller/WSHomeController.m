@@ -8,8 +8,15 @@
 
 #import "WSHomeController.h"
 #import "WSOauthController.h"
+#import "WSStatusCell.h"
 
 static NSString * const title = @"首页";
+
+@interface WSHomeController ()
+
+@property (nonatomic, strong) NSMutableArray <WSStatusModel *> *statuses;
+
+@end
 
 @implementation WSHomeController
 
@@ -23,6 +30,10 @@ static NSString * const title = @"首页";
     [self.leftBarButton addTarget:self action:@selector(leftBarButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.rightBarButton addTarget:self action:@selector(rightBarButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [WSCoreManager markID:@"HomePage" label:@""];
+    self.enableFooterRefresh = true;
+    self.enableHeaderRefresh = true;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 200;
     debugLog();
     [self sendRequest];
 }
@@ -42,10 +53,27 @@ static NSString * const title = @"首页";
     
 }
 
+#pragma mark - tablview delegate & datasource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return self.statuses.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    WSStatusCell *cell = [WSStatusCell statusCellWithTableView:tableView];
+    cell.statusModel = self.statuses[indexPath.row];
+    return cell;
+}
+
+
+
 #pragma mark - network
 
 - (void)sendRequest {
     
+    [self.tableView.mj_header beginRefreshing];
     [WSManager.statusService getHomeStatusesWithSince_id:[NSNumber numberWithInteger:0] max_id:[NSNumber numberWithInteger:0] count:20 page:1 feature:0 delegate:self];
 }
 
@@ -55,7 +83,8 @@ static NSString * const title = @"首页";
 
 - (void)requestSuccessedWithRes:(ResponseModel *)res {
     
-    
+    [self.statuses addObjectsFromArray:res.statuses];
+    [self refreshData];
 }
 
 #pragma mark - event 
@@ -75,6 +104,16 @@ static NSString * const title = @"首页";
     if ([self checkLogin]) {
         
     }
+}
+
+#pragma mark - lazy loadind
+
+- (NSMutableArray *)statuses {
+    
+    if (!_statuses) {
+        _statuses = [NSMutableArray array];
+    }
+    return _statuses;
 }
 
 @end

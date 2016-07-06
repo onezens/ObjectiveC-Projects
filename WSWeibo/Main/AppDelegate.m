@@ -11,6 +11,7 @@
 #import "TalkingData.h"
 #import <UMMobClick/MobClick.h>
 #import <Bugly/Bugly.h>
+#import "JPFPSStatus.h"
 
 @interface AppDelegate ()
 
@@ -32,6 +33,10 @@
     [self setUpUM];
     
     [Bugly startWithAppId:WS_BUGLY_APPKEY];
+    
+#if defined(DEBUG)||defined(_DEBUG)
+    [[JPFPSStatus sharedInstance] open];
+#endif
     
     return YES;
 }

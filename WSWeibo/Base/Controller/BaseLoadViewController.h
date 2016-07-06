@@ -10,6 +10,9 @@
 
 @interface BaseLoadViewController : BaseViewController<UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic, assign) BOOL enableFooterRefresh;
+@property (nonatomic, assign) BOOL enableHeaderRefresh;
+
 /**
  *  tableview
  */

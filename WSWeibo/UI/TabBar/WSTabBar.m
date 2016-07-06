@@ -31,7 +31,7 @@
 }
 
 - (void)awakeFromNib {
-    
+    [super awakeFromNib];
     [self setUpUI];
 }
 

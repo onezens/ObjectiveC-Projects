@@ -26,14 +26,45 @@
     return nil;
 }
 
+- (void)showUnLoginViewWithType:(WSUnloginViewType)viewType {
+    
+    [super showUnLoginViewWithType:viewType];
+    if (![WSUserModel isLogin]) {
+        self.enableHeaderRefresh = NO;
+        self.enableFooterRefresh = NO;
+    }
+}
+
 #pragma mark - event
 
+- (void)setEnableFooterRefresh:(BOOL)enableFooterRefresh {
+    
+    _enableFooterRefresh = enableFooterRefresh;
+    if (enableFooterRefresh) {
+        self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    }else {
+        self.tableView.mj_footer = nil;
+    }
+}
+
+- (void)setEnableHeaderRefresh:(BOOL)enableHeaderRefresh {
+    
+    _enableHeaderRefresh = enableHeaderRefresh;
+    if (self.enableFooterRefresh) {
+        self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
+    }else {
+        self.tableView.mj_header = nil;
+    }
+}
+
 - (void)refreshData {
+    if(!self.enableHeaderRefresh) return;
     [self.tableView.mj_header endRefreshing];
     [self.tableView reloadData];
 }
 
 - (void)loadMoreData {
+    if(!self.enableFooterRefresh) return;
     [self.tableView.mj_footer endRefreshing];
     [self.tableView reloadData];
 }
@@ -50,8 +81,7 @@
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.frame = self.view.bounds;
         [self.view addSubview:_tableView];
-        self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
-        self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+        
     }
     return _tableView;
 }

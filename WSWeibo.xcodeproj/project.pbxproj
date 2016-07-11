@@ -13,7 +13,6 @@
 		650ED0F81D1BB24D0057108E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 650ED0FA1D1BB24D0057108E /* InfoPlist.strings */; };
 		650ED0FF1D1BD7400057108E /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 650ED0FE1D1BD7400057108E /* config.plist */; };
 		652B8D901D2CB8B800867565 /* WSStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652B8D8F1D2CB8B800867565 /* WSStatusCell.xib */; };
-		652B8D951D2CD9D200867565 /* WSStatusContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 652B8D941D2CD9D200867565 /* WSStatusContentView.m */; };
 		654A28861D1A7C480076BF9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A28881D1A7C480076BF9D /* Main.storyboard */; };
 		65531B911D1A3D1F00782632 /* BaseLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531B7F1D1A3D1F00782632 /* BaseLoadViewController.m */; };
 		65531B931D1A3D1F00782632 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531B831D1A3D1F00782632 /* BaseViewController.m */; };
@@ -30,7 +29,8 @@
 		65531BAD1D1A766900782632 /* WSDiscoveryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BAC1D1A766900782632 /* WSDiscoveryController.m */; };
 		65531BB01D1A767A00782632 /* WSComposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BAF1D1A767A00782632 /* WSComposeController.m */; };
 		658739591D1A8DCB00C3E820 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6587395B1D1A8DCB00C3E820 /* Localizable.strings */; };
-		6592CB531D2CB26A00556A65 /* WSStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6592CB521D2CB26A00556A65 /* WSStatusCell.m */; };
+		658BC72A1D3386040091B37A /* WSStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 658BC7271D3386040091B37A /* WSStatusCell.m */; };
+		658BC72B1D3386040091B37A /* WSStatusContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 658BC7291D3386040091B37A /* WSStatusContentView.m */; };
 		65BE5C201D18D8C5002840AA /* WSLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BE5C1F1D18D8C5002840AA /* WSLoadingViewController.m */; };
 		65BEE3D71D20B89F0057C01D /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BEE3D61D20B89F0057C01D /* BaseWebViewController.m */; };
 		65BEE3DA1D20B9E30057C01D /* WSOauthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BEE3D91D20B9E30057C01D /* WSOauthController.m */; };
@@ -151,9 +151,7 @@
 		650ED0FC1D1BB2530057108E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		650ED0FD1D1BB2640057108E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		650ED0FE1D1BD7400057108E /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = config.plist; sourceTree = "<group>"; };
-		652B8D8F1D2CB8B800867565 /* WSStatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSStatusCell.xib; path = ../../../AutoLocalization/WSStatusCell.xib; sourceTree = "<group>"; };
-		652B8D931D2CD9D200867565 /* WSStatusContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSStatusContentView.h; sourceTree = "<group>"; };
-		652B8D941D2CD9D200867565 /* WSStatusContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSStatusContentView.m; sourceTree = "<group>"; };
+		652B8D8F1D2CB8B800867565 /* WSStatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WSStatusCell.xib; path = ../../../../AutoLocalization/WSStatusCell.xib; sourceTree = "<group>"; };
 		654A28871D1A7C480076BF9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		654A288A1D1A7C4A0076BF9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		65531B701D1A3C3700782632 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Test.strings; sourceTree = "<group>"; };
@@ -189,8 +187,10 @@
 		65873A831D1BB03300C3E820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		65873A841D1BB03300C3E820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Test.strings"; sourceTree = "<group>"; };
 		65873A861D1BB04400C3E820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		6592CB511D2CB26A00556A65 /* WSStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSStatusCell.h; sourceTree = "<group>"; };
-		6592CB521D2CB26A00556A65 /* WSStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSStatusCell.m; sourceTree = "<group>"; };
+		658BC7261D3386040091B37A /* WSStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSStatusCell.h; sourceTree = "<group>"; };
+		658BC7271D3386040091B37A /* WSStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSStatusCell.m; sourceTree = "<group>"; };
+		658BC7281D3386040091B37A /* WSStatusContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSStatusContentView.h; sourceTree = "<group>"; };
+		658BC7291D3386040091B37A /* WSStatusContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSStatusContentView.m; sourceTree = "<group>"; };
 		65BE5C1E1D18D8C5002840AA /* WSLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLoadingViewController.h; sourceTree = "<group>"; };
 		65BE5C1F1D18D8C5002840AA /* WSLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLoadingViewController.m; sourceTree = "<group>"; };
 		65BEE3D51D20B89F0057C01D /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
@@ -549,6 +549,32 @@
 				6509E4EB1D21374F001EE2F0 /* UnloginView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		658BC7231D3386040091B37A /* frame */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = frame;
+			sourceTree = "<group>";
+		};
+		658BC7241D3386040091B37A /* masnory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = masnory;
+			sourceTree = "<group>";
+		};
+		658BC7251D3386040091B37A /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				652B8D8F1D2CB8B800867565 /* WSStatusCell.xib */,
+				658BC7261D3386040091B37A /* WSStatusCell.h */,
+				658BC7271D3386040091B37A /* WSStatusCell.m */,
+				658BC7281D3386040091B37A /* WSStatusContentView.h */,
+				658BC7291D3386040091B37A /* WSStatusContentView.m */,
+			);
+			path = xib;
 			sourceTree = "<group>";
 		};
 		65BEE3DB1D20BB0B0057C01D /* Model */ = {
@@ -1085,11 +1111,9 @@
 		65F9BE421D2261B400CCC3A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				652B8D8F1D2CB8B800867565 /* WSStatusCell.xib */,
-				6592CB511D2CB26A00556A65 /* WSStatusCell.h */,
-				6592CB521D2CB26A00556A65 /* WSStatusCell.m */,
-				652B8D931D2CD9D200867565 /* WSStatusContentView.h */,
-				652B8D941D2CD9D200867565 /* WSStatusContentView.m */,
+				658BC7231D3386040091B37A /* frame */,
+				658BC7241D3386040091B37A /* masnory */,
+				658BC7251D3386040091B37A /* xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1238,8 +1262,6 @@
 				65DD73C11D17E6290075917E /* FMDatabasePool.m in Sources */,
 				65DD73EA1D17E6290075917E /* UIView+MJExtension.m in Sources */,
 				65DD73FC1D17E6290075917E /* SVProgressAnimatedView.m in Sources */,
-				6592CB531D2CB26A00556A65 /* WSStatusCell.m in Sources */,
-				652B8D951D2CD9D200867565 /* WSStatusContentView.m in Sources */,
 				65DD73BD1D17E6290075917E /* DeviceID.m in Sources */,
 				65531B951D1A3D1F00782632 /* BaseService.m in Sources */,
 				65531BB01D1A767A00782632 /* WSComposeController.m in Sources */,
@@ -1258,6 +1280,7 @@
 				65DD73FE1D17E6290075917E /* SVProgressHUD.m in Sources */,
 				65DD73F21D17E6290075917E /* SDWebImageManager.m in Sources */,
 				65DD73D11D17E6290075917E /* MASLayoutConstraint.m in Sources */,
+				658BC72A1D3386040091B37A /* WSStatusCell.m in Sources */,
 				65DD73D91D17E6290075917E /* MJRefreshBackFooter.m in Sources */,
 				65DD73FA1D17E6290075917E /* UIView+WebCacheOperation.m in Sources */,
 				65DD73D41D17E6290075917E /* NSArray+MASAdditions.m in Sources */,
@@ -1296,6 +1319,7 @@
 				65DD73CC1D17E6290075917E /* JSONKeyMapper.m in Sources */,
 				65DD73EB1D17E6290075917E /* MKAnnotationView+WebCache.m in Sources */,
 				65E8AAB01D1BDD0200CF84D9 /* UIFont+WS.m in Sources */,
+				658BC72B1D3386040091B37A /* WSStatusContentView.m in Sources */,
 				65531B981D1A3D1F00782632 /* ErrorButton.m in Sources */,
 				65DD73B41D17E6290075917E /* main.m in Sources */,
 				65DD73DF1D17E6290075917E /* MJRefreshAutoStateFooter.m in Sources */,

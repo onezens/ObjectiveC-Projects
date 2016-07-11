@@ -11,7 +11,7 @@
 
 @interface WSStatusContentView ()
 
-@property (nonatomic, strong) UILabel *contentView;
+@property (nonatomic, strong) UILabel *textView;
 @property (nonatomic, strong) UICollectionView *imageView;
 @property (nonatomic, strong) NSArray *imgUrls;
 
@@ -21,9 +21,9 @@
 
 - (void)setContent:(NSString *)content andImageUrls:(NSArray *)imgUrls {
     
-    self.contentView.text = content;
+    self.textView.text = content;
     self.imgUrls = imgUrls;
-    _contentHeight = [content sizeWithFont:self.contentView.font maxSize:CGSizeMake(self.contentView.bounds.size.width, MAXFLOAT)].height + 16;
+    _contentHeight = [content sizeWithFont:self.textView.font maxSize:CGSizeMake(kScreenWidth - 16, MAXFLOAT)].height + 16;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -43,11 +43,11 @@
 
 - (void)setUpUI {
     
-    self.contentView = [[UILabel alloc] init];
-    self.contentView.numberOfLines = 0;
-    self.contentView.font = [UIFont baseFont];
-    [self addSubview:self.contentView];
-    [self.contentView makeConstraints:^(MASConstraintMaker *make) {
+    self.textView = [[UILabel alloc] init];
+    self.textView.numberOfLines = 0;
+    self.textView.font = [UIFont baseFont];
+    [self addSubview:self.textView];
+    [self.textView makeConstraints:^(MASConstraintMaker *make) {
         make.top.leading.equalTo(self).offset(8);
         make.bottom.trailing.equalTo(self).offset(-8);
     }];

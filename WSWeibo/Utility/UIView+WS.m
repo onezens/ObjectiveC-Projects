@@ -11,62 +11,63 @@
 @implementation UIView (WS)
 
 
-- (CGFloat)left {
+- (CGFloat)f_left {
     return self.frame.origin.x;
 }
 
-- (void)setLeft:(CGFloat)x {
+- (void)setF_left:(CGFloat)x {
     CGRect frame = self.frame;
     frame.origin.x = x;
     self.frame = frame;
 }
 
-- (CGFloat)top {
+- (CGFloat)f_top {
     return self.frame.origin.y;
 }
 
-- (void)setTop:(CGFloat)y {
+- (void)setF_top:(CGFloat)y {
     CGRect frame = self.frame;
     frame.origin.y = y;
     self.frame = frame;
 }
 
-- (CGFloat)right {
+
+- (CGFloat)f_right {
     return self.frame.origin.x + self.frame.size.width;
 }
 
-- (void)setRight:(CGFloat)right {
+- (void)setF_right:(CGFloat)right {
     CGRect frame = self.frame;
     frame.origin.x = right - frame.size.width;
     self.frame = frame;
 }
 
-- (CGFloat)bottom {
+- (CGFloat)f_bottom {
     return self.frame.origin.y + self.frame.size.height;
 }
 
-- (void)setBottom:(CGFloat)bottom {
+- (void)setF_bottom:(CGFloat)bottom {
     CGRect frame = self.frame;
     frame.origin.y = bottom - frame.size.height;
     self.frame = frame;
 }
 
 
-- (CGFloat)width {
+- (CGFloat)f_width {
     return self.frame.size.width;
 }
 
-- (void)setWidth:(CGFloat)width {
+- (void)setF_width:(CGFloat)width {
     CGRect frame = self.frame;
     frame.size.width = width;
     self.frame = frame;
 }
 
-- (CGFloat)height {
+- (CGFloat)f_height {
     return self.frame.size.height;
 }
 
-- (void)setHeight:(CGFloat)height {
+- (void)setF_height:(CGFloat)height {
     CGRect frame = self.frame;
     frame.size.height = height;
     self.frame = frame;
@@ -74,40 +75,40 @@
 
 #pragma mark - Quick Access
 
-- (CGPoint)origin {
+- (CGPoint)f_origin {
     return self.frame.origin;
 }
 
-- (void)setOrigin:(CGPoint)origin {
+- (void)setF_origin:(CGPoint)origin {
     CGRect frame = self.frame;
     frame.origin = origin;
     self.frame = frame;
 }
 
-- (CGSize)size {
+- (CGSize)f_size {
     return self.frame.size;
 }
 
-- (void)setSize:(CGSize)size {
+- (void)setF_size:(CGSize)size {
     CGRect frame = self.frame;
     frame.size = size;
     self.frame = frame;
 }
 
 
-- (CGFloat)centerX{
+- (CGFloat)f_centerX{
     return self.center.x;
 }
 
-- (void)setCenterX:(CGFloat)centerX{
+- (void)setF_centerX:(CGFloat)centerX{
     self.center = CGPointMake(centerX, self.center.y);
 }
 
-- (CGFloat)centerY{
+- (CGFloat)f_centerY{
     return self.center.y;
 }
 
-- (void)setCenterY:(CGFloat)centerY{
+- (void)setF_centerY:(CGFloat)centerY{
     self.center = CGPointMake(self.center.x, centerY);
 }
 @end

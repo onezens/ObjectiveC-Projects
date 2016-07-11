@@ -52,10 +52,11 @@ static NSString * const kCellID = @"WSStatusCellID";
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:statusModel.user.avatar_large] forState:UIControlStateNormal];
     self.nameLbl.text = statusModel.user.screen_name;
     [self.statusContent setContent:statusModel.text andImageUrls:statusModel.pic_urls];
-    [self.retweetContentView setContent:statusModel.retweeted_status.text andImageUrls:statusModel.retweeted_status.pic_urls];
-    self.statusContentHeight.constant = self.statusContent.contentHeight;
+
+    [self.retweetContentView setContent:[NSString stringWithFormat:@"@%@ %@",statusModel.retweeted_status.user.name ,statusModel.retweeted_status.text] andImageUrls:statusModel.retweeted_status.pic_urls];
+//    self.statusContentHeight.constant = self.statusContent.contentHeight;
     self.retweetContentHeight.constant = self.retweetContentView.contentHeight;
-    [self.contentView layoutIfNeeded];
+//    [self.contentView layoutIfNeeded];
 }
 
 - (void)awakeFromNib {

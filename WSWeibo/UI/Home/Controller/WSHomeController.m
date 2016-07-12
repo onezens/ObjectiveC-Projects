@@ -9,6 +9,7 @@
 #import "WSHomeController.h"
 #import "WSOauthController.h"
 #import "WSStatusCell.h"
+#import "WSStatusCell_Mas.h"
 
 static NSString * const title = @"首页";
 
@@ -63,7 +64,7 @@ static NSString * const title = @"首页";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    WSStatusCell *cell = [WSStatusCell statusCellWithTableView:tableView];
+    WSStatusCell_Mas *cell = [WSStatusCell_Mas statusCellWithTableView:tableView];
     cell.statusModel = self.statuses[indexPath.row];
     return cell;
     debugLog();

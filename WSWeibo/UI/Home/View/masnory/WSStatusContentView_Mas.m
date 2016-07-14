@@ -49,10 +49,8 @@
         [self addSubview:_contentLbl];
         [_contentLbl makeConstraints:^(MASConstraintMaker *make) {
            
-            make.leading.equalTo(self).offset(8);
-            make.top.equalTo(self);
-            make.trailing.equalTo(self).offset(-8);
-            make.bottom.equalTo(self);
+            make.leading.top.equalTo(self).offset(8);
+            make.trailing.bottom.equalTo(self).offset(-8);
         }];
     }
     return _contentLbl;

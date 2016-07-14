@@ -33,8 +33,8 @@ static NSString * const title = @"首页";
     [WSCoreManager markID:@"HomePage" label:@""];
     self.enableFooterRefresh = true;
     self.enableHeaderRefresh = true;
+    self.tableView.estimatedRowHeight = 200;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 279;
     debugLog();
     [self sendRequest];
 }
@@ -67,7 +67,6 @@ static NSString * const title = @"首页";
     WSStatusCell_Mas *cell = [WSStatusCell_Mas statusCellWithTableView:tableView];
     cell.statusModel = self.statuses[indexPath.row];
     return cell;
-    debugLog();
 }
 
 

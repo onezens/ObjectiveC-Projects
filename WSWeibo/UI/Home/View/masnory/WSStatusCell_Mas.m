@@ -20,6 +20,7 @@ static NSString * const kCellID = @"WSStatusCell_Mas_ID";
 @property (nonatomic, weak) WSStatusContentView_Mas *retweetStatusContentView;
 @property (nonatomic, weak) WSStatusHeaderView *headerView;
 @property (nonatomic, weak) WSStatusToolBarView *toolBar;
+@property (nonatomic, weak) UIView *selView;
 
 @end
 
@@ -37,14 +38,33 @@ static NSString * const kCellID = @"WSStatusCell_Mas_ID";
     return cell;
 }
 
-- (instancetype)init {
+
+- (void)layoutSubviews {
     
-    if (self = [super init]) {
+    [super layoutSubviews];
+    self.selView.frame = self.contentView.bounds;
+}
+
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self headerView];
         [self statusContentView];
         [self retweetStatusContentView];
+        [self toolBar];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+//        UIView *view = [[UIView alloc] init];
+//        view.backgroundColor = [UIColor greenColor];
+//        self.selView = view;
+//        self.selectedBackgroundView = view;
+        //添加次约束可以防止约束报错，非常重要
+        [self.contentView makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.trailing.top.equalTo(self);
+            make.bottom.equalTo(self.toolBar.bottom);
+        }];
     }
+    
     return self;
 }
 
@@ -55,7 +75,7 @@ static NSString * const kCellID = @"WSStatusCell_Mas_ID";
     self.headerView.model = statusModel;
     [self.statusContentView setContent:statusModel.text];
     [self.retweetStatusContentView setContent:statusModel.retweeted_status.text];
-    [self.contentView layoutIfNeeded];
+    [self layoutIfNeeded];
 }
 
 #pragma mark - lazy loading
@@ -69,8 +89,9 @@ static NSString * const kCellID = @"WSStatusCell_Mas_ID";
         [self.contentView addSubview:_toolBar];
         [_toolBar makeConstraints:^(MASConstraintMaker *make) {
            
-            make.leading.trailing.bottom.equalTo(self.contentView);
-            make.top.equalTo(self.retweetStatusContentView);
+            make.leading.trailing.equalTo(self.contentView);
+//            make.bottom.equalTo(self.contentView);
+//            make.top.equalTo(self.retweetStatusContentView);
         }];
     }
     return _toolBar;
@@ -85,8 +106,8 @@ static NSString * const kCellID = @"WSStatusCell_Mas_ID";
         [_retweetStatusContentView makeConstraints:^(MASConstraintMaker *make) {
             
             make.leading.trailing.equalTo(self.contentView);
-            make.top.equalTo(self.statusContentView.bottom).offset(8);
-            make.bottom.equalTo(self.toolBar.top).offset(-8);
+            make.top.equalTo(self.statusContentView.bottom);
+            make.bottom.equalTo(self.toolBar.top);
         }];
     }
     return _retweetStatusContentView;
@@ -99,7 +120,7 @@ static NSString * const kCellID = @"WSStatusCell_Mas_ID";
         [self.contentView addSubview:_statusContentView];
         [_statusContentView makeConstraints:^(MASConstraintMaker *make) {
             make.leading.trailing.equalTo(self.contentView);
-            make.top.equalTo(self.headerView.bottom).offset(8);
+            make.top.equalTo(self.headerView.bottom);
         }];
     }
     return _statusContentView;
@@ -111,7 +132,8 @@ static NSString * const kCellID = @"WSStatusCell_Mas_ID";
         _headerView = [WSStatusHeaderView statusHeaderView];
         [self.contentView addSubview:_headerView];
         [_headerView makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.top.trailing.equalTo(self.contentView);
+            make.leading.trailing.equalTo(self.contentView);
+            make.top.equalTo(self.contentView).offset(8);
         }];
     }
     return _headerView;

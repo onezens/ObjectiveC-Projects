@@ -65,6 +65,7 @@ static NSString * const title = @"首页";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     WSStatusCell_Mas *cell = [WSStatusCell_Mas statusCellWithTableView:tableView];
+//    WSStatusCell *cell = [WSStatusCell statusCellWithTableView:tableView];
     cell.statusModel = self.statuses[indexPath.row];
     return cell;
 }

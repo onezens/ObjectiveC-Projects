@@ -11,6 +11,8 @@
 @interface WSStatusContentView_Mas ()
 
 @property (nonatomic, strong) UILabel *contentLbl;
+@property (nonatomic, weak) MASConstraint *topOffset;
+@property (nonatomic, weak) MASConstraint *bottomOffset;
 
 @end
 
@@ -36,6 +38,14 @@
 - (void)setContent:(NSString *)content {
     
     self.contentLbl.text = content;
+    if (content == nil) {
+        
+        self.topOffset.offset(0);
+        self.bottomOffset.offset(0);
+    }else {
+        self.topOffset.offset(8);
+        self.bottomOffset.offset(-8);
+    }
 }
 
 #pragma mark - lazy loading
@@ -49,8 +59,11 @@
         [self addSubview:_contentLbl];
         [_contentLbl makeConstraints:^(MASConstraintMaker *make) {
            
-            make.leading.top.equalTo(self).offset(8);
-            make.trailing.bottom.equalTo(self).offset(-8);
+            make.leading.equalTo(self).offset(8);
+            make.trailing.equalTo(self).offset(-8);
+            self.topOffset = make.top.equalTo(self).offset(8);
+            self.bottomOffset = make.bottom.equalTo(self).offset(-8);
+            
         }];
     }
     return _contentLbl;

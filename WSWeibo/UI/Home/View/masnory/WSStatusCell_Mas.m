@@ -73,8 +73,8 @@ static NSString * const kCellID = @"WSStatusCell_Mas_ID";
     
     _statusModel = statusModel;
     self.headerView.model = statusModel;
-    [self.statusContentView setContent:statusModel.text];
-    [self.retweetStatusContentView setContent:statusModel.retweeted_status.text];
+    self.statusContentView.status = statusModel;
+    self.retweetStatusContentView.status = statusModel.retweeted_status;
     
     [self layoutIfNeeded];
 }

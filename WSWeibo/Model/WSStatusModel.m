@@ -8,6 +8,13 @@
 
 #import "WSStatusModel.h"
 
-@implementation WSPicUrls  @end
+@implementation WSPicUrls
+
+- (NSString<Optional> *)bmiddle_pic {
+    
+    return [self.thumbnail_pic stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+}
+
+@end
 
 @implementation WSStatusModel @end

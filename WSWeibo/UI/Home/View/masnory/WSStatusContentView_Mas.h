@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WSStatusModel;
 
 @interface WSStatusContentView_Mas : UIView
 
+@property (nonatomic, strong) WSStatusModel *status;
+
 + (instancetype)statusContentView;
 
-- (void)setContent:(NSString *)content;
 
 @end

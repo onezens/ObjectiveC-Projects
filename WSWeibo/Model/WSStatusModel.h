@@ -12,6 +12,7 @@
 @protocol WSPicUrls  @end
 @interface WSPicUrls : BaseModel
 @property (nonatomic, copy) NSString <Optional> *thumbnail_pic;
+@property (nonatomic, copy) NSString <Optional> *bmiddle_pic;
 @end
 
 

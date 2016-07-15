@@ -35,6 +35,7 @@
 		658BC7341D338B490091B37A /* WSStatusContentView_Mas.m in Sources */ = {isa = PBXBuildFile; fileRef = 658BC7331D338B490091B37A /* WSStatusContentView_Mas.m */; };
 		658BC7371D338FF50091B37A /* WSStatusHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 658BC7361D338FF50091B37A /* WSStatusHeaderView.m */; };
 		658BC73A1D34C1610091B37A /* WSStatusToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 658BC7391D34C1610091B37A /* WSStatusToolBarView.m */; };
+		6596BAC91D378C7B005439F5 /* photoBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6596BAC81D378C7B005439F5 /* photoBrowserView.m */; };
 		65BE5C201D18D8C5002840AA /* WSLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BE5C1F1D18D8C5002840AA /* WSLoadingViewController.m */; };
 		65BEE3D71D20B89F0057C01D /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BEE3D61D20B89F0057C01D /* BaseWebViewController.m */; };
 		65BEE3DA1D20B9E30057C01D /* WSOauthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BEE3D91D20B9E30057C01D /* WSOauthController.m */; };
@@ -203,6 +204,8 @@
 		658BC7361D338FF50091B37A /* WSStatusHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSStatusHeaderView.m; sourceTree = "<group>"; };
 		658BC7381D34C1610091B37A /* WSStatusToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSStatusToolBarView.h; sourceTree = "<group>"; };
 		658BC7391D34C1610091B37A /* WSStatusToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSStatusToolBarView.m; sourceTree = "<group>"; };
+		6596BAC71D378C7B005439F5 /* photoBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = photoBrowserView.h; sourceTree = "<group>"; };
+		6596BAC81D378C7B005439F5 /* photoBrowserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = photoBrowserView.m; sourceTree = "<group>"; };
 		65BE5C1E1D18D8C5002840AA /* WSLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLoadingViewController.h; sourceTree = "<group>"; };
 		65BE5C1F1D18D8C5002840AA /* WSLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLoadingViewController.m; sourceTree = "<group>"; };
 		65BEE3D51D20B89F0057C01D /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
@@ -595,6 +598,15 @@
 				658BC7291D3386040091B37A /* WSStatusContentView.m */,
 			);
 			path = xib;
+			sourceTree = "<group>";
+		};
+		6596BAC61D378B36005439F5 /* photoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				6596BAC71D378C7B005439F5 /* photoBrowserView.h */,
+				6596BAC81D378C7B005439F5 /* photoBrowserView.m */,
+			);
+			path = photoBrowser;
 			sourceTree = "<group>";
 		};
 		65BEE3DB1D20BB0B0057C01D /* Model */ = {
@@ -1131,6 +1143,7 @@
 		65F9BE421D2261B400CCC3A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6596BAC61D378B36005439F5 /* photoBrowser */,
 				658BC7231D3386040091B37A /* frame */,
 				658BC7241D3386040091B37A /* masnory */,
 				658BC7251D3386040091B37A /* xib */,
@@ -1349,6 +1362,7 @@
 				65DD73DF1D17E6290075917E /* MJRefreshAutoStateFooter.m in Sources */,
 				65DD73F01D17E6290075917E /* SDWebImageDownloader.m in Sources */,
 				65DD74031D17E6290075917E /* UIColor+WS.m in Sources */,
+				6596BAC91D378C7B005439F5 /* photoBrowserView.m in Sources */,
 				65DD73F61D17E6290075917E /* UIImage+MultiFormat.m in Sources */,
 				65531B971D1A3D1F00782632 /* EmptyView.m in Sources */,
 				65BEE3DF1D20BB950057C01D /* WSUserService.m in Sources */,

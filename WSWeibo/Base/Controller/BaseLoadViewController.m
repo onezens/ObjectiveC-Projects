@@ -13,7 +13,15 @@
 - (void)setupRootView {
     [super setupRootView];
     [self tableView];
-    [self.tableView.mj_header beginRefreshing];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    if (self.tableView.contentInset.top > kNavBarHeight+kStatusBarHeight) {
+        self.tableView.contentInset = UIEdgeInsetsMake(kNavBarHeight+kStatusBarHeight, 0, kTabBarHeight, 0);
+    }
 }
 
 #pragma mark - delegate & datasource
@@ -31,27 +39,21 @@
     [super showUnLoginViewWithType:viewType];
     if (![WSUserModel isLogin]) {
         self.enableHeaderRefresh = NO;
-        self.enableFooterRefresh = NO;
+    }else {
+        self.enableHeaderRefresh = true;
     }
 }
 
 #pragma mark - event
 
-- (void)setEnableFooterRefresh:(BOOL)enableFooterRefresh {
-    
-    _enableFooterRefresh = enableFooterRefresh;
-    if (enableFooterRefresh) {
-        self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
-    }else {
-        self.tableView.mj_footer = nil;
-    }
-}
 
 - (void)setEnableHeaderRefresh:(BOOL)enableHeaderRefresh {
     
+    if (_enableHeaderRefresh == enableHeaderRefresh) return;
     _enableHeaderRefresh = enableHeaderRefresh;
-    if (self.enableFooterRefresh) {
+    if (self.enableHeaderRefresh) {
         self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
+
     }else {
         self.tableView.mj_header = nil;
     }
@@ -59,14 +61,10 @@
 
 - (void)refreshData {
     if(!self.enableHeaderRefresh) return;
-    [self.tableView.mj_header endRefreshing];
-    [self.tableView reloadData];
+ 
 }
 
 - (void)loadMoreData {
-    if(!self.enableFooterRefresh) return;
-    [self.tableView.mj_footer endRefreshing];
-    [self.tableView reloadData];
 }
 
 #pragma mark - lazy loading
@@ -81,7 +79,9 @@
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.frame = self.view.bounds;
         [self.view addSubview:_tableView];
-        
+        self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+        self.tableView.mj_footer.automaticallyHidden = YES;
+
     }
     return _tableView;
 }

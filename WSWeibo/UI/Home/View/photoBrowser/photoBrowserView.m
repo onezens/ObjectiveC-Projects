@@ -66,7 +66,6 @@
 }
 
 
-
 #pragma mark - lazy loading
 
 - (NSMutableArray<UIImageView *> *)imgViews {

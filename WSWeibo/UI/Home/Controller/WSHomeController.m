@@ -31,27 +31,17 @@ static NSString * const title = @"首页";
     [self.leftBarButton addTarget:self action:@selector(leftBarButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.rightBarButton addTarget:self action:@selector(rightBarButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [WSCoreManager markID:@"HomePage" label:@""];
-    self.enableFooterRefresh = true;
-    self.enableHeaderRefresh = true;
     self.tableView.estimatedRowHeight = 200;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     debugLog();
-    [self sendRequest];
+    self.enableHeaderRefresh = true;
+    [self.tableView.mj_header beginRefreshing];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    [self showUnLoginViewWithType:WSUnloginViewHome];
-}
-
-- (void)showUnLoginViewWithType:(WSUnloginViewType)viewType {
-    
-    [super showUnLoginViewWithType:viewType];
-    if (![WSUserModel isLogin]) {
-        
-    }
-    
+    [super showUnLoginViewWithType:WSUnloginViewHome];
 }
 
 #pragma mark - tablview delegate & datasource
@@ -74,9 +64,13 @@ static NSString * const title = @"首页";
 
 #pragma mark - network
 
+- (void)refreshData {
+    
+    [self sendRequest];
+}
+
 - (void)sendRequest {
     
-    [self.tableView.mj_header beginRefreshing];
     [WSManager.statusService getHomeStatusesWithSince_id:[NSNumber numberWithInteger:0] max_id:[NSNumber numberWithInteger:0] count:20 page:1 feature:0 delegate:self];
 }
 
@@ -86,8 +80,10 @@ static NSString * const title = @"首页";
 
 - (void)requestSuccessedWithRes:(ResponseModel *)res {
     
+    [self.tableView.mj_header endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
     [self.statuses addObjectsFromArray:res.statuses];
-    [self refreshData];
+    [self.tableView reloadData];
 }
 
 #pragma mark - event 

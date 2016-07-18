@@ -276,6 +276,7 @@ NSString * const kLoadingTitle = @"正在加载";
     if (!_unloginView) {
         _unloginView = [UnloginView unloginViewWithType:self.unloginViewType];
         _unloginView.frame = self.view.bounds;
+        _unloginView.backgroundColor = [UIColor baseBackGroundColor];
         [self.view addSubview:_unloginView];
     }
     return _unloginView;

@@ -36,6 +36,7 @@
 		658BC7371D338FF50091B37A /* WSStatusHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 658BC7361D338FF50091B37A /* WSStatusHeaderView.m */; };
 		658BC73A1D34C1610091B37A /* WSStatusToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 658BC7391D34C1610091B37A /* WSStatusToolBarView.m */; };
 		6596BAC91D378C7B005439F5 /* photoBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6596BAC81D378C7B005439F5 /* photoBrowserView.m */; };
+		6596BACD1D38DC9B005439F5 /* WSPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6596BACC1D38DC9B005439F5 /* WSPhotoBrowser.m */; };
 		65BE5C201D18D8C5002840AA /* WSLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BE5C1F1D18D8C5002840AA /* WSLoadingViewController.m */; };
 		65BEE3D71D20B89F0057C01D /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BEE3D61D20B89F0057C01D /* BaseWebViewController.m */; };
 		65BEE3DA1D20B9E30057C01D /* WSOauthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BEE3D91D20B9E30057C01D /* WSOauthController.m */; };
@@ -206,6 +207,8 @@
 		658BC7391D34C1610091B37A /* WSStatusToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSStatusToolBarView.m; sourceTree = "<group>"; };
 		6596BAC71D378C7B005439F5 /* photoBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = photoBrowserView.h; sourceTree = "<group>"; };
 		6596BAC81D378C7B005439F5 /* photoBrowserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = photoBrowserView.m; sourceTree = "<group>"; };
+		6596BACB1D38DC9B005439F5 /* WSPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPhotoBrowser.h; sourceTree = "<group>"; };
+		6596BACC1D38DC9B005439F5 /* WSPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSPhotoBrowser.m; sourceTree = "<group>"; };
 		65BE5C1E1D18D8C5002840AA /* WSLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLoadingViewController.h; sourceTree = "<group>"; };
 		65BE5C1F1D18D8C5002840AA /* WSLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLoadingViewController.m; sourceTree = "<group>"; };
 		65BEE3D51D20B89F0057C01D /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
@@ -605,8 +608,17 @@
 			children = (
 				6596BAC71D378C7B005439F5 /* photoBrowserView.h */,
 				6596BAC81D378C7B005439F5 /* photoBrowserView.m */,
+				6596BACB1D38DC9B005439F5 /* WSPhotoBrowser.h */,
+				6596BACC1D38DC9B005439F5 /* WSPhotoBrowser.m */,
 			);
 			path = photoBrowser;
+			sourceTree = "<group>";
+		};
+		6596BACA1D38D23B005439F5 /* videoView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = videoView;
 			sourceTree = "<group>";
 		};
 		65BEE3DB1D20BB0B0057C01D /* Model */ = {
@@ -1143,6 +1155,7 @@
 		65F9BE421D2261B400CCC3A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6596BACA1D38D23B005439F5 /* videoView */,
 				6596BAC61D378B36005439F5 /* photoBrowser */,
 				658BC7231D3386040091B37A /* frame */,
 				658BC7241D3386040091B37A /* masnory */,
@@ -1231,29 +1244,31 @@
 /* Begin PBXShellScriptBuildPhase section */
 		65DD740A1D17E6C50075917E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "python ${SRCROOT}/${TARGET_NAME}/AutoLocalization/RunScript/AutoGenStringsXIB.py ${SRCROOT}/${TARGET_NAME}";
+			showEnvVarsInLog = 0;
 		};
 		65DD740B1D17E6C70075917E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "python ${SRCROOT}/${TARGET_NAME}/AutoLocalization/RunScript/AutoGenStringsSB.py ${SRCROOT}/${TARGET_NAME}";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1367,6 +1382,7 @@
 				65531B971D1A3D1F00782632 /* EmptyView.m in Sources */,
 				65BEE3DF1D20BB950057C01D /* WSUserService.m in Sources */,
 				65DD73B81D17E6290075917E /* AFNetworkReachabilityManager.m in Sources */,
+				6596BACD1D38DC9B005439F5 /* WSPhotoBrowser.m in Sources */,
 				65DD73EF1D17E6290075917E /* SDWebImageDecoder.m in Sources */,
 				65BE5C201D18D8C5002840AA /* WSLoadingViewController.m in Sources */,
 				65DD73C21D17E6290075917E /* FMDatabaseQueue.m in Sources */,

@@ -15,4 +15,6 @@
 @property (nonatomic, assign) NSInteger currentIndex;
 @property (nonatomic, strong) UIImage *placeHolder;
 
++ (instancetype)showPhotoBrowser:(NSArray *)imgUrls placeHolders:(NSArray <UIImage *> *)placeHolders index:(NSInteger)index;
+
 @end

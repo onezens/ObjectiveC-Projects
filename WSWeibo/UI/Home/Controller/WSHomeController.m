@@ -65,8 +65,15 @@ static NSString * const title = @"首页";
 #pragma mark - network
 
 - (void)refreshData {
-    
+    [self.tableView.mj_footer resetNoMoreData];
     [self sendRequest];
+}
+
+- (void)loadMoreData {
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.tableView.mj_footer endRefreshingWithNoMoreData];
+    });
 }
 
 - (void)sendRequest {

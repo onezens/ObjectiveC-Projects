@@ -7,6 +7,7 @@
 //
 
 #import "photoBrowserView.h"
+#import "WSPhotoBrowser.h"
 #import "UIImageView+WebCache.h"
 
 #define MaxImagesCount 9
@@ -57,12 +58,28 @@
        
         if (count > idx) {
             obj.hidden = false;
-            [obj sd_setImageWithURL:[NSURL URLWithString:self.urls[idx].bmiddle_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+            [obj sd_setImageWithURL:[NSURL URLWithString:self.urls[idx].thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
             [self.showViews addObject:obj];
         }else {
             obj.hidden = true;
         }
     }];
+}
+
+
+
+- (void)showBigImg:(UITapGestureRecognizer *)sender {
+    
+    UIImageView *img = (UIImageView *)sender.view;
+    NSInteger index = img.tag;
+    NSMutableArray *arr = [NSMutableArray array];
+    NSMutableArray *imgs = [NSMutableArray array];
+    [self.urls enumerateObjectsUsingBlock:^(WSPicUrls * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        [arr addObject:obj.bmiddle_pic];
+        [imgs addObject:self.imgViews[idx].image ? : [UIImage imageNamed:@"timeline_image_placeholder"]];
+    }];
+   [WSPhotoBrowser showPhotoBrowser:arr placeHolders:imgs index:index];
 }
 
 
@@ -74,10 +91,15 @@
         
         _imgViews = [NSMutableArray arrayWithCapacity:MaxImagesCount];
         for (NSInteger i=0; i<MaxImagesCount; i++) {
+            
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showBigImg:)];
             UIImageView *img = [[UIImageView alloc] init];
             img.contentMode = UIViewContentModeScaleAspectFill;
             img.clipsToBounds = true;
+            img.tag = i;
+            img.userInteractionEnabled = true;
             [_imgViews addObject:img];
+            [img addGestureRecognizer:tap];
             [self addSubview:img];
         }
         

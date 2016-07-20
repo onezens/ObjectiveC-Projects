@@ -26,6 +26,11 @@ static NSString * const title = @"发现";
     debugLog();
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [self.searchBar endEditing:true];
+}
+
 #pragma mark - lazy loading
 
 - (UISearchBar *)searchBar {

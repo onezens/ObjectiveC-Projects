@@ -28,6 +28,7 @@
 		65531BAA1D1A765600782632 /* WSMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BA91D1A765600782632 /* WSMessageController.m */; };
 		65531BAD1D1A766900782632 /* WSDiscoveryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BAC1D1A766900782632 /* WSDiscoveryController.m */; };
 		65531BB01D1A767A00782632 /* WSComposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BAF1D1A767A00782632 /* WSComposeController.m */; };
+		655F23E21D3F14F60061F178 /* WSPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 655F23E11D3F14F60061F178 /* WSPhotoCell.m */; };
 		658739591D1A8DCB00C3E820 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6587395B1D1A8DCB00C3E820 /* Localizable.strings */; };
 		658BC72A1D3386040091B37A /* WSStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 658BC7271D3386040091B37A /* WSStatusCell.m */; };
 		658BC72B1D3386040091B37A /* WSStatusContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 658BC7291D3386040091B37A /* WSStatusContentView.m */; };
@@ -189,6 +190,8 @@
 		65531BAC1D1A766900782632 /* WSDiscoveryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDiscoveryController.m; sourceTree = "<group>"; };
 		65531BAE1D1A767A00782632 /* WSComposeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSComposeController.h; sourceTree = "<group>"; };
 		65531BAF1D1A767A00782632 /* WSComposeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSComposeController.m; sourceTree = "<group>"; };
+		655F23E01D3F14F60061F178 /* WSPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPhotoCell.h; sourceTree = "<group>"; };
+		655F23E11D3F14F60061F178 /* WSPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSPhotoCell.m; sourceTree = "<group>"; };
 		65873A821D1BB03200C3E820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		65873A831D1BB03300C3E820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		65873A841D1BB03300C3E820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Test.strings"; sourceTree = "<group>"; };
@@ -610,6 +613,8 @@
 				6596BAC81D378C7B005439F5 /* photoBrowserView.m */,
 				6596BACB1D38DC9B005439F5 /* WSPhotoBrowser.h */,
 				6596BACC1D38DC9B005439F5 /* WSPhotoBrowser.m */,
+				655F23E01D3F14F60061F178 /* WSPhotoCell.h */,
+				655F23E11D3F14F60061F178 /* WSPhotoCell.m */,
 			);
 			path = photoBrowser;
 			sourceTree = "<group>";
@@ -1348,6 +1353,7 @@
 				65DD73F41D17E6290075917E /* UIButton+WebCache.m in Sources */,
 				65531B941D1A3D1F00782632 /* ResponseModel.m in Sources */,
 				65DD73EE1D17E6290075917E /* SDWebImageCompat.m in Sources */,
+				655F23E21D3F14F60061F178 /* WSPhotoCell.m in Sources */,
 				65DD73AF1D17E6290075917E /* WSHttpClient.m in Sources */,
 				65DD73DA1D17E6290075917E /* MJRefreshComponent.m in Sources */,
 				65DD73BC1D17E6290075917E /* AFURLSessionManager.m in Sources */,

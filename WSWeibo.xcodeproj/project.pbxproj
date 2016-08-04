@@ -29,6 +29,7 @@
 		65531BAD1D1A766900782632 /* WSDiscoveryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BAC1D1A766900782632 /* WSDiscoveryController.m */; };
 		65531BB01D1A767A00782632 /* WSComposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65531BAF1D1A767A00782632 /* WSComposeController.m */; };
 		655F23E21D3F14F60061F178 /* WSPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 655F23E11D3F14F60061F178 /* WSPhotoCell.m */; };
+		65758E5D1D52F4BC0044E5E6 /* WSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65758E5C1D52F4BC0044E5E6 /* WSProgressView.m */; };
 		658739591D1A8DCB00C3E820 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6587395B1D1A8DCB00C3E820 /* Localizable.strings */; };
 		658BC72A1D3386040091B37A /* WSStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 658BC7271D3386040091B37A /* WSStatusCell.m */; };
 		658BC72B1D3386040091B37A /* WSStatusContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 658BC7291D3386040091B37A /* WSStatusContentView.m */; };
@@ -192,6 +193,8 @@
 		65531BAF1D1A767A00782632 /* WSComposeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSComposeController.m; sourceTree = "<group>"; };
 		655F23E01D3F14F60061F178 /* WSPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPhotoCell.h; sourceTree = "<group>"; };
 		655F23E11D3F14F60061F178 /* WSPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSPhotoCell.m; sourceTree = "<group>"; };
+		65758E5B1D52F4BC0044E5E6 /* WSProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSProgressView.h; sourceTree = "<group>"; };
+		65758E5C1D52F4BC0044E5E6 /* WSProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSProgressView.m; sourceTree = "<group>"; };
 		65873A821D1BB03200C3E820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		65873A831D1BB03300C3E820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		65873A841D1BB03300C3E820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Test.strings"; sourceTree = "<group>"; };
@@ -615,6 +618,8 @@
 				6596BACC1D38DC9B005439F5 /* WSPhotoBrowser.m */,
 				655F23E01D3F14F60061F178 /* WSPhotoCell.h */,
 				655F23E11D3F14F60061F178 /* WSPhotoCell.m */,
+				65758E5B1D52F4BC0044E5E6 /* WSProgressView.h */,
+				65758E5C1D52F4BC0044E5E6 /* WSProgressView.m */,
 			);
 			path = photoBrowser;
 			sourceTree = "<group>";
@@ -1303,6 +1308,7 @@
 				65DD73F91D17E6290075917E /* UIImageView+WebCache.m in Sources */,
 				65DD73D21D17E6290075917E /* MASViewAttribute.m in Sources */,
 				65531BAA1D1A765600782632 /* WSMessageController.m in Sources */,
+				65758E5D1D52F4BC0044E5E6 /* WSProgressView.m in Sources */,
 				65DD73CF1D17E6290075917E /* MASConstraint.m in Sources */,
 				6509E4E91D212C49001EE2F0 /* WSUserModel.m in Sources */,
 				65DD73D31D17E6290075917E /* MASViewConstraint.m in Sources */,

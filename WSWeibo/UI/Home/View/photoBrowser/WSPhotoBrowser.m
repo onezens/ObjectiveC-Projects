@@ -42,13 +42,28 @@ static NSString * const cellID = @"WSPhotoCell";
 }
 
 - (void)setUpUI {
+    self.collectionView.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = [UIColor blackColor];
     self.collectionView.frame = self.view.bounds;
     self.flowLayout.itemSize = self.view.bounds.size;
     if (self.currentIndex!=0) {
         [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.currentIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:true];
     }
+    self.indexLbl.f_centerX = self.view.f_centerX;
+    self.indexLbl.f_top = 30;
 }
 
+
+- (void)setIndex:(NSInteger)index {
+    
+    if (self.large_urls.count==1) {
+        self.indexLbl.hidden = true;
+        return;
+    }
+    self.indexLbl.hidden = false;
+    self.indexLbl.text = [NSString stringWithFormat:@"%zd/%zd",index+1, self.large_urls.count];
+    [self.indexLbl sizeToFit];
+}
 
 #pragma mark - collectionview datasource & delegate
 
@@ -56,6 +71,7 @@ static NSString * const cellID = @"WSPhotoCell";
     
     WSPhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
     [cell setPlaceHolder:self.placeHolders[indexPath.row] andImgUrl:self.large_urls[indexPath.item]];
+    [self setIndex:indexPath.item];
     return cell;
 }
 
@@ -68,6 +84,7 @@ static NSString * const cellID = @"WSPhotoCell";
     
     [self dismissViewControllerAnimated:true completion:nil];
 }
+
 
 #pragma mark - lazy laoding
 
@@ -91,6 +108,8 @@ static NSString * const cellID = @"WSPhotoCell";
     
     if (!_indexLbl) {
         _indexLbl = [[UILabel alloc] init];
+        _indexLbl.textColor = [UIColor whiteColor];
+        _indexLbl.font = [UIFont boldSystemFontOfSize:17];
         [self.view addSubview:_indexLbl];
     }
     return _indexLbl;

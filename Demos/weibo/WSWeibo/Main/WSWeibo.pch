@@ -1,0 +1,87 @@
+//
+//  WSWeibo.pch
+//  WSWeibo
+//
+//  Created by onezen on 16/6/12.
+//  Copyright © 2016年 www.onezen.cc. All rights reserved.
+///Users/lexue/Desktop/WSWeibo/WSWeibo/Main/WSWeibo.pch
+
+//************** 发布环境和测试环境 *****************
+//#define WSWeibo_RELEASE
+#define WSWeibo_DEBUG
+
+//**************        真机和模拟器之间的设置         *****************
+
+#ifdef DEBUG //调试模式--模拟器
+
+#define WSLog(...) NSLog(__VA_ARGS__)  //自定义打印
+#define debugLog() NSLog(@"%s", __func__)
+
+#else //发布模式 RELEASE--真机
+
+#define WSLog(...)  //发布版本下取消自定义打印，自定义打印不起作用
+#define debugLog()
+#endif
+
+//**************    所有objective-c文件共享的头文件   *****************
+
+#ifdef __OBJC__  //所有objective-c文件共享的头文件
+
+#import <UIKit/UIKit.h>
+#import "WSCoreDefs.h"
+
+
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
+
+#define kScreenWidth            kScreenSize.size.width
+#define kScreenHeight           kScreenSize.size.height
+#define kScreenSize             [UIScreen mainScreen].bounds
+#define kScreenScare            [[UIScreen mainScreen] scale]
+#define kUserDefault            [NSUserDefaults standardUserDefaults]
+#define kNotificationCenter     [NSNotificationCenter defaultCenter]
+#define kFileManager            [NSFileManager defaultManager]
+#define kAppVersion             [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+#define kAppBuildVersion        [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
+#define kApplicationDelegate    [[UIApplication sharedApplication] delegate]
+#define kPathForDocument        NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0]
+#define kPathForLibrary         NSSearchPathForDirectoriesInDomains (NSLibraryDirectory, NSUserDomainMask, YES)[0]
+#define kPathForCaches          NSSearchPathForDirectoriesInDomains (NSCachesDirectory, NSUserDomainMask, YES)[0]
+#define kTabBarHeight           49
+#define kStatusBarHeight        20
+#define kNavBarHeight           44
+
+#define SCREEN_MAX_LENGTH (MAX(kScreenWidth, kScreenHeight))
+#define SCREEN_MIN_LENGTH (MIN(kScreenWidth, kScreenHeight))
+
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+#define IsIOS7 SYSTEM_VERSION_LESS_THAN(@"8.0")
+#define IsIOS8 SYSTEM_VERSION_GREATER_THAN(@"8.0")
+
+/// 系统语言
+#define IOS_SYSTEM_Language ([[NSLocale preferredLanguages] objectAtIndex:0])
+
+
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+
+
+#endif
+
+//*************************     公用的头文件      ************************
